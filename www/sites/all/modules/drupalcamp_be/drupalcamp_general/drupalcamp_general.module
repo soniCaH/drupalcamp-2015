@@ -3,3 +3,105 @@
  * @file General drupalcamp functionality.
  */
 
+/* ************************************ *
+ * ******* HOOK IMPLEMENTATIONS ******* *
+ * ************************************ */
+
+
+/* ************************************ *
+ * *********** HOOK ALTERS ************ *
+ * ************************************ */
+
+/**
+ * Implements hook_menu_alter().
+ */
+function drupalcamp_general_menu_alter(&$items) {
+  $items['user/register']['title'] = 'Register';
+  $items['user/%user/tickets']['access callback'] = FALSE;
+  $items['user/%user/edit']['title'] = t('Edit Your Details');
+  $items['user/%/sessions']['access callback']
+    = '_drupalcamp_general_user_sessions_access';
+}
+
+/**
+ * Implements hook_module_implements_alter().
+ */
+function drupalcamp_general_module_implements_alter(&$implementations, $hook) {
+  // When the implementations of hook_menu_alter are called, we need our module
+  // to be called after views, so let's remove it from the implementations then
+  // add it to the end.
+  if ($hook == 'menu_alter') {
+    if (isset($implementations['drupalcamp_general'])) {
+      $my_implementation = $implementations['drupalcamp_general'];
+      unset($implementations['drupalcamp_general']);
+      $implementations['drupalcamp_general'] = $my_implementation;
+    }
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * @param array $form
+ *   Form structure.
+ * @param array $form_state
+ *   Form state array.
+ * @param String $form_id
+ *   String identifier of the form.
+ */
+function drupalcamp_general_form_alter(&$form, &$form_state, $form_id) {
+  switch ($form_id) {
+    case 'user_register_form':
+    case 'user_profile_form':
+      $form['og_user_node']['#access'] = FALSE;
+      if (arg(2) === 'edit') {
+        drupal_set_title(t('Edit your profile'));
+        $form['actions']['submit']['#value'] = t('Edit your profile');
+      }
+      else {
+        drupal_set_title(t('Register'));
+        $form['actions']['submit']['#value'] = t('Register for DrupalCamp');
+      }
+      break;
+  }
+}
+
+/* ************************************ *
+ * ********* ACCESS CALLBACKS ********* *
+ * ************************************ */
+
+/**
+ * Custom access callback to hide user/sessions tab if user has no sessions.
+ *
+ * @return boolean
+ */
+function _drupalcamp_general_user_sessions_access() {
+  $uid = arg(1);
+  global $user;
+
+  if (!is_numeric($uid)
+    || ($user->uid != $uid) && !user_access('administer content')
+  ) {
+    return FALSE;
+  }
+
+  // Check if user has sessions.
+  $sql = db_select('node', 'n');
+
+  $sql->addField('n', 'nid');
+  $sql->innerJoin(
+    'field_data_field_speakers', 's', 'n.nid = s.entity_id'
+  );
+  $sql->condition('n.type', 'session', '=');
+  $sql->condition('s.field_speakers_target_id', $uid, '=');
+
+  $res = $sql->execute();
+
+  $num = $res->rowCount();
+
+  if ($num > 0) {
+    return TRUE;
+  }
+
+  return FALSE;
+}

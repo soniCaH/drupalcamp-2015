@@ -1,6 +1,13 @@
 name = DrupalCamp Belgium General
 description = Generic functionality over all drupalcamp installations.
 core = 7.x
-package = drupalcamp
+package = DrupalCamp Belgium
 version = 7.x-1.0
-project = drupalcamp_be
+project = drupalcamp_general
+dependencies[] = color_field
+dependencies[] = features
+dependencies[] = taxonomy
+features[features_api][] = api:2
+features[field_base][] = field_track_color
+features[field_instance][] = taxonomy_term-session_tracks_1-field_track_color
+features[taxonomy][] = session_tracks_1
