@@ -4,6 +4,7 @@ core = 7.x
 package = DrupalCamp Belgium
 version = 7.x-1.0
 project = drupalcamp_general
+dependencies[] = cod_sponsors
 dependencies[] = color_field
 dependencies[] = features
 dependencies[] = taxonomy
