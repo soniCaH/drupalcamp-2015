@@ -1,0 +1,175 @@
+<?php
+/**
+ * @file Installation and update hooks.
+ */
+
+
+/**
+ * Implements hook_install().
+ */
+function drupalcamp_general_install() {
+  // Install default tracks.
+  _drupalcamp_general_session_tracks_install();
+
+  // Install default sponsorship levels.
+  _drupalcamp_general_sponsor_levels_install();
+}
+
+/**
+ * Create the default terms in the session_tracks vocabulary.
+ *
+ * @return bool
+ *   returns FALSE if the vocabulary does not exist.
+ *
+ * @seealso _drupalcamp_general_session_tracks_get().
+ */
+function _drupalcamp_general_session_tracks_install() {
+  $vocabulary = taxonomy_vocabulary_machine_name_load('session_tracks_1');
+
+  if (!$vocabulary) {
+    return FALSE;
+  }
+
+  $tracks = _drupalcamp_general_session_tracks_get();
+  foreach ($tracks as $track) {
+    $term = entity_create(
+      'taxonomy_term',
+      array(
+        'vid'                     => $vocabulary->vid,
+        'name'                    => $track['name'],
+        'description'             => $track['description'],
+        'vocabulary_machine_name' => $vocabulary->machine_name,
+      )
+    );
+
+    $wrapper = entity_metadata_wrapper('taxonomy_term', $term);
+    $wrapper->field_track_color->set(array('rgb' => $track['color']));
+    $wrapper->save();
+  }
+
+  return TRUE;
+}
+
+/**
+ * Return 6 default track names with associated color code.
+ *
+ * Business and Strategy
+ * Code and Development
+ * Community
+ * DevOps
+ * Frontend & Design
+ * Sitebuilding
+ *
+ * @return array
+ *  Array with all default tracks.
+ */
+function _drupalcamp_general_session_tracks_get() {
+  return array(
+    array(
+      'name'        => 'Business and Strategy',
+      'description' => '',
+      'color'       => '#CF1940'
+    ),
+    array(
+      'name'        => 'Code and Development',
+      'description' => '',
+      'color'       => '#30b101'
+    ),
+    array(
+      'name'        => 'Community',
+      'description' => '',
+      'color'       => '#0491C6'
+    ),
+    array(
+      'name'        => 'DevOps',
+      'description' => '',
+      'color'       => '#C66904'
+    ),
+    array(
+      'name'        => 'Frontend & Design',
+      'description' => '',
+      'color'       => '#06D39B'
+    ),
+    array(
+      'name'        => 'Sitebuilding',
+      'description' => '',
+      'color'       => '#283360'
+    ),
+  );
+}
+
+/**
+ * Create the default terms in the sponsorship_level vocabulary.
+ *
+ * @return bool
+ *   returns FALSE if the vocabulary does not exist.
+ *
+ * @seealso _drupalcamp_general_sponsorship_levels_get().
+ */
+function _drupalcamp_general_sponsorship_levels_install() {
+  $vocabulary = taxonomy_vocabulary_machine_name_load('sponsorship_level');
+
+  if (!$vocabulary) {
+    return FALSE;
+  }
+
+  $levels = _drupalcamp_general_sponsorship_levels_get();
+  foreach ($levels as $level) {
+    $term = entity_create(
+      'taxonomy_term',
+      array(
+        'vid'                     => $vocabulary->vid,
+        'name'                    => $level['name'],
+        'description'             => $level['description'],
+        'weight'                  => $level['weight'],
+        'vocabulary_machine_name' => $vocabulary->machine_name,
+      )
+    );
+
+    entity_save('taxonomy_term', $term);
+  }
+
+  return TRUE;
+}
+
+/**
+ * Return default sponsorship levels.
+ *
+ * Platinum
+ * Gold
+ * Silver
+ * Bronze
+ * Partner
+ *
+ * @return array
+ *  Array with all default levels.
+ */
+function _drupalcamp_general_sponsorship_levels_get() {
+  return array(
+    array(
+      'name'        => 'Platinum',
+      'weight'      => -10,
+      'description' => 'Main conference sponsor.',
+    ),
+    array(
+      'name'        => 'Gold',
+      'weight'      => -9,
+      'description' => 'Golden sponsor.',
+    ),
+    array(
+      'name'        => 'Silver',
+      'weight'      => -8,
+      'description' => 'Silver sponsor.',
+    ),
+    array(
+      'name'        => 'Bronze',
+      'weight'      => -7,
+      'description' => 'Bronze sponsor.',
+    ),
+    array(
+      'name'        => 'Partner',
+      'weight'      => -6,
+      'description' => 'Supportive partner of the conference.',
+    ),
+  );
+}
