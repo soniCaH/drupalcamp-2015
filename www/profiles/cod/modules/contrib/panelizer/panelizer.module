@@ -164,24 +164,6 @@ function panelizer_admin_paths() {
 }
 
 /**
- * Implements hook_form_FORM_ID_alter().
- *
- * Check whether a given view mode is panelized.
- * Set an error message if there are un-hidden fields
- * because they won't be printed anyway.
- */
-function panelizer_form_field_ui_display_overview_form_alter(&$form, &$form_state, $form_id) {
-
-  if (!empty($form['#entity_type']) && !empty($form['#bundle']) && !empty($form['#view_mode'])) {
-    module_load_install('panelizer');
-    if (panelizer_view_mode_extra_field_displays($form['#entity_type'], $form['#bundle'], $form['#view_mode'])) {
-      $message = t("This view mode is being controlled via Panelizer. For performance reasons, it is recommended to move all fields to 'hidden'. Fields not marked as hidden will be prepared for output but will not actually output, thus needlessly increasing render and page load time.");
-      drupal_set_message($message, 'error', FALSE);
-    }
-  }
-}
-
-/**
  * Implements hook_form_alter().
  */
 function panelizer_form_alter(&$form, &$form_state, $form_id) {
@@ -824,10 +806,10 @@ function panelizer_export_ui_switcher_page($entity_handler, $bundle, $plugin_nam
 
     foreach ($handler->plugin['redirect'] as $key => $old_path) {
       if ($key == 'add') {
-        $handler->plugin['redirect'][$key] = $path . '/%ctools_export_ui/settings';
+        $handler->plugin['redirect'][$key] = $path . '/list/%ctools_export_ui/settings';
       }
       else {
-        $handler->plugin['redirect'][$key] = $path;
+        $handler->plugin['redirect'][$key] = $path . '/list';
       }
     }
 
@@ -935,10 +917,7 @@ function panelizer_has_no_choice_callback($handler, $bundle, $view_mode = NULL) 
     return FALSE;
   }
 
-  $has_default = $handler->has_default_panel($bundle);
-  $has_choice = $handler->has_panel_choice($bundle);
-
-  return $has_default && !$has_choice;
+  return $handler->has_default_panel($bundle) && !$handler->has_panel_choice($bundle);
 }
 
 /**
@@ -1331,17 +1310,16 @@ function panelizer_panels_cache_save($argument, $cache) {
     ctools_export_crud_save('panelizer_defaults', $panelizer);
   }
   else {
-    list($entity_id, $view_mode) = explode(':', $key);
-    $conditions = (isset($vid) ? array('vid' => $vid) : array());
-    $entities = entity_load($entity_type, array($entity_id), $conditions);
-    if ($entities[$entity_id] && $entities[$entity_id]->panelizer[$view_mode]) {
-      $entities[$entity_id]->panelizer[$view_mode]->display = $cache->display;
-      $entities[$entity_id]->panelizer[$view_mode]->display_is_modified = TRUE;
-      $handler->entity_save($entities[$entity_id]);
+    list($entity_id, $view_mode, $vid) = explode(':', $key);
+    $entity = $cache->display->context['panelizer']->data;
+    if ($entity->panelizer[$view_mode]) {
+      $entity->panelizer[$view_mode]->display = $cache->display;
+      $entity->panelizer[$view_mode]->display_is_modified = TRUE;
+      $handler->entity_save($entity);
       // The display may have been cloned in the save process, so we need
       // to be sure to put the old display back, and its contexts.
-      $cache->display = $entities[$entity_id]->panelizer[$view_mode]->display;
-      $cache->display->context = $handler->get_contexts($entities[$entity_id]->panelizer[$view_mode], $entities[$entity_id]);
+      $cache->display = $entity->panelizer[$view_mode]->display;
+      $cache->display->context = $handler->get_contexts($entity->panelizer[$view_mode], $entity);
     }
   }
   panelizer_panels_cache_clear($original, $cache);
