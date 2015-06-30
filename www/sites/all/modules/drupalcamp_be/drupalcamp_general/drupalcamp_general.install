@@ -3,16 +3,15 @@
  * @file Installation and update hooks.
  */
 
-
 /**
- * Implements hook_install().
+ * Implements hook_update_N().
  */
-function drupalcamp_general_install() {
+function drupalcamp_general_update_7001() {
   // Install default tracks.
   _drupalcamp_general_session_tracks_install();
 
   // Install default sponsorship levels.
-  _drupalcamp_general_sponsor_levels_install();
+  _drupalcamp_general_sponsorship_levels_install();
 }
 
 /**
