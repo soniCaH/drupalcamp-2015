@@ -1,0 +1,7 @@
+name = DrupalCamp Belgium 2015
+description = Session functionality for the 2015 DrupalCamp.
+core = 7.x
+package = DrupalCamp Belgium 2015
+version = 7.x-1.0
+project = drupalcamp_sessions
+dependencies[] = drupalcamp_general
