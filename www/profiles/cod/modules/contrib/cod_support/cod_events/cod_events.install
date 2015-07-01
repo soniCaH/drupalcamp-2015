@@ -528,3 +528,7 @@ function cod_events_update_7020() {
 
   return array();
 }
+
+function cod_events_update_7021() {
+  module_enable(array('og_theme'));
+}

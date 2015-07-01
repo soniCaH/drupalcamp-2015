@@ -84,10 +84,9 @@ features_exclude[field_instance][node-event-field_paid_event] = node-event-field
 files[] = includes/views/handlers/cod_events_plugin_argument_default_event.inc
 files[] = includes/views/handlers/cod_events_plugin_argument_default_type.inc
 
-
-; Information added by drush on 2015-06-26
-version = "7.x-1.0-beta9+31-dev"
+; Information added by Drupal.org packaging script on 2015-06-30
+version = "7.x-1.0-beta9+35-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1435302255"
+datestamp = "1435705684"
 

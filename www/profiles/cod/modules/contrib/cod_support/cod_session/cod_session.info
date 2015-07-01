@@ -136,10 +136,9 @@ files[] = views/cod_session.views.inc
 files[] = views/cod_session_views_handler_field_track_link.inc
 files[] = views/views_plugin_pager_session_more.inc
 
-
-; Information added by drush on 2015-06-26
-version = "7.x-1.0-beta9+31-dev"
+; Information added by Drupal.org packaging script on 2015-06-30
+version = "7.x-1.0-beta9+35-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1435302255"
+datestamp = "1435705684"
 

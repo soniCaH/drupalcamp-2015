@@ -42,10 +42,9 @@ features[variable][] = node_submitted_news
 features[variable][] = pathauto_node_news_pattern
 features[views_view][] = cod_news
 
-
-; Information added by drush on 2015-06-26
-version = "7.x-1.0-beta9+31-dev"
+; Information added by Drupal.org packaging script on 2015-06-30
+version = "7.x-1.0-beta9+35-dev"
 core = "7.x"
 project = "cod_support"
-datestamp = "1435302255"
+datestamp = "1435705684"
 
