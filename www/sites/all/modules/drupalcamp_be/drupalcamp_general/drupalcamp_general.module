@@ -66,6 +66,73 @@ function drupalcamp_general_form_alter(&$form, &$form_state, $form_id) {
   }
 }
 
+/**
+ * Implements hook_block_info().
+ */
+function drupalcamp_general_block_info() {
+  $blocks['footer_text'] = array(
+    'info' => t('Footer text with social links and credits.'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_configure().
+ */
+function drupalcamp_general_block_configure($delta = '') {
+  $callback = _drupalcamp_general_block_callback($delta, 'configure');
+  if ($callback) {
+    return $callback();
+  }
+}
+
+/**
+ * Implements hook_block_save().
+ */
+function drupalcamp_general_block_save($delta = '', $edit = array()) {
+  $callback = _drupalcamp_general_block_callback($delta, 'save');
+  if ($callback) {
+    return $callback($edit);
+  }
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function drupalcamp_general_block_view($delta = '') {
+  $callback = _drupalcamp_general_block_callback($delta, 'view');
+  if ($callback) {
+    return $callback();
+  }
+}
+
+/**
+ * Helper to include the blocks include and to create the proper callback.
+ *
+ * @param string $delta
+ *   The delta of the block.
+ * @param string $type
+ *   The block hook name (configure, save, view).
+ *
+ * @return FALSE|string
+ *   The callback name will only be returned if it exists.
+ */
+function _drupalcamp_general_block_callback($delta, $type) {
+  module_load_include(
+    'inc',
+    'drupalcamp_general',
+    'drupalcamp_general.blocks'
+  );
+
+  $callback = '_drupalcamp_general_' . $delta . '_' . $type;
+  if (!function_exists($callback)) {
+    return FALSE;
+  }
+
+  return $callback;
+}
+
 /* ************************************ *
  * ********* ACCESS CALLBACKS ********* *
  * ************************************ */

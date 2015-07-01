@@ -7,6 +7,9 @@
  * Implements hook_update_N().
  */
 function drupalcamp_general_update_7001() {
+  // Remove default footer block. A custom one will be added via context.
+  _drupalcamp_general_update_footer_text();
+
   // Install default tracks.
   _drupalcamp_general_session_tracks_install();
 
@@ -171,4 +174,29 @@ function _drupalcamp_general_sponsorship_levels_get() {
       'description' => 'Supportive partner of the conference.',
     ),
   );
+}
+
+/**
+ * Remove default footer block. A custom one will be added via context.
+ */
+function _drupalcamp_general_remove_footer_block() {
+  $block_custom = db_select('block_custom', 'bc')
+    ->fields('bc')
+    ->condition(
+      'body', '%' . db_like('Conference Organizing Distribution') . '%', 'LIKE'
+    )
+    ->execute()
+    ->fetchObject();
+
+  if (empty($block_custom)) {
+    return;
+  }
+
+  db_delete('block')
+    ->condition('delta', $block_custom->bid)
+    ->execute();
+
+  db_delete('block_custom')
+    ->condition('bid', $block_custom->bid)
+    ->execute();
 }
