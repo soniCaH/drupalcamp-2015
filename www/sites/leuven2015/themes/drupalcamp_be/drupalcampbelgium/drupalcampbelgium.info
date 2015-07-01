@@ -1,5 +1,5 @@
 name = DrupalCamp Belgium
-description = Custom sub-theme based on the the Zurb Foundation base theme.
+description = Zurb Foundation 5.x subtheme altered for the DrupalCamps in Belgium.
 screenshot = images/screenshot.png
 
 core = 7.x
@@ -99,7 +99,7 @@ plugins[panels][layouts] = layouts
 ; Top Bar.
 settings[zurb_foundation_top_bar_enable] = 1
 settings[zurb_foundation_top_bar_grid] = 0
-settings[zurb_foundation_top_bar_sticky] = 0
+settings[zurb_foundation_top_bar_sticky] = 1
 settings[zurb_foundation_top_bar_menu_text] = 'Menu'
 settings[zurb_foundation_top_bar_custom_back_text] = 1
 settings[zurb_foundation_top_bar_back_text] = 'Back'
