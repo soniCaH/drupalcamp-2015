@@ -9,7 +9,6 @@ branches:
 
 before_install:
   - date
-  - sudo apt-get update > /dev/null
   - composer self-update
   - export PATH="$HOME/.composer/vendor/bin:$PATH"
 
