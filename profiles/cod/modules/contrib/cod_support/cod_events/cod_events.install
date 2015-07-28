@@ -516,19 +516,3 @@ function cod_events_update_7019() {
   }
   drupal_set_message("URL aliases have been updated to use the path of the conference instead of a title. Update your content accordingly.");
 }
-
-/**
- * Update add og fields to the conference, now required by og_node_access strict
- */
-function cod_events_update_7020() {
-  $revert = array(
-    'cod_events' => array('field_instance', 'variable', 'views_view'),
-  );
-  features_revert($revert);
-
-  return array();
-}
-
-function cod_events_update_7021() {
-  module_enable(array('og_theme'));
-}

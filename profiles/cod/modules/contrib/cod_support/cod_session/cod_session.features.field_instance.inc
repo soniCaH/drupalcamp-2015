@@ -102,7 +102,7 @@ function cod_session_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 1,
+      'weight' => -4,
     ),
   );
 
@@ -155,17 +155,16 @@ function cod_session_field_default_field_instances() {
       'description_field' => 1,
       'file_directory' => '',
       'file_extensions' => 'jpg jpeg gif png txt doc xls pdf ppt pps odt ods odp',
-      'max_filesize' => '',
+      'max_filesize' => '1 MB',
       'user_register_form' => FALSE,
     ),
     'widget' => array(
-      'active' => 1,
       'module' => 'file',
       'settings' => array(
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 2,
+      'weight' => 1,
     ),
   );
 
@@ -223,7 +222,7 @@ function cod_session_field_default_field_instances() {
   // Exported field_instance: 'node-schedule_item-field_accepted'
   $field_instances['node-schedule_item-field_accepted'] = array(
     'bundle' => 'schedule_item',
-    'default_value' => 'proposed',
+    'default_value' => 'unprocessed',
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -262,150 +261,6 @@ function cod_session_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-schedule_item-field_experience'
-  $field_instances['node-schedule_item-field_experience'] = array(
-    'bundle' => 'schedule_item',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_experience',
-    'label' => 'Experience level',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_buttons',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-schedule_item-field_schedule_item_tags'
-  $field_instances['node-schedule_item-field_schedule_item_tags'] = array(
-    'bundle' => 'schedule_item',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Add tags to items that can be classified together (ie: trainings, keynotes, etc) to help organize separate lists',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 7,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_schedule_item_tags',
-    'label' => 'Tags',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'taxonomy',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'size' => 60,
-      ),
-      'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
-    ),
-  );
-
-  // Exported field_instance: 'node-schedule_item-field_speakers'
-  $field_instances['node-schedule_item-field_speakers'] = array(
-    'bundle' => 'schedule_item',
-    'default_value' => NULL,
-    'default_value_function' => '',
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 6,
-      ),
-      'listing' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_speakers',
-    'label' => 'Speaker(s)',
-    'required' => 0,
-    'settings' => array(
-      'behaviors' => array(
-        'prepopulate' => array(
-          'status' => 0,
-        ),
-      ),
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'node-schedule_item-og_group_ref'
   $field_instances['node-schedule_item-og_group_ref'] = array(
     'bundle' => 'schedule_item',
@@ -418,7 +273,7 @@ function cod_session_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 4,
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -436,7 +291,7 @@ function cod_session_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'og_group_ref',
     'label' => 'Conference',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'behaviors' => array(
         'og_widget' => array(
@@ -450,11 +305,11 @@ function cod_session_field_default_field_instances() {
           'status' => TRUE,
         ),
         'prepopulate' => array(
-          'action' => 'hide',
-          'action_on_edit' => 1,
+          'action' => 'none',
+          'action_on_edit' => 0,
           'fallback' => 'none',
           'providers' => array(
-            'og_context' => 1,
+            'og_context' => 0,
             'url' => 1,
           ),
           'skip_perm' => 0,
@@ -480,7 +335,7 @@ function cod_session_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 6,
+      'weight' => 31,
     ),
   );
 
@@ -517,7 +372,7 @@ function cod_session_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'body',
     'label' => 'Description',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'display_summary' => 1,
       'text_processing' => 1,
@@ -531,7 +386,7 @@ function cod_session_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'widget_type' => 'text_textarea_with_summary',
   );
@@ -541,7 +396,7 @@ function cod_session_field_default_field_instances() {
     'bundle' => 'session',
     'default_value' => array(
       0 => array(
-        'value' => 'proposed',
+        'value' => 'unprocessed',
       ),
     ),
     'default_value_function' => '',
@@ -614,7 +469,7 @@ function cod_session_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_experience',
     'label' => 'Experience level',
-    'required' => 1,
+    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -623,7 +478,7 @@ function cod_session_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 36,
+      'weight' => 7,
     ),
   );
 
@@ -675,7 +530,7 @@ function cod_session_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 9,
+      'weight' => 12,
     ),
   );
 
@@ -723,7 +578,7 @@ function cod_session_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -826,14 +681,14 @@ function cod_session_field_default_field_instances() {
           'status' => TRUE,
         ),
         'prepopulate' => array(
-          'action' => 'hide',
-          'action_on_edit' => 1,
-          'fallback' => 'form_error',
+          'action' => 'none',
+          'action_on_edit' => 0,
+          'fallback' => 'none',
           'providers' => array(
-            'og_context' => 1,
+            'og_context' => 0,
             'url' => 1,
           ),
-          'skip_perm' => 'administer nodes',
+          'skip_perm' => 0,
           'status' => 1,
         ),
       ),
@@ -853,10 +708,10 @@ function cod_session_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'options',
+      'module' => 'og',
       'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 4,
+      'type' => 'og_complex',
+      'weight' => 5,
     ),
   );
 
@@ -870,11 +725,11 @@ function cod_session_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'entityreference',
+        'module' => 'og_vocab',
         'settings' => array(
-          'link' => FALSE,
+          'concatenate' => FALSE,
         ),
-        'type' => 'entityreference_label',
+        'type' => 'og_vocab',
         'weight' => 6,
       ),
       'listing' => array(
@@ -910,27 +765,24 @@ function cod_session_field_default_field_instances() {
       'module' => 'og_vocab',
       'settings' => array(),
       'type' => 'og_vocab_complex',
-      'weight' => 37,
+      'weight' => 8,
     ),
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Add tags to items that can be classified together (ie: trainings, keynotes, etc) to help organize separate lists');
   t('An image to be used for highlighted sessions in the front page rotator.');
   t('Body');
-  t('Conference');
   t('Default Session View');
   t('Description');
+  t('Conference');
   t('Experience level');
   t('File attachments');
   t('Image');
   t('Session Track');
   t('Slides');
   t('Speaker(s)');
-  t('Sponsor(s)');
   t('Status');
-  t('Tags');
   t('Type the username of the speaker, and to add more speakers click "Add another speaker"');
   t('Upload your slides here as a PDF, or link to them from the description. (This is typically done after your session.)');
 

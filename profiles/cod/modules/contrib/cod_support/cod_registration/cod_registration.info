@@ -30,11 +30,15 @@ features[ticket_state][] = cancelled
 features[ticket_state][] = checked_in
 features[ticket_state][] = completed
 features[ticket_state][] = pending
+features[user_permission][] = administer ticket
+features[user_permission][] = administer ticket states
+features[user_permission][] = edit all ticket registrations
+features[user_permission][] = view all ticket registrations
 install_option = cod
 
-; Information added by Drupal.org packaging script on 2015-06-30
-version = "7.x-1.0-beta9+35-dev"
+; Information added by Drupal.org packaging script on 2015-07-06
+version = "7.x-1.0-beta10"
 core = "7.x"
 project = "cod_support"
-datestamp = "1435705684"
+datestamp = "1436225347"
 

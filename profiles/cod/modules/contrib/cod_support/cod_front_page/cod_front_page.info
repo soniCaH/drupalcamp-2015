@@ -3,23 +3,15 @@ description = Displays promoted content, sessions, and news on front page.
 core = 7.x
 package = COD Pages
 project = cod_front_page
-dependencies[] = cod_events
 dependencies[] = cod_news
 dependencies[] = cod_session
 dependencies[] = ctools
-dependencies[] = views
-dependencies[] = views_content
-features[ctools][] = page_manager:pages_default:1
-features[ctools][] = views:views_default:3.0
+features[ctools][] = context:context:3
 features[features_api][] = api:2
-features[page_manager_pages][] = cod_front_page
-features[views_view][] = cod_front_page_conferences
-features_exclude[dependencies][page_manager] = page_manager
-install_option = cod
 
-; Information added by Drupal.org packaging script on 2015-06-30
-version = "7.x-1.0-beta9+35-dev"
+; Information added by Drupal.org packaging script on 2015-07-06
+version = "7.x-1.0-beta10"
 core = "7.x"
 project = "cod_support"
-datestamp = "1435705684"
+datestamp = "1436225347"
 

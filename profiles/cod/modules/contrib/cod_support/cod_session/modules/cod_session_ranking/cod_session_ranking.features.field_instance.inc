@@ -61,7 +61,7 @@ function cod_session_ranking_field_default_field_instances() {
       'module' => 'fivestar',
       'settings' => array(),
       'type' => 'exposed',
-      'weight' => 10,
+      'weight' => 34,
     ),
   );
 

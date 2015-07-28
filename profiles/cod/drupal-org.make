@@ -78,10 +78,10 @@ projects[ckeditor][patch][] = "http://drupal.org/files/issues/ckeditor-accomodat
 
 projects[cod_support][type] = "module"
 projects[cod_support][subdir] = "contrib"
-projects[cod_support][version] = "1.0-beta9"
-projects[cod_support][download][type] = "git"
-projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
-projects[cod_support][download][branch] = "7.x-1.x"
+projects[cod_support][version] = "1.0-beta10"
+;projects[cod_support][download][type] = "git"
+;projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
+;projects[cod_support][download][branch] = "7.x-1.x"
 
 projects[commerce][type] = "module"
 projects[commerce][version] = "1.11"
@@ -157,11 +157,11 @@ projects[date][patch][] = "http://drupal.org/files/issues/date-views-filter-time
 
 projects[date_ical][type] = "module"
 projects[date_ical][subdir] = "contrib"
-projects[date_ical][version] = "3.3"
+projects[date_ical][version] = "3.4"
 
 ; Remove icalcreator library from the date_ical module
 ; https://drupal.org/node/2209165
-projects[date_ical][patch][] = "http://drupal.org/files/issues/date_ical_remove_makefile.patch"
+projects[date_ical][patch][] = "http://drupal.org/files/issues/date_ical_remove_makefile-3.patch"
 
 ; Keeping this to the latest version, since it should only be used for development.
 projects[devel][version] = "1.5"
@@ -219,7 +219,7 @@ projects[entityreference_prepopulate][patch][] = "http://drupal.org/files/issues
 
 projects[features][type] = "module"
 projects[features][subdir] = "contrib"
-projects[features][version] = "2.5"
+projects[features][version] = "2.6"
 
 projects[fivestar][type] = "module"
 projects[fivestar][subdir] = "contrib"
@@ -299,7 +299,7 @@ projects[mollom][subdir] = "contrib"
 projects[mollom][version] = "2.14"
 
 projects[multiple_entity_form][type] = "module"
-projects[multiple_entity_form][version] = "1.2"
+projects[multiple_entity_form][version] = "1.3"
 projects[multiple_entity_form][subdir] = "contrib"
 
 projects[oauth][type] = "module"
@@ -414,11 +414,15 @@ projects[realname][version] = "1.2"
 
 projects[redirect][type] = "module"
 projects[redirect][subdir] = "contrib"
-projects[redirect][version] = "1.0-rc1"
+projects[redirect][version] = "1.0-rc2"
 
 projects[rules][type] = "module"
 projects[rules][subdir] = "contrib"
 projects[rules][version] = "2.9"
+
+projects[safeword][type] = "module"
+projects[safeword][subdir] = "contrib"
+projects[safeword][version] = "1.13"
 
 projects[smtp][type] = "module"
 projects[smtp][subdir] = "contrib"
@@ -444,15 +448,13 @@ projects[taxonomy_machine_name][version] = "1.0"
 projects[taxonomy_machine_name][patch][2496141] = "http://drupal.org/files/issues/taxonomy_validator-2496141-1.patch"
 
 ; For COD releases, we peg it to a release of ticket. For dev, we use the dev branch.
-; Currently using the ticket_reservation branch for COD.
 projects[ticket][type] = "module"
 projects[ticket][subdir] = "contrib"
 projects[ticket][version] = "1.0-beta4"
 projects[ticket][download][type] = "git"
 projects[ticket][download][url] = "http://git.drupal.org/project/ticket.git"
-;projects[ticket][download][branch] = "7.x-1.x"
-projects[ticket][download][branch] = "ticket_reservation"
-;projects[ticket][download][revision] = "d834077dced70360866f5d98c29cb5b8dceace20"
+projects[ticket][download][branch] = "7.x-1.x"
+;projects[ticket][download][revision] = "1b530acb2d31f2536ef777c98c28fb7fbc8a73b7"
 
 projects[title][type] = "module"
 projects[title][version] = "1.0-alpha7"
@@ -501,7 +503,7 @@ projects[views_autorefresh][subdir] = "contrib"
 
 projects[views_block_filter_block][type] = "module"
 projects[views_block_filter_block][subdir] = "contrib"
-projects[views_block_filter_block][version] = "1.0-beta1"
+projects[views_block_filter_block][version] = "1.0-beta2"
 
 projects[views_datasource][type] = "module"
 projects[views_datasource][subdir] = "contrib"
@@ -524,7 +526,7 @@ projects[views_data_export][version] = "3.0-beta8"
 projects[views_data_export][subdir] = "contrib"
 
 projects[views_bulk_operations][type] = "module"
-projects[views_bulk_operations][version] = "3.2"
+projects[views_bulk_operations][version] = "3.3"
 projects[views_bulk_operations][subdir] = "contrib"
 
 projects[votingapi][type] = "module"
