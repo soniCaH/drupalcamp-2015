@@ -1,0 +1,34 @@
+sudo: false
+
+language: php
+
+branches:
+  only:
+    - master
+    - develop
+
+before_install:
+  - date
+  - sudo apt-get update > /dev/null
+  - composer self-update
+  - export PATH="$HOME/.composer/vendor/bin:$PATH"
+
+
+install:
+  - date
+
+  # Install Coder for code standard reviews.
+  - $TRAVIS_BUILD_DIR/build/travis/bin/install_coder.sh
+
+before_script:
+  - date
+
+script:
+  - date
+
+  # Run Code Style validation.
+  - $TRAVIS_BUILD_DIR/build/travis/bin/run_coder.sh
+
+
+after_script:
+  - date
