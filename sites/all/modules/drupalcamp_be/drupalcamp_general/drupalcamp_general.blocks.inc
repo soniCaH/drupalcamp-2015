@@ -94,7 +94,7 @@ function _drupalcamp_general_footer_text_configure() {
  * @param array $edit
  *   The data as received from the block config form.
  */
-function _drupalcamp_general_footer_text_save($edit) {
+function _drupalcamp_general_footer_text_save(array $edit) {
   variable_set(
     'drupalcamp_general_footer_text_facebook',
     $edit['drupalcamp_general_footer_text_facebook']
@@ -154,8 +154,8 @@ function _drupalcamp_general_footer_text_view() {
               'https://plus.google.com/u/0/+DrupalcampBe/posts'
             ),
           )
-        )
-      )
+        ),
+      ),
     )
   );
 
@@ -177,8 +177,8 @@ function _drupalcamp_general_footer_text_view() {
               )
             ),
           )
-        )
-      )
+        ),
+      ),
     )
   );
 
@@ -202,8 +202,8 @@ function _drupalcamp_general_footer_text_view() {
             'Designed by @designer', array('@designer' => $designer)
           ) : '') . '<br />' . t(
             '<a href="http://drupal.org/" target="_blank">Drupal</a> is a <a href="http://drupal.com/trademark" target="_blank">registered trademark</a> of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.'
-          )
-      )
+          ),
+      ),
     )
   );
 

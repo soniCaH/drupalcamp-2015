@@ -1,3 +1,10 @@
+<?php
+/**
+ * @file
+ * Page template (HTML structure).
+ */
+?>
+
 <!--.page -->
 <div role="document" class="page">
 

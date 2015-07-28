@@ -56,16 +56,17 @@ function _drupalcamp_general_session_tracks_install() {
 /**
  * Return 6 default track names with associated color code.
  *
+ * Will create some defaults:
  * - Business and Strategy
  * - Code and Development
  * - Community
  * - DevOps
  * - Frontend & Design
  * - Sitebuilding
- * Options created.
+ * in the track taxonomy.
  *
  * @return array
- *  Array with all default tracks.
+ *   Array with all default tracks.
  */
 function _drupalcamp_general_session_tracks_get() {
   return array(
@@ -139,12 +140,13 @@ function _drupalcamp_general_sponsorship_levels_install() {
 /**
  * Return default sponsorship levels.
  *
+ * Will create some defaults:
  * - Platinum
  * - Gold
  * - Silver
  * - Bronze
  * - Partner
- * Options created.
+ * in the sponsor category taxonomy.
  *
  * @return array
  *   Array with all default levels.

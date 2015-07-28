@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Template functionality for the theme layer.
+ */
 
 /**
  * Implements template_preprocess_html().

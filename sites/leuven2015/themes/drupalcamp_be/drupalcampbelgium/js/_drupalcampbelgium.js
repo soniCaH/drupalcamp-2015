@@ -1,1 +1,4 @@
-/* Implement custom javascript here */
+/**
+ * @file
+ * Implement custom javascript here.
+ */

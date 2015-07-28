@@ -1,6 +1,7 @@
 <?php
 /**
- * @file Installation and update hooks.
+ * @file
+ * Installation and update hooks.
  */
 
 define('CAMP_DAY_ONE', '2015-11-14');
@@ -8,7 +9,7 @@ define('CAMP_DAY_TWO', '2015-11-15');
 define('CAMP_NID', 1);
 
 /**
- * Implements hook_install.
+ * Implements hook_install().
  */
 function drupalcamp_sessions_install() {
   // Install default timeslots for 2015 camp.
@@ -58,7 +59,7 @@ function _drupalcamp_sessions_timeslots_install() {
  * Return a set of default timeslots.
  *
  * @return array
- *  Array with all default timeslots.
+ *   Array with all default timeslots.
  */
 function _drupalcamp_sessions_timeslots_get() {
   return array(
@@ -188,7 +189,7 @@ function _drupalcamp_sessions_rooms_install() {
  * Return a set of default rooms.
  *
  * @return array
- *  Array with all default rooms.
+ *   Array with all default rooms.
  */
 function _drupalcamp_sessions_rooms_get() {
   return array(
