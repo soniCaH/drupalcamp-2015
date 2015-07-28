@@ -41,7 +41,7 @@ code_review () {
 PATTERNS="*.features.inc,*.features.*.inc,*.field_group.inc,*.strongarm.inc,*.ds.inc,*.context.inc,*.pages.inc,*.pages_default.inc,*.views_default.inc,*.file_default_displays.inc,*.facetapi_defaults.inc,dist,node_modules,bower_components,ckeditor-plugins"
 
 echo
-echo "${LBLUE}> Sniffing capacity4more Modules${RESTORE}"
+echo "${LBLUE}> Sniffing drupalcamp Modules${RESTORE}"
 echo
 for dir in $TRAVIS_BUILD_DIR/sites/*/modules/drupalcamp_be/*/ ; do
   code_review $dir $PATTERNS
@@ -53,7 +53,7 @@ echo
 PATTERNS=".sass-cache,css,fonts,images,modernizr.js,bootstrap,node_modules,*.min.js,*.concat.js"
 
 echo
-echo "${LBLUE}> Sniffing capacity4more Themes${RESTORE}"
+echo "${LBLUE}> Sniffing drupalcamp Themes${RESTORE}"
 echo
 for dir in $TRAVIS_BUILD_DIR/sites/*/themes/drupalcamp_be/*/ ; do
   code_review $dir $PATTERNS
