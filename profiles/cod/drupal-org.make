@@ -78,10 +78,10 @@ projects[ckeditor][patch][] = "http://drupal.org/files/issues/ckeditor-accomodat
 
 projects[cod_support][type] = "module"
 projects[cod_support][subdir] = "contrib"
-projects[cod_support][version] = "1.0-beta10"
-;projects[cod_support][download][type] = "git"
-;projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
-;projects[cod_support][download][branch] = "7.x-1.x"
+projects[cod_support][version] = "2.0-alpha1"
+projects[cod_support][download][type] = "git"
+projects[cod_support][download][url] = "http://git.drupal.org/project/cod_support.git"
+projects[cod_support][download][branch] = "7.x-2.x"
 
 projects[commerce][type] = "module"
 projects[commerce][version] = "1.11"
