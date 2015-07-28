@@ -8,7 +8,7 @@
  */
 function drupalcamp_general_update_7001() {
   // Remove default footer block. A custom one will be added via context.
-  _drupalcamp_general_update_footer_text();
+  _drupalcamp_general_remove_footer_block();
 
   // Install default tracks.
   _drupalcamp_general_session_tracks_install();
