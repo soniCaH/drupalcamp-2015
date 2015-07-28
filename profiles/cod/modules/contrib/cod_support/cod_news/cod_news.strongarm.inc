@@ -106,7 +106,6 @@ function cod_news_strongarm() {
     0 => 'status',
     1 => 'promote',
     2 => 'revision',
-    3 => 'panelizer',
   );
   $export['node_options_news'] = $strongarm;
 
@@ -121,7 +120,7 @@ function cod_news_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_news';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_submitted_news'] = $strongarm;
 
   $strongarm = new stdClass();

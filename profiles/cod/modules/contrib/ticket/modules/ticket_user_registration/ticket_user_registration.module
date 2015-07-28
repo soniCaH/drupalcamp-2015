@@ -70,6 +70,7 @@ function ticket_user_registration_form_ticket_register_form_alter(&$form, &$form
       $parent_entity = $form[$field_name]['#entity']->ticket_type();
       $user_registration_added = TRUE;
 
+      $form[$field_name]['#description'] = t('Enter ticket specific details below.');
       $form[$field_name]['ticket_user_registration_email:' . $matches[1][0]] = array(
         '#type' => 'textfield',
         '#title' => t('Registered e-mail address'),
@@ -83,14 +84,14 @@ function ticket_user_registration_form_ticket_register_form_alter(&$form, &$form
       $first_registration = FALSE;
     }
   }
-  $return_url = $parent_entity->entity_type . '/' . $parent_entity->entity_id . '/registration';
+  $return_url = $parent_entity->entity_type . '/' . $parent_entity->entity_id;
   $form['ticket_registrant'] = array(
     '#type' => 'fieldset',
     '#title' => 'Ticket Registrant',
-    '#description' => $form['#user_category'] == 'account' ? t('Hello %email. Not you? !signout.', array('%email' => $form['#user']->mail, '!signout' => l(t('Start over'), 'user/logout', array('query' => array('destination' => $return_url))))) : t('Have an account already? !signin', array('!signin' => l(t('Sign-in'), 'user/login', array('query' => array('destination' => $return_url))))),
+    '#description' => $form['#user_category'] == 'account' ? t('"Hello %email. Not you? !signout', array('%email' => $form['#user']->mail, '!signout' => l(t('Start over'), 'user/logout', array('query' => array('destination' => $return_url))))) : t('Have an account already? !signin', array('!signin' => l(t('Sign-in'), 'user/login', array('query' => array('destination' => $return_url))))),
     '#weight' => -1000,
   );
-  $form['ticket_registrant']['ticket_user_registration_email'] = array(
+  $form['ticket_registrant']['ticket_user_registrant_email'] = array(
     '#type' => 'textfield',
     '#title' => t('Registrant e-mail address'),
     '#description' => t('Enter the e-mail address of the person who manages this order. The e-mail address will be used to create an account if one does not exist already.'),
@@ -159,7 +160,7 @@ function ticket_user_registration_form_submit(&$form, &$form_state) {
 
   // Potentially create a new user for the registrant of the tickets.
   if (isset($form['ticket_registrant'])) {
-    $email = $form_state['values']['ticket_registrant']['ticket_user_registration_email'];
+    $email = $form_state['values']['ticket_registrant']['ticket_user_registrant_email'];
     if (!$account = user_load_by_mail($email)) {
       if (variable_get('ticket_user_registration_create', TRUE)) {
         $account = _ticket_user_registration_create_user($email, $form, $form_state, 'ticket_registrant');

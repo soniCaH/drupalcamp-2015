@@ -87,6 +87,16 @@ function cod_sponsors_commerce_field_default_field_instances() {
     'required' => 0,
     'settings' => array(
       'behaviors' => array(
+        'og_widget' => array(
+          'access_override' => 0,
+          'admin' => array(
+            'widget_type' => 'entityreference_autocomplete',
+          ),
+          'default' => array(
+            'widget_type' => 'options_select',
+          ),
+          'status' => TRUE,
+        ),
         'prepopulate' => array(
           'action' => 'none',
           'action_on_edit' => 0,
@@ -103,9 +113,9 @@ function cod_sponsors_commerce_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'options',
+      'module' => 'og',
       'settings' => array(),
-      'type' => 'options_select',
+      'type' => 'og_complex',
       'weight' => 39,
     ),
   );

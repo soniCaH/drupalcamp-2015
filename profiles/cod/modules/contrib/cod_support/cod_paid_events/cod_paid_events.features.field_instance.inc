@@ -102,9 +102,9 @@ function cod_paid_events_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'settings' => array(),
+        'weight' => 9,
       ),
     ),
     'entity_type' => 'ticket_type',
@@ -134,7 +134,7 @@ function cod_paid_events_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'ticket_type',

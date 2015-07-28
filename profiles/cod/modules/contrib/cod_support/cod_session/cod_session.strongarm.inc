@@ -98,7 +98,7 @@ function cod_session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'comment_page';
-  $strongarm->value = '0';
+  $strongarm->value = 0;
   $export['comment_page'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -194,13 +194,10 @@ function cod_session_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'title' => array(
-          'weight' => '0',
+          'weight' => '-5',
         ),
         'path' => array(
-          'weight' => '4',
-        ),
-        'redirect' => array(
-          'weight' => '5',
+          'weight' => '30',
         ),
       ),
       'display' => array(),
@@ -248,13 +245,13 @@ function cod_session_strongarm() {
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '8',
+          'weight' => '10',
         ),
         'mollom' => array(
           'weight' => '11',
         ),
         'redirect' => array(
-          'weight' => '7',
+          'weight' => '9',
         ),
       ),
       'display' => array(),
@@ -267,9 +264,7 @@ function cod_session_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'menu_options_page';
   $strongarm->value = array(
-    0 => 'menu-losangeles2015-footer',
-    1 => 'menu-losangeles2015',
-    2 => 'main-menu',
+    0 => 'main-menu',
   );
   $export['menu_options_page'] = $strongarm;
 
@@ -318,8 +313,6 @@ function cod_session_strongarm() {
   $strongarm->name = 'node_options_page';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'revision',
-    2 => 'panelizer',
   );
   $export['node_options_page'] = $strongarm;
 
@@ -328,7 +321,8 @@ function cod_session_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_schedule_item';
   $strongarm->value = array(
-    0 => 'panelizer',
+    0 => 'status',
+    1 => 'promote',
   );
   $export['node_options_schedule_item'] = $strongarm;
 
@@ -336,11 +330,7 @@ function cod_session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_options_session';
-  $strongarm->value = array(
-    0 => 'status',
-    1 => 'revision',
-    2 => 'panelizer',
-  );
+  $strongarm->value = array();
   $export['node_options_session'] = $strongarm;
 
   $strongarm = new stdClass();
@@ -368,28 +358,28 @@ function cod_session_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_page';
-  $strongarm->value = 0;
+  $strongarm->value = FALSE;
   $export['node_submitted_page'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_schedule_item';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_submitted_schedule_item'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_session';
-  $strongarm->value = 0;
+  $strongarm->value = 1;
   $export['node_submitted_session'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'pathauto_node_schedule_item_pattern';
-  $strongarm->value = '[node:og-group-ref:0:url:path]/[node:title]';
+  $strongarm->value = '[node:og-group-ref:0:url:path]/schedule/[node:title]';
   $export['pathauto_node_schedule_item_pattern'] = $strongarm;
 
   $strongarm = new stdClass();

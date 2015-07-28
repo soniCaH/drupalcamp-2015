@@ -44,8 +44,7 @@ function cod_event_room_form($form, &$form_state, CodEventRoom $cod_event_room, 
   }
 
   if (isset($node) && is_object($node)) {
-    // Check for both the og_widget and select or hidden widgets to set default value.
-    isset($form['og_group_ref'][LANGUAGE_NONE][0]['default']) ? $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $node->nid : $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $node->nid;
+    $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $node->nid;
     $form['og_group_ref']['#access'] = FALSE;
   }
 
@@ -145,8 +144,7 @@ function cod_event_time_form($form, &$form_state, CodEventTime $cod_event_time, 
   }
 
   if (isset($node) && is_object($node)) {
-    // Check for both the og_widget and select or hidden widgets to set default value.
-    isset($form['og_group_ref'][LANGUAGE_NONE][0]['default']) ? $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $node->nid : $form['og_group_ref'][LANGUAGE_NONE]['#default_value'] = $node->nid;
+    $form['og_group_ref'][LANGUAGE_NONE][0]['default']['#default_value'] = $node->nid;
     $form['og_group_ref']['#access'] = FALSE;
   }
 

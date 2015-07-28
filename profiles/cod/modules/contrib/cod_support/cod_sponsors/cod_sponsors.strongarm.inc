@@ -73,9 +73,6 @@ function cod_sponsors_strongarm() {
         'path' => array(
           'weight' => '5',
         ),
-        'redirect' => array(
-          'weight' => '30',
-        ),
       ),
       'display' => array(),
     ),
@@ -118,8 +115,6 @@ function cod_sponsors_strongarm() {
   $strongarm->name = 'node_options_sponsor';
   $strongarm->value = array(
     0 => 'status',
-    1 => 'revision',
-    2 => 'panelizer',
   );
   $export['node_options_sponsor'] = $strongarm;
 
