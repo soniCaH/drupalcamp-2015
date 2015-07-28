@@ -3,4 +3,4 @@
  * Implement custom javascript here.
  */
 
-// Custom JS.
+$(document).foundation();
