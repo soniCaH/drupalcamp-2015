@@ -1,6 +1,7 @@
 <?php
 /**
- * @file Installation and update hooks.
+ * @file
+ * Installation and update hooks.
  */
 
 /**
@@ -55,12 +56,13 @@ function _drupalcamp_general_session_tracks_install() {
 /**
  * Return 6 default track names with associated color code.
  *
- * Business and Strategy
- * Code and Development
- * Community
- * DevOps
- * Frontend & Design
- * Sitebuilding
+ * - Business and Strategy
+ * - Code and Development
+ * - Community
+ * - DevOps
+ * - Frontend & Design
+ * - Sitebuilding
+ * Options created.
  *
  * @return array
  *  Array with all default tracks.
@@ -70,32 +72,32 @@ function _drupalcamp_general_session_tracks_get() {
     array(
       'name'        => 'Business and Strategy',
       'description' => '',
-      'color'       => '#CF1940'
+      'color'       => '#CF1940',
     ),
     array(
       'name'        => 'Code and Development',
       'description' => '',
-      'color'       => '#30b101'
+      'color'       => '#30b101',
     ),
     array(
       'name'        => 'Community',
       'description' => '',
-      'color'       => '#0491C6'
+      'color'       => '#0491C6',
     ),
     array(
       'name'        => 'DevOps',
       'description' => '',
-      'color'       => '#C66904'
+      'color'       => '#C66904',
     ),
     array(
       'name'        => 'Frontend & Design',
       'description' => '',
-      'color'       => '#06D39B'
+      'color'       => '#06D39B',
     ),
     array(
       'name'        => 'Sitebuilding',
       'description' => '',
-      'color'       => '#283360'
+      'color'       => '#283360',
     ),
   );
 }
@@ -137,14 +139,15 @@ function _drupalcamp_general_sponsorship_levels_install() {
 /**
  * Return default sponsorship levels.
  *
- * Platinum
- * Gold
- * Silver
- * Bronze
- * Partner
+ * - Platinum
+ * - Gold
+ * - Silver
+ * - Bronze
+ * - Partner
+ * Options created.
  *
  * @return array
- *  Array with all default levels.
+ *   Array with all default levels.
  */
 function _drupalcamp_general_sponsorship_levels_get() {
   return array(

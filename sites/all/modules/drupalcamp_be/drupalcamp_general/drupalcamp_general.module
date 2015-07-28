@@ -1,6 +1,7 @@
 <?php
 /**
- * @file General drupalcamp functionality.
+ * @file
+ * General drupalcamp functionality.
  */
 
 /* ************************************ *
@@ -41,13 +42,6 @@ function drupalcamp_general_module_implements_alter(&$implementations, $hook) {
 
 /**
  * Implements hook_form_alter().
- *
- * @param array $form
- *   Form structure.
- * @param array $form_state
- *   Form state array.
- * @param String $form_id
- *   String identifier of the form.
  */
 function drupalcamp_general_form_alter(&$form, &$form_state, $form_id) {
   switch ($form_id) {
@@ -140,7 +134,8 @@ function _drupalcamp_general_block_callback($delta, $type) {
 /**
  * Custom access callback to hide user/sessions tab if user has no sessions.
  *
- * @return boolean
+ * @return bool
+ *   TRUE if the user has sessions (and thus access).
  */
 function _drupalcamp_general_user_sessions_access() {
   $uid = arg(1);
