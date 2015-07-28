@@ -1,8 +1,13 @@
+/**
+ * @file
+ * Grunt configuration to compile the theme.
+ */
+
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
   var theme_name = 'drupalcampbelgium';
-  var base_theme_path = '../zurb_foundation';
+  var base_theme_path = '../../custom/zurb_foundation';
 
   var global_vars = {
     theme_name: theme_name,
@@ -13,13 +18,13 @@ module.exports = function(grunt) {
 
   var bourbon = require('node-bourbon').includePaths;
 
-  // array of javascript libraries to include.
+  // Array of javascript libraries to include.
   var jsLibs = [
     '<%= global_vars.base_theme_path %>/js/vendor/placeholder.js',
     '<%= global_vars.base_theme_path %>/js/vendor/fastclick.js'
   ];
 
-  // array of foundation javascript components to include.
+  // Array of foundation javascript components to include.
   var jsFoundation = [
     '<%= global_vars.base_theme_path %>/js/foundation/foundation.js',
     '<%= global_vars.base_theme_path %>/js/foundation/foundation.abide.js',
@@ -40,7 +45,7 @@ module.exports = function(grunt) {
     '<%= global_vars.base_theme_path %>/js/foundation/foundation.topbar.js'
   ];
 
-  // array of custom javascript files to include.
+  // Array of custom javascript files to include.
   var jsApp = [
     'js/_*.js'
   ];
@@ -80,7 +85,7 @@ module.exports = function(grunt) {
           'js/libs.min.js': [jsLibs],
           'js/foundation.min.js': [jsFoundation],
           'js/app.min.js': [jsApp]
-      }
+        }
       }
     },
 

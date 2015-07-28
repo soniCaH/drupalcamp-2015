@@ -50,7 +50,7 @@ done
 echo
 
 # Review custom theme(s).
-PATTERNS=".sass-cache,css,fonts,images,modernizr.js,bootstrap,node_modules,*.min.js,*.concat.js"
+PATTERNS=".sass-cache,css,fonts,images,modernizr.js,bootstrap,node_modules,*.min.js,*.concat.js,*.info"
 
 echo
 echo "${LBLUE}> Sniffing drupalcamp Themes${RESTORE}"
