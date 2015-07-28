@@ -2,11 +2,6 @@ sudo: false
 
 language: php
 
-branches:
-  only:
-    - master
-    - develop
-
 env:
   - CODE_REVIEW=1
 
