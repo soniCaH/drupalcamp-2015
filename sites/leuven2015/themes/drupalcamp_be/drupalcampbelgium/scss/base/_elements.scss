@@ -12,13 +12,18 @@
 
 // Anchors
 //-----------------------------------------------------------------------------
-// a {}
+a {
+  color: $pink;
+}
 
-// a:focus {}
+//a:focus {}
 
-// a.active,
-// a:active,
-// a:hover {}
+a.active,
+a:active,
+a:hover {
+  color: $pink-alpha;
+  text-decoration: underline;
+}
 
 // Form Input
 //-----------------------------------------------------------------------------

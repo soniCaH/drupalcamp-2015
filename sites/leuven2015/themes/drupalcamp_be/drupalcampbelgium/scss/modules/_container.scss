@@ -1,12 +1,14 @@
 .contain-to-grid {
-  background: rgba(131, 174, 143, 0.75);
-  border-bottom: 1px solid rgb(131, 174, 143);
-  padding: 5px 0;
+  background: $green-alpha;
+  border-bottom: 1px solid $green;
 }
 
 .top-bar {
   background: none;
   ul li, li:not(.has-form) a:not(.button) {
     background: none;
+  }
+  li:not(.has-form) a:not(.button):hover {
+    background: $green;
   }
 }
