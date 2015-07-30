@@ -27,7 +27,7 @@
     console.log('text');
 
     var
-      tcon = {},// Static class.
+      tcon = {},
       _transformClass = 'tcon-transform',
 
       DEFAULT_EVENTS = {
