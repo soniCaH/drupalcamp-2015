@@ -12,10 +12,6 @@
   <header role="banner" class="l-header">
 
     <?php if ($top_bar): ?>
-      <!--.top-bar -->
-      <?php if ($top_bar_classes): ?>
-        <div class="<?php print $top_bar_classes; ?>">
-      <?php endif; ?>
       <div class="contain-to-grid">
         <nav class="top-bar" data-topbar role="navigation">
           <ul class="title-area">
@@ -41,62 +37,22 @@
           </section>
         </nav>
       </div>
-      <?php if ($top_bar_classes): ?>
-        </div>
-      <?php endif; ?>
+
       <!--/.top-bar -->
     <?php endif; ?>
 
-    <button type="button" class="tcon tcon-menu--xcross"
-            aria-label="toggle menu">
-      <span class="tcon-menu__lines" aria-hidden="true"></span>
-      <span class="tcon-visuallyhidden">toggle menu</span>
-    </button>
-
-    <!-- Title, slogan and menu -->
-    <?php if ($alt_header): ?>
-      <section class="row <?php print $alt_header_classes; ?>">
-
-        <?php if ($linked_logo): print $linked_logo; endif; ?>
-
-        <?php if ($site_name): ?>
-          <?php if ($title): ?>
-            <div id="site-name" class="element-invisible">
-              <strong>
-                <a href="<?php print $front_page; ?>"
-                   title="<?php print t('Home'); ?>"
-                   rel="home"><span><?php print $site_name; ?></span></a>
-              </strong>
+    <div class="l-header-inner">
+      <div class="l-branding site-branding">
+        <a href="/" title="Home" rel="home" class="site-branding__logo"><img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.png" alt="Home"></a>
+        <div class="l-region l-region--branding">
+          <div id="block-block-9" class="block block--block block--block-9">
+            <div class="block__content">
+              <p><a href="/barcelona2015/registration">Register Now</a></p>
             </div>
-          <?php else: /* Use h1 when the content title is empty */ ?>
-            <h1 id="site-name">
-              <a href="<?php print $front_page; ?>"
-                 title="<?php print t('Home'); ?>"
-                 rel="home"><span><?php print $site_name; ?></span></a>
-            </h1>
-          <?php endif; ?>
-        <?php endif; ?>
-
-        <?php if ($site_slogan): ?>
-          <h2 title="<?php print $site_slogan; ?>"
-              class="site-slogan"><?php print $site_slogan; ?></h2>
-        <?php endif; ?>
-
-        <?php if ($alt_main_menu): ?>
-          <nav id="main-menu" class="navigation" role="navigation">
-            <?php print ($alt_main_menu); ?>
-          </nav> <!-- /#main-menu -->
-        <?php endif; ?>
-
-        <?php if ($alt_secondary_menu): ?>
-          <nav id="secondary-menu" class="navigation" role="navigation">
-            <?php print $alt_secondary_menu; ?>
-          </nav> <!-- /#secondary-menu -->
-        <?php endif; ?>
-
-      </section>
-    <?php endif; ?>
-    <!-- End title, slogan and menu -->
+          </div>
+        </div>
+      </div>
+    </div>
 
     <?php if (!empty($page['header'])): ?>
       <!--.l-header-region -->
