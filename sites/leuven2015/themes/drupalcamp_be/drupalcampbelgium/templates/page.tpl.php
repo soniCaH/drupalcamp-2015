@@ -15,7 +15,7 @@
 
       <div class="l-branding site-branding">
         <?php if ($top_bar): ?>
-          <div class="row">
+          <div class="contain-to-grid">
             <nav class="top-bar" data-topbar role="navigation">
               <ul class="title-area">
                 <li class="name">
@@ -47,7 +47,7 @@
         <div class="l-region l-region--branding">
           <div id="block-block-9" class="block block--block block--block-9">
             <div class="block__content">
-              <p><a href="/barcelona2015/registration">Register Now</a></p>
+              <p><a href="/user/register">Register Now</a></p>
             </div>
           </div>
         </div>
