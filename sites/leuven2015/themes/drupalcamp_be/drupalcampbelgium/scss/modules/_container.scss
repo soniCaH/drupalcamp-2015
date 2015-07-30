@@ -1,0 +1,10 @@
+.contain-to-grid {
+  background: #83AE8F;
+}
+
+.top-bar {
+  background: none;
+  ul li, li:not(.has-form) a:not(.button) {
+    background: none;
+  }
+}

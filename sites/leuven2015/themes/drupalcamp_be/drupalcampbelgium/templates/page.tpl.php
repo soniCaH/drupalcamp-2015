@@ -11,38 +11,38 @@
   <!--.l-header -->
   <header role="banner" class="l-header">
 
-    <?php if ($top_bar): ?>
-      <div class="contain-to-grid">
-        <nav class="top-bar" data-topbar role="navigation">
-          <ul class="title-area">
-            <li class="name">
-            </li>
-            <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-            <li class="toggle-topbar">
-              <button type="button" class="tcon tcon-menu--xcross"
-                      aria-label="toggle menu">
-                <span class="tcon-menu__lines" aria-hidden="true"></span>
-                <span class="tcon-visuallyhidden">toggle menu</span>
-              </button>
-            </li>
-          </ul>
-
-          <section class="top-bar-section">
-            <?php if ($top_bar_main_menu) : ?>
-              <?php print $top_bar_main_menu; ?>
-            <?php endif; ?>
-            <?php if ($top_bar_secondary_menu) : ?>
-              <?php print $top_bar_secondary_menu; ?>
-            <?php endif; ?>
-          </section>
-        </nav>
-      </div>
-
-      <!--/.top-bar -->
-    <?php endif; ?>
-
     <div class="l-header-inner">
+
       <div class="l-branding site-branding">
+        <?php if ($top_bar): ?>
+          <div class="row">
+            <nav class="top-bar" data-topbar role="navigation">
+              <ul class="title-area">
+                <li class="name">
+                </li>
+                <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+                <li class="toggle-topbar">
+                  <button type="button" class="tcon tcon-menu--xcross"
+                          aria-label="toggle menu">
+                    <span class="tcon-menu__lines" aria-hidden="true"></span>
+                    <span class="tcon-visuallyhidden">toggle menu</span>
+                  </button>
+                </li>
+              </ul>
+
+              <section class="top-bar-section">
+                <?php if ($top_bar_main_menu) : ?>
+                  <?php print $top_bar_main_menu; ?>
+                <?php endif; ?>
+                <?php if ($top_bar_secondary_menu) : ?>
+                  <?php print $top_bar_secondary_menu; ?>
+                <?php endif; ?>
+              </section>
+            </nav>
+          </div>
+          <!--/.top-bar -->
+        <?php endif; ?>
+
         <a href="/" title="Home" rel="home" class="site-branding__logo"><img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.png" alt="Home"></a>
         <div class="l-region l-region--branding">
           <div id="block-block-9" class="block block--block block--block-9">
