@@ -167,7 +167,6 @@
 
     /**
      * Remove transformicon behavior from one or more elements.
-     * @public
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements to be toggled
@@ -182,6 +181,8 @@
      *
      * @returns {transformicon}
      *   transformicon instance for chaining
+     *
+     * @public
      */
     tcon.remove = function (elements, events) {
       setListeners(elements, events, true);
@@ -190,13 +191,14 @@
 
     /**
      * Put one or more elements in the transformed state.
-     * @public
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements to be transformed
      *
      * @returns {transformicon}
      *   transformicon instance for chaining
+     *
+     * @public
      */
     tcon.transform = function (elements) {
       getElementList(elements).forEach(function (element) {
@@ -207,12 +209,14 @@
 
     /**
      * Revert one or more elements to the original state.
-     * @public
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements to be reverted
+     *
      * @returns {transformicon}
      *   transformicon instance for chaining
+     *
+     * @public
      */
     tcon.revert = function (elements) {
       getElementList(elements).forEach(function (element) {
@@ -223,12 +227,14 @@
 
     /**
      * Toggles one or more elements between transformed and original state.
-     * @public
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements to be toggled
+     *
      * @returns {transformicon}
      *   transformicon instance for chaining
+     *
+     * @public
      */
     tcon.toggle = function (elements) {
       getElementList(elements).forEach(function (element) {
