@@ -3,9 +3,6 @@
  * Implement custom javascript here.
  */
 
-
-
-
 (
   function (root, factory) {
     if (typeof define === 'function' && define.amd) {
@@ -41,19 +38,19 @@
     // ##############
     // private methods
     // ##############
-
     /**
      * Normalize a selector into an array of DOM elements.
      *
      * Normalize a selector string, a single DOM element or an array of elements
      * into an array of DOM elements.
-     * @private
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements
      *
      * @returns {array}
      *   Array of DOM elements
+     *
+     * @private
      */
     var getElementList = function (elements) {
       if (typeof elements === 'string') {
@@ -72,13 +69,14 @@
      *
      * Normalize a string with eventnames separated by spaces or an array of
      * eventnames into an array of eventnames.
-     * @private
      *
      * @param {(string|array)} elements
      *   String with eventnames separated by spaces or array of eventnames
      *
      * @returns {array}
      *   Array of eventnames
+     *
+     * @private
      */
     var getEventList = function (events) {
       if (typeof events === 'string') {
@@ -91,7 +89,6 @@
 
     /**
      * Attach or remove transformicon events to one or more elements.
-     * @private
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements to be toggled
@@ -99,6 +96,8 @@
      *   An Object containing one or more special event definitions
      * @param {boolean} [remove=false]
      *   Defines wether the listeners should be added (default) or removed.
+     *
+     * @private
      */
     var setListeners = function (elements, events, remove) {
       var
@@ -129,10 +128,11 @@
 
     /**
      * Event handler for transform events.
-     * @private
      *
      * @param {object} event
      *   Event object
+     *
+     * @private
      */
     var handleEvent = function (event) {
       tcon.toggle(event.currentTarget);
@@ -141,10 +141,8 @@
     // ##############
     // public methods
     // ##############
-
     /**
      * Add transformicon behavior to one or more elements.
-     * @public
      *
      * @param {(string|element|array)} elements
      *   Selector, DOM element or Array of DOM elements to be toggled
@@ -159,6 +157,8 @@
      *
      * @returns {transformicon}
      *   Transformicon instance for chaining
+     *
+     * @public
      */
     tcon.add = function (elements, events) {
       setListeners(elements, events);
