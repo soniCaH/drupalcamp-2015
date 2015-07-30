@@ -6,6 +6,7 @@
   background: none;
   ul li, li:not(.has-form) a:not(.button) {
     background: none;
+    text-transform: uppercase;
   }
   li:not(.has-form) a:not(.button):hover {
     background: $green;

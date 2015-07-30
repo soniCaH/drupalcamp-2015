@@ -47,7 +47,7 @@
         <div class="l-region l-region--branding">
           <div id="block-block-9" class="block block--block block--block-9">
             <div class="block__content">
-              <p><a href="/user/register">Register Now</a></p>
+              <p><a href="/user/register" class="button">Register Now</a></p>
             </div>
           </div>
         </div>
