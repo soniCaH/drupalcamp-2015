@@ -1,5 +1,3 @@
-@import url("http://pluggable.reisinfo.delijn.be/routeplannerPluggable/js/dijit/themes/nihilo/nihilo.css");
-
 .full-width, .block-drupalcamp-routeplanner {
   width: 100%;
 }
@@ -62,11 +60,9 @@
     margin-right: 2%;
     width: 28%;
   }
-
   .block-drupalcamp-routeplanner .dl-border {
     padding: 20px;
   }
-
   .block-drupalcamp-routeplanner .dl-icon-swap {
     float: left;
     width: 4%;
@@ -115,12 +111,12 @@
   position: relative;
 }
 
-.dj_ie INPUT.dijitTextBox,
-.dj_ie .dijitInputField INPUT {
+.dj_ie input.dijitTextBox,
+.dj_ie .dijitInputField input {
   font-size: 100%;
 }
 
-.dj_ie .dijitInputField INPUT {
+.dj_ie .dijitInputField input {
   margin: -1px 0 !important;
 }
 
@@ -354,7 +350,7 @@
 }
 
 .dijitArrowButton {
-  padding: 0 .4em;
+  padding: 0 0.4em;
 }
 
 div.dijitArrowButton {
@@ -430,9 +426,9 @@ TABLE.dijitComboButton {
   outline: auto 5px -webkit-focus-ring-color;
 }
 
-.dijitTextBox INPUT,
-.dijitComboBox INPUT,
-.dijitSpinner INPUT {
+.dijitTextBox input,
+.dijitComboBox input,
+.dijitSpinner input {
   border-left: solid black 1px;
   display: inline;
   position: static !important;
@@ -492,8 +488,8 @@ TABLE.dijitComboButton {
   overflow: hidden;
 }
 
-.dijitCheckBox INPUT,
-.dijitRadio INPUT {
+.dijitCheckBox input,
+.dijitRadio input {
   margin: 0;
   padding: 0;
   display: block;
@@ -515,7 +511,8 @@ TABLE.dijitComboButton {
 
 .dijit_a11y .dijitCheckBoxInput {
   opacity: 1;
-  filter: none;
+  -webkit-filter: none;
+          filter: none;
   width: auto;
   height: auto;
 }
@@ -939,7 +936,7 @@ img.dijitColorPaletteUnder {
 .dijitMenuItem {
   text-align: left;
   white-space: nowrap;
-  padding: .1em .2em;
+  padding: 0.1em 0.2em;
   cursor: pointer;
 }
 
@@ -1747,13 +1744,13 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   color: gray;
 }
 
-.dj_webkit .dijitTextBoxDisabled INPUT,
-.dj_webkit .dijitComboBoxDisabled INPUT,
-.dj_webkit .dijitSpinnerDisabled INPUT {
+.dj_webkit .dijitTextBoxDisabled input,
+.dj_webkit .dijitComboBoxDisabled input,
+.dj_webkit .dijitSpinnerDisabled input {
   color: #eee;
 }
 
-.dj_webkit INPUT.dijitTextBoxDisabled,
+.dj_webkit input.dijitTextBoxDisabled,
 .dj_webkit TEXTAREA.dijitTextAreaDisabled {
   color: #333;
 }
@@ -2550,7 +2547,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   margin: 0;
 }
 
-.nihilo .dijitInputField INPUT,
+.nihilo .dijitInputField input,
 .nihilo .dijitTextBox,
 .nihilo .dijitComboBox,
 .nihilo .dijitSpinner {
@@ -2611,7 +2608,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   background-image: none;
 }
 
-.dj_ie6 .nihilo .dijitError INPUT {
+.dj_ie6 .nihilo .dijitError input {
   background-color: #f9f7ba !important;
 }
 
@@ -2620,7 +2617,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   background-image: none;
 }
 
-.dj_ie6 .nihilo .dijitErrorFocused INPUT {
+.dj_ie6 .nihilo .dijitErrorFocused input {
   background-color: #ff6 !important;
 }
 
@@ -3321,7 +3318,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 }
 
 .dj_ie .nihilo .dijitCalendarDateTemplate {
-  padding: 0.1em .33em 0.02em .33em;
+  padding: 0.1em 0.33em 0.02em 0.33em;
 }
 
 .nihilo .dijitCalendarPreviousMonth,
@@ -3512,7 +3509,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 
 .nihilo .dijitDialog .dijitDialogTitle {
   font-size: 0.9em;
-  color: #3243C5F;
+  color: #3243C5;
   font-weight: bold;
   padding: 0px 4px;
 }
@@ -4139,5 +4136,4 @@ iframe#tcalIF {
 .nihilo .dijitDialog {
   background-color: white;
 }
-
 /*# sourceMappingURL=routeplanner.css.map */

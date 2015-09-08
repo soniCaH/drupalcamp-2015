@@ -21,3 +21,4 @@ sites/all/modules/README.txt
 sites/all/themes/README.txt
 sites/all/modules/contrib/devel_themer
 sites/all/modules/contrib/simplehtmldom
+.sass-cache
