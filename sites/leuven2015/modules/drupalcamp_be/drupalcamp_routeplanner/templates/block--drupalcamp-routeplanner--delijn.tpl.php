@@ -1,3 +1,9 @@
+<?php
+/**
+ * @file
+ * De Lijn app integration.
+ */
+?>
 <div id="wrapperId">
   <div>
     <div>
