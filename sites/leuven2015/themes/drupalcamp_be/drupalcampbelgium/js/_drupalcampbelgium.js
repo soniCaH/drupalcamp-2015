@@ -24,8 +24,6 @@
     // ####################
     'use strict';
 
-    console.log('text');
-
     var
       tcon = {},
       _transformClass = 'tcon-transform',
