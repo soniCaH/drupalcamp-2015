@@ -99,7 +99,7 @@
   visibility: hidden !important;
 }
 .dl-error-mandatory {
-  border: 2px solid #D8000C !important;
+  border: 2px solid #d8000c !important;
 }
 .dl-inactive{
   color:#999 !important;
@@ -170,12 +170,12 @@
   zoom: 1;
 }
 .yui-skin-delijnPluggable .yui-ac-content li.yui-ac-prehighlight {
-  color: #FFF;
+  color: #fff;
   background: rgb(148, 119, 184);
 }
 .yui-skin-delijnPluggable .yui-ac-content li.yui-ac-highlight {
   background: rgba(148, 119, 184, 0.75);
-  color: #FFF;
+  color: #fff;
 }
 
 /*
@@ -247,13 +247,13 @@ div#tcal td.othermonth {
   color: silver;
 }
 div#tcal td.weekend {
-  background-color: #ACD6F5;
+  background-color: #acd6f5;
 }
 div#tcal td.today {
   border: 1px solid red;
 }
 div#tcal td.selected {
-  background-color: #FFB3BE;
+  background-color: #ffb3be;
 }
 /* iframe element used to suppress windowed controls in IE5/6 */
 iframe#tcalIF {
