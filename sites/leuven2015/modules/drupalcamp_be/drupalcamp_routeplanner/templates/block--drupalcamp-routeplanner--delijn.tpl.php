@@ -237,10 +237,7 @@
 
                         <div class="dl-hidden" id="errorBoodschapDatum"></div>
                       </div>
-                      <div>
-                        <label for="uur">
-                          <?php echo t('Hour'); ?>:
-                        </label>
+                      <div class="hour-minutes clearfix">
                         <select id="uur" name="uur">
                           <option value="0">00</option>
                           <option value="1">01</option>
@@ -268,28 +265,26 @@
                           <option value="23">23</option>
                         </select>
 
-                        <div>
-                          <select id="minuten" name="minuten">
-                            <option selected="selected" value="0">00</option>
-                            <option value="5">05</option>
-                            <option value="10">10</option>
-                            <option value="15">15</option>
-                            <option value="20">20</option>
-                            <option value="25">25</option>
-                            <option value="30">30</option>
-                            <option value="35">35</option>
-                            <option value="40">40</option>
-                            <option value="45">45</option>
-                            <option value="50">50</option>
-                            <option value="55">55</option>
-                          </select>
-                        </div>
-                        <div>
-                          <input type="checkbox" checked="checked" id="berekenTerugReisCheckboxId" name="berekenTerugReis"/>
-                          <label for="berekenTerugReisCheckboxId">
-                            <?php echo t('Calculate last return.'); ?>
-                          </label>
-                        </div>
+                        <select id="minuten" name="minuten">
+                          <option selected="selected" value="0">00</option>
+                          <option value="5">05</option>
+                          <option value="10">10</option>
+                          <option value="15">15</option>
+                          <option value="20">20</option>
+                          <option value="25">25</option>
+                          <option value="30">30</option>
+                          <option value="35">35</option>
+                          <option value="40">40</option>
+                          <option value="45">45</option>
+                          <option value="50">50</option>
+                          <option value="55">55</option>
+                        </select>
+                      </div>
+                      <div>
+                        <input type="checkbox" checked="checked" id="berekenTerugReisCheckboxId" name="berekenTerugReis"/>
+                        <label for="berekenTerugReisCheckboxId">
+                          <?php echo t('Calculate last return.'); ?>
+                        </label>
                       </div>
                     </div>
                   </div>
