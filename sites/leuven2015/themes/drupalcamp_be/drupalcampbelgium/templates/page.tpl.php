@@ -109,8 +109,6 @@
 
       <a id="main-content"></a>
 
-      <?php //if ($breadcrumb): print $breadcrumb; endif; ?>
-
       <?php if ($title): ?>
         <?php print render($title_prefix); ?>
         <h1 id="page-title" class="title"><?php print $title; ?></h1>
@@ -149,8 +147,7 @@
   <!--/.l-main -->
 
   <?php if (!empty($page['triptych_first']) || !empty($page['triptych_middle'])
-    || !empty($page['triptych_last'])
-  ): ?>
+         || !empty($page['triptych_last'])): ?>
     <!--.triptych-->
     <section class="l-triptych row">
       <div class="triptych-first medium-4 columns">

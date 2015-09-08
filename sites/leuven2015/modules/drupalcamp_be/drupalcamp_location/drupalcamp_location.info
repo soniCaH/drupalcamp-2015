@@ -1,0 +1,10 @@
+name = DrupalCamp Belgium Location
+description = Provides functionality for the location
+core = 7.x
+package = DrupalCamp Belgium
+dependencies[] = context
+dependencies[] = ctools
+dependencies[] = drupalcamp_routeplanner
+features[context][] = drupalcamp_location
+features[ctools][] = context:context:3
+features[features_api][] = api:2
