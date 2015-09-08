@@ -1,3 +1,5 @@
+@import url("http://pluggable.reisinfo.delijn.be/routeplannerPluggable/js/dijit/themes/nihilo/nihilo.css");
+
 .full-width, .block-drupalcamp-routeplanner {
   width: 100%;
 }
@@ -99,12 +101,9 @@
 
 .dijitInline {
   display: inline-block;
-  #zoom: 1;
-  #display: inline;
   border: 0;
   padding: 0;
   vertical-align: middle;
-  #vertical-align: auto;
 }
 
 .dijitHidden {
@@ -128,8 +127,6 @@
 .dijitInlineTable {
   display: inline-table;
   display: inline-block;
-  #zoom: 1;
-  #display: inline;
   box-sizing: content-box;
   -moz-box-sizing: content-box;
   border: 0;
@@ -158,7 +155,6 @@
 
 .dijitInputField {
   overflow: hidden;
-  #zoom: 1;
 }
 
 .dijitPositionOnly {
@@ -289,7 +285,6 @@
 }
 
 .dijitRight {
-  #display: inline;
   background-position: right top;
   background-repeat: no-repeat;
 }
@@ -334,7 +329,6 @@
   margin: 0;
   line-height: normal;
   vertical-align: middle;
-  #vertical-align: auto;
   text-align: center;
   white-space: nowrap;
 }
@@ -363,7 +357,7 @@
   padding: 0 .4em;
 }
 
-DIV.dijitArrowButton {
+div.dijitArrowButton {
   float: right;
 }
 
@@ -403,16 +397,11 @@ TABLE.dijitComboButton {
   border-collapse: separate;
 }
 
-.dj_ie BUTTON.dijitButtonNode {
+.dj_ie button.dijitButtonNode {
   overflow: visible;
 }
 
-table .dijitButton .dijitButtonNode,
-table .dijitComboButton .dijitButtonNode {
-  #overflow: hidden;
-}
-
-.dijitButtonNode IMG {
+.dijitButtonNode img {
   vertical-align: middle;
 }
 
@@ -420,10 +409,8 @@ table .dijitComboButton .dijitButtonNode {
 .dijitComboBox,
 .dijitSpinner {
   border: solid black 1px;
-  #overflow: hidden;
   width: 15em;
   vertical-align: middle;
-  #vertical-align: auto;
 }
 
 .dijitTimeTextBox {
@@ -1159,8 +1146,6 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 .dijitTabContainerTop-tabs .dijitTab,
 .dijitTabContainerBottom-tabs .dijitTab {
   display: inline-block;
-  #zoom: 1;
-  #display: inline;
 }
 
 .dijitTabInnerDiv {
@@ -1523,7 +1508,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   display: inline !important;
 }
 
-.dj_ie7 .dijitButtonNode > BUTTON.dijitButtonContents > * {
+.dj_ie7 .dijitButtonNode > button.dijitButtonContents > * {
   position: relative;
 }
 
@@ -1540,7 +1525,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   width: auto;
 }
 
-.dijitTextArea > DIV {
+.dijitTextArea > div {
   text-decoration: none;
   overflow: auto;
   min-height: 1.40em;
@@ -1783,7 +1768,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   filter: alpha(opacity=40);
 }
 
-.dijit_a11y .dijitSlider .dijitSliderButtonContainer DIV {
+.dijit_a11y .dijitSlider .dijitSliderButtonContainer div {
   font-family: monospace;
   font-size: 1em;
   line-height: 1em;
@@ -2888,13 +2873,11 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   width: 15px;
   height: 18px;
   background: url(images/preciseSliderThumb.png) no-repeat center top;
-  #background: url(images/preciseSliderThumb.gif) no-repeat center top;
   cursor: pointer;
 }
 
 .nihilo .dijitSliderFocused .dijitSliderImageHandleH {
   background-image: url(images/preciseSliderThumbFocus.png);
-  #background-image: url(images/preciseSliderThumbFocus.gif);
 }
 
 .nihilo .dijitSliderLeftBumper {
@@ -2914,13 +2897,11 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   width: 20px;
   height: 15px;
   background: url(images/sliderThumb.png) no-repeat center center;
-  #background: url(images/sliderThumb.gif) no-repeat center center;
   cursor: pointer;
 }
 
 .nihilo .dijitSliderFocused .dijitSliderImageHandleV {
   background-image: url(images/sliderThumbFocus.png);
-  #background-image: url(images/sliderThumbFocus.gif);
 }
 
 .nihilo .dijitSliderBottomBumper {
@@ -2938,7 +2919,6 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 .nihilo .dijitSliderIncrementIconH,
 .nihilo .dijitSliderIncrementIconV {
   background: url(images/spriteRoundedIconsSmall.png) no-repeat -45px top;
-  #background: url(images/spriteRoundedIconsSmall.gif) no-repeat -45px top;
   width: 15px;
   height: 15px;
   cursor: pointer;
@@ -2946,7 +2926,6 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 
 .nihilo .dijitSliderIncrementIconH {
   background: url(images/spriteRoundedIconsSmall.png) no-repeat -30px top;
-  #background: url(images/spriteRoundedIconsSmall.gif) no-repeat -30px top;
 }
 
 .nihilo .dijitSliderDecrementIconH,
@@ -2955,12 +2934,10 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
   height: 15px;
   cursor: pointer;
   background: url(images/spriteRoundedIconsSmall.png) no-repeat -15px top;
-  #background: url(images/spriteRoundedIconsSmall.gif) no-repeat -15px top;
 }
 
 .nihilo .dijitSliderDecrementIconH {
   background: url(images/spriteRoundedIconsSmall.png) no-repeat 0px top;
-  #background: url(images/spriteRoundedIconsSmall.gif) no-repeat 0px top;
 }
 
 .nihilo .dijitSliderButtonInner {
@@ -3008,7 +2985,6 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 .nihilo .dijitSelect .dijitButtonContents {
   padding-top: 1px;
   background: #fff url(images/validationInputBg.png) repeat-x top left;
-  #background: #fff url(images/validationInputBg.gif) repeat-x top left;
 }
 
 .nihilo .dijitSelectHover .dijitButtonContents,
@@ -3167,7 +3143,7 @@ div.dijitTabBtnDisabled, .dj_ie div.dijitTabBtnDisabled {
 
 .nihilo .dijitProgressBarEmpty {
   background: #fff url(images/progressBarEmpty.png) repeat-x center center;
-  border-color: #f8d582 #f8d582 #f8d582 #f8d582;
+  border-color: #f8d582;
 }
 
 .nihilo .dijitProgressBarTile {
