@@ -2,7 +2,8 @@ name = COD News
 description = News items for events
 core = 7.x
 package = COD
-project = cod_news
+version = 7.x-1.0-beta10
+project = cod_support
 dependencies[] = cod_events
 dependencies[] = comment
 dependencies[] = ctools
@@ -15,6 +16,7 @@ dependencies[] = taxonomy
 dependencies[] = text
 dependencies[] = views
 dependencies[] = views_content
+datestamp = 1436225347
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
 features[features_api][] = api:2
@@ -40,10 +42,3 @@ features[variable][] = node_submitted_news
 features[variable][] = pathauto_node_news_pattern
 features[views_view][] = cod_news
 install_option = cod
-
-; Information added by Drupal.org packaging script on 2015-07-06
-version = "7.x-1.0-beta10"
-core = "7.x"
-project = "cod_support"
-datestamp = "1436225347"
-
