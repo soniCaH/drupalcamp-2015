@@ -20,7 +20,6 @@ function cod_session_ranking_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 2,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'fivestar',

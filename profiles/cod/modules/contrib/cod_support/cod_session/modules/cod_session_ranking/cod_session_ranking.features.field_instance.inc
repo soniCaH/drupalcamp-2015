@@ -29,7 +29,7 @@ function cod_session_ranking_field_default_field_instances() {
           ),
         ),
         'type' => 'fivestar_formatter_default',
-        'weight' => 11,
+        'weight' => 6,
       ),
       'listing' => array(
         'label' => 'above',
@@ -37,11 +37,17 @@ function cod_session_ranking_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 9,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 15,
       ),
     ),
     'entity_type' => 'node',

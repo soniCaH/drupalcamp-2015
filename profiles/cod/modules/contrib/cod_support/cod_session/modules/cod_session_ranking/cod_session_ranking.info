@@ -2,10 +2,13 @@ name = COD Session Ranking
 description = Provide administrative (private) rankings for sessions
 core = 7.x
 package = COD
+version = 7.x-1.0-beta10
+project = cod_support
+dependencies[] = cod_session
 dependencies[] = features
 dependencies[] = field_permissions
-dependencies[] = cod_session
 dependencies[] = fivestar
+datestamp = 1436225347
 features[features_api][] = api:2
 features[field_base][] = field_session_ranking
 features[field_instance][] = node-session-field_session_ranking
@@ -16,10 +19,3 @@ features[user_permission][] = rate content
 features[user_permission][] = view field_session_ranking
 features[user_permission][] = view own field_session_ranking
 install_option = cod
-
-; Information added by Drupal.org packaging script on 2015-07-06
-version = "7.x-1.0-beta10"
-core = "7.x"
-project = "cod_support"
-datestamp = "1436225347"
-
