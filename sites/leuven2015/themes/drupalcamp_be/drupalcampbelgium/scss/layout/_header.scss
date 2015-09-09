@@ -7,18 +7,21 @@
 .l-branding {
   background: url('../images/leuvenmarkt2_edit.png') transparent center top -250px no-repeat;
   background-size: cover;
-  min-height: 800px;
   text-align: center;
+  min-height: 450px;
   width: 100%;
 
   .node-type-event & {
     background: url('../images/leuvenmarkt2_edit.png') transparent center top no-repeat;
     background-size: cover;
+    min-height: 800px;
   }
 }
 
 .l-region--branding {
-  margin-top: 5em;
+  .node-type-event & {
+    margin-top: 5em;
+  }
 }
 
 .site-branding__logo {
@@ -27,4 +30,10 @@
   .node-type-event & {
     padding-top: 6em;
   }
+}
+
+.l-footer {
+  margin-top: 2em;
+  border-top: 1px solid #ccc;
+  padding: 2em 0;
 }
