@@ -15,14 +15,39 @@ function cod_basic_page_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__page';
   $strongarm->value = array(
-    'view_modes' => array(),
+    'view_modes' => array(
+      'teaser' => array(
+        'custom_settings' => TRUE,
+      ),
+      'listing' => array(
+        'custom_settings' => TRUE,
+      ),
+      'full' => array(
+        'custom_settings' => FALSE,
+      ),
+      'rss' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_index' => array(
+        'custom_settings' => FALSE,
+      ),
+      'search_result' => array(
+        'custom_settings' => FALSE,
+      ),
+      'diff_standard' => array(
+        'custom_settings' => FALSE,
+      ),
+      'token' => array(
+        'custom_settings' => FALSE,
+      ),
+    ),
     'extra_fields' => array(
       'form' => array(
         'title' => array(
           'weight' => '0',
         ),
         'path' => array(
-          'weight' => '4',
+          'weight' => '3',
         ),
         'redirect' => array(
           'weight' => '5',
@@ -42,21 +67,25 @@ function cod_basic_page_strongarm() {
     'view modes' => array(
       'page_manager' => array(
         'status' => 0,
+        'substitute' => 0,
         'default' => 0,
         'choice' => 0,
       ),
       'default' => array(
         'status' => 1,
+        'substitute' => '',
         'default' => 1,
         'choice' => 0,
       ),
       'teaser' => array(
         'status' => 0,
+        'substitute' => 0,
         'default' => 0,
         'choice' => 0,
       ),
       'listing' => array(
         'status' => 0,
+        'substitute' => 0,
         'default' => 0,
         'choice' => 0,
       ),

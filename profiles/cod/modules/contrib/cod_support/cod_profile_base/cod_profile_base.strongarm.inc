@@ -25,6 +25,9 @@ function cod_profile_base_strongarm() {
       'token' => array(
         'custom_settings' => FALSE,
       ),
+      'user_attendees_overview' => array(
+        'custom_settings' => TRUE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
@@ -32,23 +35,30 @@ function cod_profile_base_strongarm() {
           'weight' => '12',
         ),
         'account' => array(
-          'weight' => '0',
+          'weight' => '1',
         ),
         'timezone' => array(
-          'weight' => '14',
+          'weight' => '15',
         ),
         'picture' => array(
-          'weight' => '1',
+          'weight' => '7',
+        ),
+        'contact' => array(
+          'weight' => '8',
         ),
       ),
       'display' => array(
         'summary' => array(
           'default' => array(
-            'weight' => '9',
+            'weight' => '12',
             'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '9',
+            'visible' => FALSE,
+          ),
+          'user_attendees_overview' => array(
+            'weight' => '14',
             'visible' => FALSE,
           ),
         ),

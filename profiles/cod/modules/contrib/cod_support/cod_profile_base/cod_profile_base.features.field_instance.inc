@@ -22,7 +22,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 6,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -30,6 +30,12 @@ function cod_profile_base_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 4,
+      ),
+      'user_attendees_overview' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
       ),
     ),
     'entity_type' => 'user',
@@ -47,7 +53,7 @@ function cod_profile_base_field_default_field_instances() {
         'rows' => 4,
       ),
       'type' => 'text_textarea',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -63,7 +69,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 2,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -71,6 +77,13 @@ function cod_profile_base_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 0,
+      ),
+      'user_attendees_overview' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'user',
@@ -92,45 +105,6 @@ function cod_profile_base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_profile_interests'
-  $field_instances['user-user-field_profile_interests'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_profile_interests',
-    'label' => 'Interests',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'user-user-field_profile_job_title'
   $field_instances['user-user-field_profile_job_title'] = array(
     'bundle' => 'user',
@@ -143,7 +117,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -151,6 +125,12 @@ function cod_profile_base_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 2,
+      ),
+      'user_attendees_overview' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'user',
@@ -184,7 +164,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -192,6 +172,13 @@ function cod_profile_base_field_default_field_instances() {
         'settings' => array(),
         'type' => 'text_default',
         'weight' => 1,
+      ),
+      'user_attendees_overview' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'user',
@@ -213,55 +200,6 @@ function cod_profile_base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_profile_location'
-  $field_instances['user-user-field_profile_location'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_profile_location',
-    'label' => 'Location',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'addressfield',
-      'settings' => array(
-        'available_countries' => array(),
-        'default_country' => '',
-        'format_handlers' => array(
-          'address' => 'address',
-          'address-hide-postal-code' => 0,
-          'address-hide-street' => 0,
-          'address-hide-country' => 0,
-          'organisation' => 0,
-          'name-full' => 0,
-          'name-oneline' => 0,
-          'address-optional' => 0,
-        ),
-      ),
-      'type' => 'addressfield_standard',
-      'weight' => 7,
-    ),
-  );
-
   // Exported field_instance: 'user-user-field_profile_org'
   $field_instances['user-user-field_profile_org'] = array(
     'bundle' => 'user',
@@ -274,9 +212,16 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'full' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'user_attendees_overview' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
@@ -303,55 +248,13 @@ function cod_profile_base_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'user-user-field_profile_phone'
-  $field_instances['user-user-field_profile_phone'] = array(
-    'bundle' => 'user',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 7,
-      ),
-    ),
-    'entity_type' => 'user',
-    'field_name' => 'field_profile_phone',
-    'label' => 'Phone number',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => 0,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 6,
-    ),
-  );
-
   // Translatables
   // Included for use with string extractors like potx.
   t('Bio');
   t('First name');
-  t('Interests');
   t('Job title');
   t('Last name');
-  t('Location');
   t('Organization');
-  t('Phone number');
 
   return $field_instances;
 }

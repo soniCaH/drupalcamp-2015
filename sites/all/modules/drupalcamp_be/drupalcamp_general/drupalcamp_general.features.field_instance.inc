@@ -19,10 +19,9 @@ function drupalcamp_general_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'color_field',
         'settings' => array(),
-        'type' => 'color_field_default_formatter',
-        'weight' => 0,
+        'type' => 'hidden',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'taxonomy_term',

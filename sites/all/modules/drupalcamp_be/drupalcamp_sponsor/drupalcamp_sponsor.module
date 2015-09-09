@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCamp Belgium Sponsor feature.
+ */
+
+include_once 'drupalcamp_sponsor.features.inc';

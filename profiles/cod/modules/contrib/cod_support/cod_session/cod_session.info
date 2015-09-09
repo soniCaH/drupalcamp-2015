@@ -2,6 +2,7 @@ name = COD Session
 description = Sessions, Session Items, and Voting Functionality
 core = 7.x
 package = COD
+version = 7.x-1.0-beta10
 project = cod_support
 dependencies[] = auto_nodetitle
 dependencies[] = cod_base
@@ -19,6 +20,7 @@ dependencies[] = file
 dependencies[] = flag
 dependencies[] = image
 dependencies[] = list
+dependencies[] = media
 dependencies[] = menu
 dependencies[] = node
 dependencies[] = number
@@ -39,6 +41,7 @@ dependencies[] = views_content
 dependencies[] = views_json
 dependencies[] = views_send
 dependencies[] = views_ui
+datestamp = 1436225347
 features[ctools][] = field_group:field_group:1
 features[ctools][] = strongarm:strongarm:1
 features[ctools][] = views:views_default:3.0
@@ -138,10 +141,3 @@ features[views_view][] = cod_session_sessions_speaker_confirmation
 features[views_view][] = cod_session_speakers
 features[views_view][] = cod_session_tracks
 features[views_view][] = cod_session_user_presentations
-
-; Information added by Drupal.org packaging script on 2015-07-06
-version = "7.x-1.0-beta10"
-core = "7.x"
-project = "cod_support"
-datestamp = "1436225347"
-

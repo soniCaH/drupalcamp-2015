@@ -20,14 +20,6 @@ function cod_sponsors_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'format' => array(
-        'columns' => array(
-          'format' => 'format',
-        ),
-        'table' => 'filter_format',
-      ),
-    ),
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -49,14 +41,6 @@ function cod_sponsors_field_default_field_bases() {
     'field_name' => 'field_sponsor_logo',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'fid' => array(
-        'columns' => array(
-          'fid' => 'fid',
-        ),
-        'table' => 'file_managed',
-      ),
     ),
     'indexes' => array(
       'fid' => array(
@@ -82,14 +66,6 @@ function cod_sponsors_field_default_field_bases() {
     'field_name' => 'field_sponsor_related_attendees',
     'field_permissions' => array(
       'type' => 0,
-    ),
-    'foreign keys' => array(
-      'users' => array(
-        'columns' => array(
-          'target_id' => 'uid',
-        ),
-        'table' => 'users',
-      ),
     ),
     'indexes' => array(
       'target_id' => array(
@@ -131,14 +107,6 @@ function cod_sponsors_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'tid' => array(
-        'columns' => array(
-          'tid' => 'tid',
-        ),
-        'table' => 'taxonomy_term_data',
-      ),
-    ),
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -168,7 +136,6 @@ function cod_sponsors_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(),
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',

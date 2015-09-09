@@ -78,6 +78,7 @@ function cod_schedule_field_default_field_instances() {
           'multiple_from' => '',
           'multiple_number' => '',
           'multiple_to' => '',
+          'show_remaining_days' => FALSE,
         ),
         'type' => 'date_default',
         'weight' => 0,
@@ -161,7 +162,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_event_timeslots-field_timeslot_allowed_types'
+  // Exported field_instance:
+  // 'field_collection_item-field_event_timeslots-field_timeslot_allowed_types'
   $field_instances['field_collection_item-field_event_timeslots-field_timeslot_allowed_types'] = array(
     'bundle' => 'field_event_timeslots',
     'default_value' => NULL,
@@ -191,7 +193,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_event_timeslots-field_timeslot_room'
+  // Exported field_instance:
+  // 'field_collection_item-field_event_timeslots-field_timeslot_room'
   $field_instances['field_collection_item-field_event_timeslots-field_timeslot_room'] = array(
     'bundle' => 'field_event_timeslots',
     'default_value' => NULL,
@@ -200,7 +203,7 @@ function cod_schedule_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
@@ -234,7 +237,8 @@ function cod_schedule_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'field_collection_item-field_event_timeslots-field_timeslot_time'
+  // Exported field_instance:
+  // 'field_collection_item-field_event_timeslots-field_timeslot_time'
   $field_instances['field_collection_item-field_event_timeslots-field_timeslot_time'] = array(
     'bundle' => 'field_event_timeslots',
     'default_value' => NULL,
@@ -243,7 +247,7 @@ function cod_schedule_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'entityreference',
         'settings' => array(
           'link' => FALSE,
@@ -380,14 +384,14 @@ function cod_schedule_field_default_field_instances() {
     'description' => 'Select the relevant time slots this session should appear at.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => TRUE,
-          'view_mode' => '',
+          'links' => 1,
+          'view_mode' => 'default',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -395,11 +399,21 @@ function cod_schedule_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 1,
+          'view_mode' => 'timeslot_time_only',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 3,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
     ),
     'entity_type' => 'node',

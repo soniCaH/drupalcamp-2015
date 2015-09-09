@@ -21,9 +21,9 @@ function cod_session_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Audience',
-    'weight' => '8',
+    'weight' => '19',
     'children' => array(),
-    'format_type' => 'hidden',
+    'format_type' => 'html-element',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
@@ -33,6 +33,9 @@ function cod_session_field_group_info() {
         'effect' => 'none',
         'speed' => 'fast',
         'classes' => ' group-audience field-group-hidden',
+        'element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
       ),
     ),
   );
@@ -51,8 +54,8 @@ function cod_session_field_group_info() {
     'label' => 'Audience',
     'weight' => '6',
     'children' => array(
-      0 => 'field_experience',
-      1 => 'og_vocabulary',
+      0 => 'og_vocabulary',
+      1 => 'field_experience',
     ),
     'format_type' => 'fieldset',
     'format_settings' => array(
@@ -107,13 +110,18 @@ function cod_session_field_group_info() {
     'children' => array(
       0 => 'field_accepted',
     ),
-    'format_type' => 'hidden',
+    'format_type' => 'html-element',
     'format_settings' => array(
-      'formatter' => 'collapsible',
+      'label' => 'Schedule info',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => ' group-schedule-info field-group-fieldset',
+        'classes' => 'group-schedule-info field-group-fieldset',
+        'element' => 'div',
+        'show_label' => '0',
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
       ),
+      'formatter' => '',
     ),
   );
   $export['group_schedule_info|node|schedule_item|default'] = $field_group;
@@ -129,16 +137,19 @@ function cod_session_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Schedule info',
-    'weight' => '7',
-    'children' => array(
-      0 => 'field_accepted',
-    ),
-    'format_type' => 'hidden',
+    'weight' => '18',
+    'children' => array(),
+    'format_type' => 'html-element',
     'format_settings' => array(
       'formatter' => 'collapsible',
       'instance_settings' => array(
         'description' => '',
         'classes' => ' group-schedule-info field-group-fieldset',
+        'element' => 'div',
+        'show_label' => 0,
+        'label_element' => 'div',
+        'attributes' => '',
+        'required_fields' => 1,
       ),
     ),
   );

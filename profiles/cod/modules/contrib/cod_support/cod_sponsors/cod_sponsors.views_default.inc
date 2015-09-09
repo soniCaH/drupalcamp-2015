@@ -98,7 +98,7 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['relationships']['og_membership_rel']['field'] = 'og_membership_rel';
   $handler->display->display_options['relationships']['og_membership_rel']['label'] = 'Conference';
   $handler->display->display_options['relationships']['og_membership_rel']['required'] = TRUE;
-  /* Relationship: Content: Sponsorship Level (field_sponsor_sponsorship_level) */
+  /* Relationship: Field: Sponsorship Level (field_sponsor_sponsorship_level) */
   $handler->display->display_options['relationships']['field_sponsor_sponsorship_level_tid']['id'] = 'field_sponsor_sponsorship_level_tid';
   $handler->display->display_options['relationships']['field_sponsor_sponsorship_level_tid']['table'] = 'field_data_field_sponsor_sponsorship_level';
   $handler->display->display_options['relationships']['field_sponsor_sponsorship_level_tid']['field'] = 'field_sponsor_sponsorship_level_tid';
@@ -131,7 +131,7 @@ function cod_sponsors_views_default_views() {
     'image_style' => 'cod_sponsors',
     'image_link' => 'content',
   );
-  /* Field: Content: Sponsorship Level */
+  /* Field: Field: Sponsorship Level */
   $handler->display->display_options['fields']['field_sponsor_sponsorship_level']['id'] = 'field_sponsor_sponsorship_level';
   $handler->display->display_options['fields']['field_sponsor_sponsorship_level']['table'] = 'field_data_field_sponsor_sponsorship_level';
   $handler->display->display_options['fields']['field_sponsor_sponsorship_level']['field'] = 'field_sponsor_sponsorship_level';
@@ -199,7 +199,7 @@ function cod_sponsors_views_default_views() {
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
-  /* Contextual filter: Content: Sponsorship Level (field_sponsor_sponsorship_level) */
+  /* Contextual filter: Field: Sponsorship Level (field_sponsor_sponsorship_level) */
   $handler->display->display_options['arguments']['field_sponsor_sponsorship_level_tid']['id'] = 'field_sponsor_sponsorship_level_tid';
   $handler->display->display_options['arguments']['field_sponsor_sponsorship_level_tid']['table'] = 'field_data_field_sponsor_sponsorship_level';
   $handler->display->display_options['arguments']['field_sponsor_sponsorship_level_tid']['field'] = 'field_sponsor_sponsorship_level_tid';
