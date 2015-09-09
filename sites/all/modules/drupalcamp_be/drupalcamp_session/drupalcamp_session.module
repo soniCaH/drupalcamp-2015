@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCamp Belgium Sessions feature.
+ */
+
+include_once 'drupalcamp_session.features.inc';
