@@ -2,4 +2,5 @@
 
 [![License : MIT](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](http://opensource.org/licenses/MIT)
 [![Build Status](https://img.shields.io/travis/soniCaH/drupalcamp-2015/master.svg?style=flat-square)](https://travis-ci.org/soniCaH/drupalcamp-2015)
-[![Quality Score](https://img.shields.io/scrutinizer/g/soniCaH/drupalcamp-2015.svg?style=flat-square)](https://scrutinizer-ci.com/g/soniCaH/drupalcamp-2015)
+
+Travis will test committed code against the Drupal coding standards and will fail if they are not met.
