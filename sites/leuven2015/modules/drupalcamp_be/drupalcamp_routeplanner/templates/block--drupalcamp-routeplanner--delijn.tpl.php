@@ -15,14 +15,7 @@
             <input type="hidden" value="true" id="co2BerekeningGevraagd" name="co2BerekeningGevraagd"/>
 
             <div>
-              <div>
-                <a title="de lijn" href="http://www.delijn.be/" class="dl-left dl-icon-logo" target="_blank"></a>
-
-                <div class="dl-ism">
-                  <?php echo t('in coorporation with MIVB, NMBS and TEC'); ?>
-                </div>
-              </div>
-              <div>
+              <div class="clearfix">
                 <fieldset>
                   <!-- Start colored box -->
                   <div>
