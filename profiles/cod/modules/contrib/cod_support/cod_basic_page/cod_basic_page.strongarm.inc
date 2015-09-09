@@ -63,33 +63,8 @@ function cod_basic_page_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'panelizer_defaults_node_page';
   $strongarm->value = array(
-    'status' => 1,
-    'view modes' => array(
-      'page_manager' => array(
-        'status' => 0,
-        'substitute' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'default' => array(
-        'status' => 1,
-        'substitute' => '',
-        'default' => 1,
-        'choice' => 0,
-      ),
-      'teaser' => array(
-        'status' => 0,
-        'substitute' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-      'listing' => array(
-        'status' => 0,
-        'substitute' => 0,
-        'default' => 0,
-        'choice' => 0,
-      ),
-    ),
+    'status' => 0,
+    'view modes' => array(),
   );
   $export['panelizer_defaults_node_page'] = $strongarm;
 
