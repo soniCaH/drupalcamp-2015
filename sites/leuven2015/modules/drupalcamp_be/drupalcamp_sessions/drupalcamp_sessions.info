@@ -5,3 +5,4 @@ package = DrupalCamp Belgium 2015
 version = 7.x-1.0
 project = drupalcamp_sessions
 dependencies[] = drupalcamp_general
+dependencies[] = drupalcamp_session

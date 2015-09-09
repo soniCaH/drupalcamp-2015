@@ -68,7 +68,7 @@ function cod_session_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -102,7 +102,7 @@ function cod_session_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'weight' => 1,
     ),
   );
 
@@ -164,7 +164,7 @@ function cod_session_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'file_generic',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -228,8 +228,9 @@ function cod_session_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'list_default',
         'weight' => 2,
       ),
       'listing' => array(
@@ -351,7 +352,7 @@ function cod_session_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 8,
       ),
       'listing' => array(
         'label' => 'above',
@@ -359,14 +360,23 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(
+          'trim_length' => 300,
+        ),
+        'type' => 'text_summary_or_trimmed',
+        'weight' => 5,
+      ),
       'teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
-          'trim_length' => 600,
+          'trim_length' => 150,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'weight' => 5,
       ),
     ),
     'entity_type' => 'node',
@@ -406,9 +416,10 @@ function cod_session_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'inline',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
+        'type' => 'list_default',
+        'weight' => 3,
       ),
       'listing' => array(
         'label' => 'above',
@@ -416,11 +427,17 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'inline',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 17,
       ),
     ),
     'entity_type' => 'node',
@@ -447,11 +464,11 @@ function cod_session_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'inline',
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -459,11 +476,19 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
-        'label' => 'above',
+      'taxonomy_page_overview' => array(
+        'label' => 'hidden',
+        'module' => 'list',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'type' => 'list_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -489,10 +514,14 @@ function cod_session_field_default_field_instances() {
     'description' => 'An image to be used for highlighted sessions in the front page rotator.',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 9,
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
       ),
       'listing' => array(
         'label' => 'above',
@@ -500,11 +529,17 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 6,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'node',
@@ -542,10 +577,12 @@ function cod_session_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'file',
-        'settings' => array(),
-        'type' => 'file_default',
-        'weight' => 1,
+        'module' => 'media',
+        'settings' => array(
+          'image_style' => 'media_thumbnail',
+        ),
+        'type' => 'media_large_icon',
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -553,11 +590,17 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 10,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 16,
       ),
     ),
     'entity_type' => 'node',
@@ -594,10 +637,10 @@ function cod_session_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'link' => FALSE,
+          'link' => 1,
         ),
         'type' => 'entityreference_label',
-        'weight' => 3,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -605,11 +648,23 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
+      ),
       'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 4,
       ),
     ),
     'entity_type' => 'node',
@@ -649,7 +704,7 @@ function cod_session_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 20,
       ),
       'listing' => array(
         'label' => 'above',
@@ -657,11 +712,17 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
+      'taxonomy_page_overview' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 18,
+      ),
       'teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
     ),
     'entity_type' => 'node',
@@ -724,13 +785,13 @@ function cod_session_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
-        'module' => 'og_vocab',
+        'label' => 'inline',
+        'module' => 'entityreference',
         'settings' => array(
-          'concatenate' => FALSE,
+          'link' => FALSE,
         ),
-        'type' => 'og_vocab',
-        'weight' => 6,
+        'type' => 'entityreference_label',
+        'weight' => 5,
       ),
       'listing' => array(
         'label' => 'above',
@@ -738,11 +799,20 @@ function cod_session_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'teaser' => array(
-        'label' => 'above',
+      'taxonomy_page_overview' => array(
+        'label' => 'inline',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
+        'weight' => 2,
       ),
     ),
     'entity_type' => 'node',
@@ -773,9 +843,9 @@ function cod_session_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('An image to be used for highlighted sessions in the front page rotator.');
   t('Body');
+  t('Conference');
   t('Default Session View');
   t('Description');
-  t('Conference');
   t('Experience level');
   t('File attachments');
   t('Image');

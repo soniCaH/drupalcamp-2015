@@ -216,7 +216,7 @@ class ctools_context_optional extends ctools_context_required {
     $context = new ctools_context('any');
     $context->title      = t('No context');
     $context->identifier = t('No context');
-    $contexts = array_merge(array('empty' => $context), $contexts);
+    $contexts['empty'] = $context;
   }
 
   function filter($contexts) {
@@ -1127,12 +1127,9 @@ function ctools_context_get_context_from_context($context, $type = 'context', $a
  * @param $placeholders
  *   If true, placeholders are acceptable.
  */
-function ctools_context_get_context_from_contexts($contexts, $type = 'context', $placeholders = FALSE, $existing_contexts = array()) {
+function ctools_context_get_context_from_contexts($contexts, $type = 'context', $placeholders = FALSE) {
   $return = array();
   foreach ($contexts as $context) {
-    if (!empty($existing_contexts)) {
-      $context['existing contexts'] = $existing_contexts;
-    }
     $ctext = ctools_context_get_context_from_context($context, $type);
     if ($ctext) {
       if ($placeholders) {
@@ -1226,7 +1223,7 @@ function ctools_context_load_contexts($object, $placeholders = TRUE, $contexts =
   }
 
   if (!empty($object->contexts) && is_array($object->contexts)) {
-    $contexts += ctools_context_get_context_from_contexts($object->contexts, 'context', $placeholders, $contexts);
+    $contexts += ctools_context_get_context_from_contexts($object->contexts, 'context', $placeholders);
   }
 
   // add contexts from relationships
@@ -1508,7 +1505,7 @@ function ctools_access($settings, $contexts = array()) {
       return TRUE;
     }
     else if (!$pass && $settings['logic'] == 'and') {
-      // Fail if 'and' and htis rule failed.
+      // Fail if 'and' and this rule failed.
       return FALSE;
     }
   }

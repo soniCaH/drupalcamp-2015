@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCamp Belgium Profile feature.
+ */
+
+include_once 'drupalcamp_profile.features.inc';

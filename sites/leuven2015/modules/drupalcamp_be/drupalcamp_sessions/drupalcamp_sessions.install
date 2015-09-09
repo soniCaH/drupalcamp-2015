@@ -4,8 +4,8 @@
  * Installation and update hooks.
  */
 
-define('CAMP_DAY_ONE', '2015-11-14');
-define('CAMP_DAY_TWO', '2015-11-15');
+define('CAMP_DAY_ONE', '2015-11-06');
+define('CAMP_DAY_TWO', '2015-11-07');
 define('CAMP_NID', 1);
 
 /**

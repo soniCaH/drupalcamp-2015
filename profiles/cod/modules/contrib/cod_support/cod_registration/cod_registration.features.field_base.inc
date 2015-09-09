@@ -20,14 +20,6 @@ function cod_registration_field_default_field_bases() {
     'field_permissions' => array(
       'type' => 0,
     ),
-    'foreign keys' => array(
-      'ttid' => array(
-        'columns' => array(
-          'value' => 'ttid',
-        ),
-        'table' => 'ticket_type',
-      ),
-    ),
     'indexes' => array(
       'value' => array(
         0 => 'value',
