@@ -4,6 +4,19 @@ html {
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-              -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='index-paper-bg.jpg', sizingMethod='scale')";
-                   filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.index-paper-bg.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='index-paper-bg.jpg', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.index-paper-bg.jpg', sizingMethod='scale');
+  min-height: 400px;
+  min-width: 400px;
+}
+
+.container {
+  background: url(index-biervilt.png) no-repeat center center fixed;
+  height: 403px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 400px;
+  margin: -200px 0 0 -200px;
 }
