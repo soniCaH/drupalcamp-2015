@@ -33,7 +33,7 @@ function cod_profile_social_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 14,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -98,7 +98,7 @@ function cod_profile_social_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 13,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -164,7 +164,7 @@ function cod_profile_social_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 11,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',

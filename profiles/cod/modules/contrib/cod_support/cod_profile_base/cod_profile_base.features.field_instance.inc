@@ -29,7 +29,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 5,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',
@@ -76,7 +76,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',
@@ -124,7 +124,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',
@@ -171,7 +171,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',
@@ -219,7 +219,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',
