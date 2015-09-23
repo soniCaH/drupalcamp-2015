@@ -66,6 +66,9 @@ class date_views_filter_handler extends date_views_filter_handler_simple {
       if ($field['table_name'] != $this->table || !empty($this->relationship)) {
         $this->related_table_alias = $this->query->ensure_table($field['table_name'], $this->relationship);
       }
+      else {
+        $this->related_table_alias = null;
+      }
       $table_alias = !empty($this->related_table_alias) ? $this->related_table_alias : $field['table_name'];
       $field_name = $table_alias . '.' . $field['field_name'];
 
@@ -175,15 +178,7 @@ class date_views_filter_handler extends date_views_filter_handler_simple {
         $date_handler = new date_sql_handler($field['sql_type'], date_default_timezone());
         $date_handler->granularity = $this->options['granularity'];
         $date_handler->db_timezone = date_get_timezone_db($field['tz_handling']);
-        if (empty($this->options['timezone']) || $this->options['timezone'] == 'date') {
-          $date_handler->local_timezone = date_get_timezone($field['tz_handling']);
-        }
-        else if ($this->options['timezone'] == 'user') {
-          $date_handler->local_timezone = date_default_timezone();
-        }
-        else {
-          $date_handler->local_timezone = $this->options['timezone'];
-        }
+        $date_handler->local_timezone = date_get_timezone($field['tz_handling']);
         $this->query_fields[] = array('field' => $field, 'date_handler' => $date_handler);
       }
     }

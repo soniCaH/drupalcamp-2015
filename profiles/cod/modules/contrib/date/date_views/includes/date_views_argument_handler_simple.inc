@@ -28,15 +28,7 @@ class date_views_argument_handler_simple extends views_handler_argument_date {
         $this->original_table = $this->definition['table'];
       }
       $this->date_handler->db_timezone = date_get_timezone_db($field['settings']['tz_handling']);
-      if (empty($options['timezone']) || $options['timezone'] == 'date') {
-        $this->date_handler->local_timezone = date_get_timezone($field['settings']['tz_handling']);
-      }
-      else if ($options['timezone'] == 'user') {
-        $this->date_handler->local_timezone = date_default_timezone();
-      }
-      else {
-        $this->date_handler->local_timezone = $options['timezone'];
-      }
+      $this->date_handler->local_timezone = date_get_timezone($field['settings']['tz_handling']);
     }
     $this->date_handler->granularity = $this->options['granularity'];
     // This value needs to be initialized so
@@ -104,7 +96,6 @@ class date_views_argument_handler_simple extends views_handler_argument_date {
     $options['granularity_reset'] = array('default' => FALSE);
     $options['default_argument_type']['default'] = 'date';
     $options['add_delta'] = array('default' => '');
-    $options['timezone'] = array('default' => 'date');
     $options['use_fromto'] = array('default' => '');
     $options['title_format'] = array('default' => '');
     $options['title_format_custom'] = array('default' => '');
@@ -208,16 +199,6 @@ class date_views_argument_handler_simple extends views_handler_argument_date {
       '#description' => t('Add an identifier to the view to show which multiple value date fields meet the filter criteria. Note: This option may introduce duplicate values into the view. Required when using multiple value fields in a Calendar or any time you want the node view of multiple value dates to display only the values that match the view filters.'),
       // Only let mere mortals tweak this setting for multi-value fields.
       '#access' => $access,
-    );
-
-    $form['timezone'] = array(
-      '#type' => 'select',
-      '#title' => t('Timezone'),
-      '#default_value' => $this->options['timezone'],
-      '#options' => array(
-        'date' => t("Date field's default timezone"),
-        'user' => t("Current user's timezone"),
-      ) + system_time_zones(),
     );
   }
 

@@ -192,15 +192,7 @@ class date_views_argument_handler extends date_views_argument_handler_simple {
         $date_handler = new date_sql_handler($field['sql_type'], date_default_timezone());
         $date_handler->granularity = $this->options['granularity'];
         $date_handler->db_timezone = date_get_timezone_db($field['tz_handling']);
-        if (empty($this->options['timezone']) || $this->options['timezone'] == 'date') {
-          $date_handler->local_timezone = date_get_timezone($field['tz_handling']);
-        }
-        else if ($this->options['timezone'] == 'user') {
-          $date_handler->local_timezone = date_default_timezone();
-        }
-        else {
-          $date_handler->local_timezone = $this->options['timezone'];
-        }
+        $date_handler->local_timezone = date_get_timezone($field['tz_handling']);
         date_views_set_timezone($date_handler, $this, $field);
         $this->query_fields[] = array('field' => $field, 'date_handler' => $date_handler);
       }
