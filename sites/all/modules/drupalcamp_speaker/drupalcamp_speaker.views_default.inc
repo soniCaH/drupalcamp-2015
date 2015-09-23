@@ -38,6 +38,11 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['relationships']['flag_content_rel']['field'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['flag'] = 'featured_speaker';
   $handler->display->display_options['relationships']['flag_content_rel']['user_scope'] = 'any';
+  /* Relationship: Entity Reference: Referencing entity */
+  $handler->display->display_options['relationships']['reverse_field_speakers_node']['id'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['relationships']['reverse_field_speakers_node']['table'] = 'users';
+  $handler->display->display_options['relationships']['reverse_field_speakers_node']['field'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['relationships']['reverse_field_speakers_node']['required'] = TRUE;
   /* Field: User: Picture */
   $handler->display->display_options['fields']['picture']['id'] = 'picture';
   $handler->display->display_options['fields']['picture']['table'] = 'users';
@@ -62,6 +67,18 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['field_profile_job_title']['field'] = 'field_profile_job_title';
   $handler->display->display_options['fields']['field_profile_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_profile_job_title']['element_label_colon'] = FALSE;
+  /* Field: Content: Title */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['relationship'] = 'reverse_field_speakers_node';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
@@ -75,6 +92,24 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['filters']['flagged']['field'] = 'flagged';
   $handler->display->display_options['filters']['flagged']['relationship'] = 'flag_content_rel';
   $handler->display->display_options['filters']['flagged']['value'] = '1';
+  /* Filter criterion: Content: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'node';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['relationship'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'schedule_item' => 'schedule_item',
+    'session' => 'session',
+  );
+  /* Filter criterion: Content: Status (field_accepted) */
+  $handler->display->display_options['filters']['field_accepted_value']['id'] = 'field_accepted_value';
+  $handler->display->display_options['filters']['field_accepted_value']['table'] = 'field_data_field_accepted';
+  $handler->display->display_options['filters']['field_accepted_value']['field'] = 'field_accepted_value';
+  $handler->display->display_options['filters']['field_accepted_value']['relationship'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['filters']['field_accepted_value']['value'] = array(
+    'accepted' => 'accepted',
+    'featured' => 'featured',
+  );
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
