@@ -166,7 +166,7 @@ function cod_session_field_group_info() {
   $field_group->parent_name = '';
   $field_group->data = array(
     'label' => 'Schedule Info',
-    'weight' => '1',
+    'weight' => '2',
     'children' => array(
       0 => 'field_accepted',
       1 => 'field_session_timeslot',
