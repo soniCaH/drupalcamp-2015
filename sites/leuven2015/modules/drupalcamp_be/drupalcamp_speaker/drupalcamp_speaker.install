@@ -1,0 +1,9 @@
+<?php
+/**
+ * @file
+ * Installation and update hooks.
+ */
+
+function drupalcamp_speaker_update_7001() {
+  variable_set('user_picture_default', 'sites/leuven2015/files/default-pic.png');
+}
