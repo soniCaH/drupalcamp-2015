@@ -1,0 +1,14 @@
+.views-row {
+  @extend .clearfix;
+
+  margin-bottom: 20px;
+}
+
+.views-field-picture {
+  text-align: center;
+
+  @media #{$medium-up} {
+    float: left;
+    margin-right: 20px;
+  }
+}
