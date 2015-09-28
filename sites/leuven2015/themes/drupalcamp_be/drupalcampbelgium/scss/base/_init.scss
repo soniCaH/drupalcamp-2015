@@ -1,5 +1,16 @@
 @import "../../custom/zurb_foundation/scss/foundation/functions";
 
+/**
+ * COLOR SCHEMA FROM DESIGN
+ */
+$black: #000000;
+$darkest: #0A0909;
+$darkest-alpha: rgba(9, 9, 9, 0.7);
+$darker: #1D1D1B;
+$dark: #2B2B2B;
+$light: #D8D8D8;
+$white: #FFFFFF;
+
 $green: rgb(131, 174, 143);
 $green-alpha: rgba(131, 174, 143, 0.75);
 $pink: rgb(148, 119, 184);
