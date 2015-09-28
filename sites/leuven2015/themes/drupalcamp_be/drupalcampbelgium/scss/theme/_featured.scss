@@ -1,9 +1,14 @@
 .featured-body--session-timeslot {
   clear: both;
-  display: inline-block;
   font-size: 2em;
   border-bottom: 5px solid $darker;
   margin-bottom: 0.25em;
+  margin-top: 0.5em;
+
+  @media #{$medium-up} {
+    display: inline-block;
+    margin-top: 0;
+  }
 }
 
 .featured-body--session-title {
@@ -22,6 +27,7 @@
 
     @media #{$medium-up} {
       float: left;
+      margin-bottom: 5em;
       margin-right: 5%;
       width: 30%;
     }
@@ -42,6 +48,19 @@
     }
     &:empty {
       display: none;
+    }
+  }
+
+  .views-row {
+    margin: 15px 0;
+    padding: 15px 0;
+
+    &:after {
+      background: url('../images/featured-after.png') no-repeat center;
+      content: ' ';
+      display: block;
+      height: 15px;
+      margin: 2em;
     }
   }
 }
