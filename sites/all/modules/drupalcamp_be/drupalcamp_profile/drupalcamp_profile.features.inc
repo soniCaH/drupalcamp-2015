@@ -14,6 +14,48 @@ function drupalcamp_profile_ctools_plugin_api($module = NULL, $api = NULL) {
 }
 
 /**
+ * Implements hook_flag_default_flags().
+ */
+function drupalcamp_profile_flag_default_flags() {
+  $flags = array();
+  // Exported flag: "Featured speaker".
+  $flags['featured_speaker'] = array(
+    'entity_type' => 'user',
+    'title' => 'Featured speaker',
+    'global' => 1,
+    'types' => array(),
+    'flag_short' => 'Feature this user',
+    'flag_long' => 'Make this user featured',
+    'flag_message' => '',
+    'unflag_short' => 'Unflag this item',
+    'unflag_long' => '',
+    'unflag_message' => '',
+    'unflag_denied_text' => '',
+    'link_type' => 'toggle',
+    'weight' => 0,
+    'show_in_links' => array(
+      'full' => 0,
+      'diff_standard' => 0,
+      'token' => 0,
+      'user_attendees_overview' => 0,
+    ),
+    'show_as_field' => 1,
+    'show_on_form' => 0,
+    'access_author' => '',
+    'show_contextual_link' => 0,
+    'show_on_profile' => 1,
+    'access_uid' => '',
+    'api_version' => 3,
+    'module' => 'drupalcamp_profile',
+    'locked' => array(
+      0 => 'name',
+    ),
+  );
+  return $flags;
+
+}
+
+/**
  * Implements hook_image_default_styles().
  */
 function drupalcamp_profile_image_default_styles() {

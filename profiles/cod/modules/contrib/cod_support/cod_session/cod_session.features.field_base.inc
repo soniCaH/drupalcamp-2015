@@ -140,6 +140,40 @@ function cod_session_field_default_field_bases() {
     'type' => 'image',
   );
 
+  // Exported field_base: 'field_schedule_item_type'
+  $field_bases['field_schedule_item_type'] = array(
+    'active' => 1,
+    'cardinality' => 1,
+    'deleted' => 0,
+    'entity_types' => array(),
+    'field_name' => 'field_schedule_item_type',
+    'field_permissions' => array(
+      'type' => 0,
+    ),
+    'indexes' => array(
+      'value' => array(
+        0 => 'value',
+      ),
+    ),
+    'locked' => 0,
+    'module' => 'list',
+    'settings' => array(
+      'allowed_values' => array(
+        'welcome' => 'Welcome Word',
+        'breakfast' => 'Breakfast',
+        'coffee' => 'Coffee Break',
+        'drinks' => 'Drinks',
+        'tapas' => 'Tapas',
+        'lunch' => 'Lunch Break',
+        'closing' => 'Closing Word',
+        'end' => 'The End',
+      ),
+      'allowed_values_function' => '',
+    ),
+    'translatable' => 0,
+    'type' => 'list_text',
+  );
+
   // Exported field_base: 'field_slides'
   $field_bases['field_slides'] = array(
     'active' => 1,

@@ -214,7 +214,7 @@ function cod_session_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
-      'weight' => 2,
+      'weight' => 3,
     ),
     'widget_type' => 'text_textarea_with_summary',
   );
@@ -259,6 +259,49 @@ function cod_session_field_default_field_instances() {
       'settings' => array(),
       'type' => 'options_buttons',
       'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-schedule_item-field_schedule_item_type'
+  $field_instances['node-schedule_item-field_schedule_item_type'] = array(
+    'bundle' => 'schedule_item',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 4,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_schedule_item_type',
+    'label' => 'Schedule Item Type',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 1,
     ),
   );
 
@@ -336,7 +379,7 @@ function cod_session_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 31,
+      'weight' => 5,
     ),
   );
 
@@ -849,6 +892,7 @@ function cod_session_field_default_field_instances() {
   t('Experience level');
   t('File attachments');
   t('Image');
+  t('Schedule Item Type');
   t('Session Track');
   t('Slides');
   t('Speaker(s)');

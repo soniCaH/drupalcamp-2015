@@ -54,12 +54,18 @@ function cod_profile_base_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '9',
+            'weight' => '16',
             'visible' => FALSE,
           ),
           'user_attendees_overview' => array(
             'weight' => '14',
             'visible' => FALSE,
+          ),
+        ),
+        'flag_featured_speaker' => array(
+          'full' => array(
+            'weight' => '0',
+            'visible' => TRUE,
           ),
         ),
       ),

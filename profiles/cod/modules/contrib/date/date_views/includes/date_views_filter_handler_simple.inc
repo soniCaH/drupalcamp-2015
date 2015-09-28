@@ -20,15 +20,7 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
         $this->date_handler->date_type = $field['type'];
       }
       $this->date_handler->db_timezone = date_get_timezone_db($field['settings']['tz_handling']);
-      if (empty($options['timezone']) || $options['timezone'] == 'date') {
-        $this->date_handler->local_timezone = date_get_timezone($field['settings']['tz_handling']);
-      }
-      else if ($options['timezone'] == 'user') {
-        $this->date_handler->local_timezone = date_default_timezone();
-      }
-      else {
-        $this->date_handler->local_timezone = $options['timezone'];
-      }
+      $this->date_handler->local_timezone = date_get_timezone($field['settings']['tz_handling']);
     }
     $this->form_submitted = FALSE;
     $this->date_handler->granularity = isset($options['granularity']) ? $options['granularity'] : 'day';
@@ -47,7 +39,6 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
     $options['form_type'] = array('default' => 'date_select');
     $options['default_date'] = array('default' => '');
     $options['default_to_date'] = array('default' => '');
-    $options['timezone'] = array('default' => 'date');
     $options['year_range'] = array('default' => '-3:+3');
     $options['add_delta'] = array('default' => '');
     return $options;
@@ -240,19 +231,6 @@ class date_views_filter_handler_simple extends views_handler_filter_date {
       $year_range[1] = $this_year + $year_range[1];
     }
     return $year_range;
-  }
-
-  function options_form(&$form, &$form_state) {
-    parent::options_form($form, $form_state);
-    $form['timezone'] = array(
-      '#type' => 'select',
-      '#title' => t('Timezone'),
-      '#default_value' => $this->options['timezone'],
-      '#options' => array(
-        'date' => t("Date field's default timezone"),
-        'user' => t("Current user's timezone"),
-      ) + system_time_zones(),
-    );
   }
 
   function extra_options_form(&$form, &$form_state) {

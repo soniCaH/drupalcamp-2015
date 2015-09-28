@@ -28,7 +28,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 6,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -74,7 +74,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -132,7 +132,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 9,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
