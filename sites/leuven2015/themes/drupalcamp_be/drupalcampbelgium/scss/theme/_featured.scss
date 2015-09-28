@@ -1,0 +1,47 @@
+.featured-body--session-timeslot {
+  clear: both;
+  display: inline-block;
+  font-size: 2em;
+  border-bottom: 5px solid $darker;
+  margin-bottom: 0.25em;
+}
+
+.featured-body--session-title {
+  font-size: 1.75em;
+  margin-bottom: 0.25em;
+}
+
+.featured-body--name {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.view-featured-speakers {
+  .views-field-picture {
+    text-align: center;
+
+    @media #{$medium-up} {
+      float: left;
+      margin-right: 5%;
+      width: 30%;
+    }
+  }
+
+  .featured-body--wrapper {
+    @media #{$medium-up} {
+      float: left;
+      width: 65%;
+    }
+  }
+
+  .featured-body--job-description {
+    font-style: italic;
+
+    &:before {
+      content: ', ';
+    }
+    &:empty {
+      display: none;
+    }
+  }
+}

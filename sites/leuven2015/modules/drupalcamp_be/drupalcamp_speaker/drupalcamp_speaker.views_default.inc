@@ -56,7 +56,7 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['field_profile_first']['id'] = 'field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['table'] = 'field_data_field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['field'] = 'field_profile_first';
-  $handler->display->display_options['fields']['field_profile_first']['label'] = 'By ';
+  $handler->display->display_options['fields']['field_profile_first']['label'] = '';
   $handler->display->display_options['fields']['field_profile_first']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_profile_first']['element_label_colon'] = FALSE;
   /* Field: User: Last name */
@@ -73,6 +73,7 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['field_profile_job_title']['label'] = '';
   $handler->display->display_options['fields']['field_profile_job_title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_profile_job_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_job_title']['hide_empty'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -106,14 +107,14 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['nothing']['table'] = 'views';
   $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
   $handler->display->display_options['fields']['nothing']['label'] = '';
-  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="featured-body">
-  <div class="featured-body--session-timeslot">[field_session_timeslot]</div>
-  <div class="featured-body--name">[field_profile_first] [field_profile_last]</div>
-  <div class="featured-body--job">[field_profile_job_title]</div>
-  <div class="featured-body--session-title">[title]</div>
-  <div class="featured-body--session-body">[body]</div>
-</div>';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="featured-body--session-timeslot">[field_session_timeslot]</div>
+<div class="featured-body--session-title">[title]</div>
+<div class="featured-body--name">By [field_profile_first] [field_profile_last]<span class="featured-body--job-description">[field_profile_job_title]</span>.</div>
+<div class="featured-body--session-body">[body]</div>
+';
   $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'featured-body--wrapper';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';
