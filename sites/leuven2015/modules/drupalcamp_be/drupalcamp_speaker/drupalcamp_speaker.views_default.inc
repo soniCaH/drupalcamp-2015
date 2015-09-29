@@ -106,6 +106,7 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['field_session_timeslot']['label'] = '';
   $handler->display->display_options['fields']['field_session_timeslot']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_session_timeslot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_session_timeslot']['type'] = 'drupalcamp_session_slot_custom_date';
   $handler->display->display_options['fields']['field_session_timeslot']['settings'] = array(
     'link' => 0,
   );
