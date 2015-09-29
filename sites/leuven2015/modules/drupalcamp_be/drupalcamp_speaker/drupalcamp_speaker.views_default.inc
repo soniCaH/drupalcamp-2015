@@ -32,6 +32,13 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<p class="text-center"><?php echo t(\'And lots of other interesting speakers\');?>...</p>
+<p class="text-center"><?php echo l(t(\'see schedule\'), \'schedule\', array(\'attributes\' => array(\'class\' => array(\'button\')))); ?></p>';
+  $handler->display->display_options['footer']['area']['format'] = 'ds_code';
   /* Relationship: Flags: featured_speaker */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'users';
