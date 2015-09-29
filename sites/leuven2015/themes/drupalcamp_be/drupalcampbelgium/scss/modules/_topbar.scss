@@ -192,3 +192,19 @@ $spinner_inner_bg: white !default;
 .top-bar.expanded {
   background: #333333;
 }
+
+.top-bar-section {
+  // Anchors
+  //-----------------------------------------------------------------------------
+  a {
+    text-decoration: none;
+  }
+
+  //a:focus {}
+
+  a.active,
+  a:active,
+  a:hover {
+    text-decoration: underline;
+  }
+}

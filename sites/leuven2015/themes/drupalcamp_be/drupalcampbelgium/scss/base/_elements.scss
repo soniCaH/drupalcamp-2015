@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-h1, h2, h3 {
+h1, h2 {
   &:after {
     background: url('../images/header-after.png') no-repeat center;
     content: ' ';
@@ -25,6 +25,7 @@ h1, h2, h3 {
 // Anchors
 //-----------------------------------------------------------------------------
 a {
+  text-decoration: underline;
 }
 
 //a:focus {}
@@ -32,7 +33,7 @@ a {
 a.active,
 a:active,
 a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 // Form Input
