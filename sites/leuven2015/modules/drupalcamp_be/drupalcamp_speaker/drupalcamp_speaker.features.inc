@@ -30,13 +30,27 @@ function drupalcamp_speaker_image_default_styles() {
   $styles['square_large'] = array(
     'label' => 'Square 275 (rounded)',
     'effects' => array(
-      1 => array(
+      2 => array(
         'name' => 'image_scale_and_crop',
         'data' => array(
           'width' => 275,
           'height' => 275,
         ),
-        'weight' => 1,
+        'weight' => -10,
+      ),
+      5 => array(
+        'name' => 'image_desaturate',
+        'data' => array(),
+        'weight' => -9,
+      ),
+      4 => array(
+        'name' => 'imagecache_coloroverlay',
+        'data' => array(
+          'RGB' => array(
+            'HEX' => '#ff8800',
+          ),
+        ),
+        'weight' => -8,
       ),
     ),
   );
