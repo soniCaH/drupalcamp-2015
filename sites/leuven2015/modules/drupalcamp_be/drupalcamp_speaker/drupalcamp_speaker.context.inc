@@ -32,6 +32,12 @@ function drupalcamp_speaker_context_default_contexts() {
           'region' => 'featured',
           'weight' => '-10',
         ),
+        'drupalcamp_location-location_featured' => array(
+          'module' => 'drupalcamp_location',
+          'delta' => 'location_featured',
+          'region' => 'featured',
+          'weight' => '-9',
+        ),
       ),
     ),
   );

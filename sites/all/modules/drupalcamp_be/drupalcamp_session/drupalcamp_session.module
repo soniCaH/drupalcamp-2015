@@ -32,12 +32,8 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
 
       if (!empty($ts_id)) {
         $query = db_select('cod_event_time', 'cet');
-        $query->addField('evt_date', 'field_evttime_date_value', 'starttime');
-        $query->addField('evt_date', 'field_evttime_date_value2', 'endtime');
-        $query->addField(
-          'evt_date', 'field_evttime_date_offset', 'startoffset'
-        );
-        $query->addField('evt_date', 'field_evttime_date_offset2', 'endoffset');
+        $query->addField('evt_date', 'field_evttime_date_value', 'date');
+        $query->addField('evt_date', 'field_evttime_date_offset', 'offset');
         $query->addField('evt_date', 'field_evttime_date_timezone', 'timezone');
 
         $query->innerJoin(
@@ -55,8 +51,7 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
 
         if (!empty($result)) {
           $timezone = $result['timezone'];
-          $start = strtotime($result['starttime']) + $result['startoffset'];
-//          $end = strtotime($result['endtime']) + $result['endoffset'];
+          $start = strtotime($result['date']) + $result['offset'];
 
           $day = array(
             '#type'       => 'html_tag',
@@ -90,116 +85,6 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
           return $element;
         }
       }
-
-//
-//
-//      if (!empty($entity->uid) && ($entity->uid == $account->uid)) {
-//        // User is the group manager.
-//        $element[0] = array(
-//          '#type' => 'html_tag',
-//          '#tag' => 'span',
-//          '#attributes' => array('title' => t('You are the group manager'), 'class' => 'group manager'),
-//          '#value' => t('You are the group manager'),
-//        );
-//
-//        return $element;
-//      }
-//
-//      list($id,, $bundle) = entity_extract_ids($entity_type, $entity);
-//      if (og_is_member($entity_type, $id, 'user', $account, array(OG_STATE_ACTIVE, OG_STATE_PENDING))) {
-//        if (og_user_access($entity_type, $id, 'unsubscribe', $account)) {
-//          $links['title'] = t('Unsubscribe from group');
-//          $links['href'] = "group/$entity_type/$id/unsubscribe";
-//          $links['class'] = 'group unsubscribe';
-//        }
-//      }
-//      else {
-//        if (og_is_member($entity_type, $id, 'user', $account, array(OG_STATE_BLOCKED))) {
-//          // If user is blocked, they should not be able to apply for
-//          // membership.
-//          return;
-//        }
-//
-//        // Check if user can subscribe to the field.
-//        if (empty($settings['field_name']) && $audience_field_name = og_get_best_group_audience_field('user', $account, $entity_type, $bundle)) {
-//          $settings['field_name'] = $audience_field_name;
-//        }
-//        if (!$settings['field_name']) {
-//          return;
-//        }
-//
-//        $field_info = field_info_field($settings['field_name']);
-//
-//        // Check if entity is referencable.
-//        if ($field_info['settings']['target_type'] != $entity_type) {
-//          // Group type doesn't match.
-//          return;
-//        }
-//        if (!empty($field_info['settings']['handler_settings']['target_bundles']) && !in_array($bundle, $field_info['settings']['handler_settings']['target_bundles'])) {
-//          // Bundles don't match.
-//          return;
-//        }
-//
-//        if (!og_check_field_cardinality('user', $account, $settings['field_name'])) {
-//          $element[0] = array(
-//            '#type' => 'html_tag',
-//            '#tag' => 'span',
-//            '#attributes' => array('title' => format_plural($field_info['cardinality'], 'You are already registered to another group', 'You are already registered to @count groups'), 'class' => 'group other'),
-//            '#value' => format_plural($field_info['cardinality'], 'You are already registered to another group', 'You are already registered to @count groups'),
-//          );
-//          return $element;
-//        }
-//
-//        $url = "group/$entity_type/$id/subscribe";
-//        if ($settings['field_name']) {
-//          $url .= '/' . $settings['field_name'];
-//        }
-//
-//        if (og_user_access($entity_type, $id, 'subscribe without approval', $account)) {
-//          $links['title'] = t('Subscribe to group');
-//          $links['class'] = 'group subscribe';
-//          if ($account->uid) {
-//            $links['href'] = $url;
-//          }
-//          else {
-//            $links['href'] = 'user/login';
-//            $links['options'] = array('query' => array('destination' => $url));
-//          }
-//        }
-//        elseif (og_user_access($entity_type, $id, 'subscribe')) {
-//          $links['title'] = t('Request group membership');
-//          $links['class'] = 'group subscribe request';
-//          if ($account->uid) {
-//            $links['href'] = $url;
-//          }
-//          else {
-//            $links['href'] = 'user/login';
-//            $links['options'] = array('query' => array('destination' => $url));
-//          }
-//        }
-//        else {
-//          $element[0] = array(
-//            '#type' => 'html_tag',
-//            '#tag' => 'span',
-//            '#attributes' => array('title' => t('This is a closed group. Only a group administrator can add you.'), 'class' => 'group closed'),
-//            '#value' => t('This is a closed group. Only a group administrator can add you.'),
-//          );
-//
-//          return $element;
-//        }
-//      }
-//
-//      if (!empty($links['title'])) {
-//        $links += array('options' => array('attributes' => array('title' => $links['title'], 'class' => array($links['class']))));
-//        $element[0] = array(
-//          '#type' => 'link',
-//          '#title' => $links['title'],
-//          '#href' => $links['href'],
-//          '#options' => $links['options'],
-//        );
-//        return $element;
-//      }
-//      // User didn't have permissions.
       break;
   }
 }
