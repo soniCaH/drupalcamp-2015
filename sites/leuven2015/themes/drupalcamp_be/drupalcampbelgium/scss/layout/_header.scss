@@ -23,11 +23,6 @@
     background-image: url('../images/header_xl.jpg');
   }
 
-  @media #{$retina} {
-    background-image: url('../images/header_r.jpg');
-  }
-
-
 //  background: url('../images/leuvenmarkt2_edit.png') transparent center top -250px no-repeat;
 //
   .node-type-event & {
