@@ -58,6 +58,8 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['picture']['element_wrapper_type'] = 'span';
   $handler->display->display_options['fields']['picture']['element_wrapper_class'] = 'user-profile';
+  $handler->display->display_options['fields']['picture']['empty'] = '<img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/i-speaker.png" alt="No picture" />';
+  $handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
   $handler->display->display_options['fields']['picture']['image_style'] = 'square_large';
   /* Field: User: First name */
   $handler->display->display_options['fields']['field_profile_first']['id'] = 'field_profile_first';

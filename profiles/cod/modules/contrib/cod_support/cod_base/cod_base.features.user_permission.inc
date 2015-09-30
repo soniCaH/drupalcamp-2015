@@ -15,7 +15,6 @@ function cod_base_user_default_permissions() {
     'name' => 'access administration menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'admin_menu',
   );
@@ -25,7 +24,6 @@ function cod_base_user_default_permissions() {
     'name' => 'access administration pages',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'system',
   );
@@ -46,7 +44,6 @@ function cod_base_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'node',
   );
@@ -65,7 +62,6 @@ function cod_base_user_default_permissions() {
     'name' => 'access private fields',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'field_permissions',
   );
@@ -75,7 +71,6 @@ function cod_base_user_default_permissions() {
     'name' => 'access site in maintenance mode',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'system',
   );
@@ -105,7 +100,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer comments',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'comment',
   );
@@ -124,7 +118,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer field permissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'field_permissions',
   );
@@ -134,7 +127,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer menu',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'menu',
   );
@@ -144,7 +136,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer nodes',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'node',
   );
@@ -154,7 +145,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer pathauto',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'pathauto',
   );
@@ -182,7 +172,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'taxonomy',
   );
@@ -192,7 +181,6 @@ function cod_base_user_default_permissions() {
     'name' => 'administer url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'path',
   );
@@ -220,7 +208,6 @@ function cod_base_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'node',
   );
@@ -230,7 +217,6 @@ function cod_base_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'path',
   );
@@ -240,7 +226,6 @@ function cod_base_user_default_permissions() {
     'name' => 'flush caches',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'admin_menu',
   );
@@ -250,7 +235,6 @@ function cod_base_user_default_permissions() {
     'name' => 'notify of path changes',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'pathauto',
   );
@@ -260,7 +244,6 @@ function cod_base_user_default_permissions() {
     'name' => 'view advanced help index',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'advanced_help',
   );
@@ -270,7 +253,6 @@ function cod_base_user_default_permissions() {
     'name' => 'view advanced help popup',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'advanced_help',
   );
@@ -280,19 +262,8 @@ function cod_base_user_default_permissions() {
     'name' => 'view advanced help topic',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
     ),
     'module' => 'advanced_help',
-  );
-
-  // Exported permission: 'view the administration theme'.
-  $permissions['view the administration theme'] = array(
-    'name' => 'view the administration theme',
-    'roles' => array(
-      'administrator' => 'administrator',
-      'content editor' => 'content editor',
-    ),
-    'module' => 'system',
   );
 
   // Exported permission: 'view own unpublished content'.
@@ -303,6 +274,15 @@ function cod_base_user_default_permissions() {
       'authenticated user' => 'authenticated user',
     ),
     'module' => 'node',
+  );
+
+  // Exported permission: 'view the administration theme'.
+  $permissions['view the administration theme'] = array(
+    'name' => 'view the administration theme',
+    'roles' => array(
+      'administrator' => 'administrator',
+    ),
+    'module' => 'system',
   );
 
   return $permissions;
