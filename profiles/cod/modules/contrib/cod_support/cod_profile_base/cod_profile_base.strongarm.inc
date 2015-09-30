@@ -38,13 +38,13 @@ function cod_profile_base_strongarm() {
           'weight' => '0',
         ),
         'timezone' => array(
-          'weight' => '15',
+          'weight' => '16',
         ),
         'picture' => array(
-          'weight' => '7',
+          'weight' => '8',
         ),
         'contact' => array(
-          'weight' => '8',
+          'weight' => '14',
         ),
       ),
       'display' => array(
