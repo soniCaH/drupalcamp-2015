@@ -35,7 +35,7 @@ function cod_profile_base_strongarm() {
           'weight' => '11',
         ),
         'account' => array(
-          'weight' => '2',
+          'weight' => '0',
         ),
         'timezone' => array(
           'weight' => '15',
@@ -50,7 +50,7 @@ function cod_profile_base_strongarm() {
       'display' => array(
         'summary' => array(
           'default' => array(
-            'weight' => '12',
+            'weight' => '14',
             'visible' => FALSE,
           ),
           'full' => array(
@@ -65,6 +65,10 @@ function cod_profile_base_strongarm() {
         'flag_featured_speaker' => array(
           'full' => array(
             'weight' => '0',
+            'visible' => TRUE,
+          ),
+          'default' => array(
+            'weight' => '12',
             'visible' => TRUE,
           ),
         ),

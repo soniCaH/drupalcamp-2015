@@ -13,12 +13,7 @@ function cod_profile_social_field_default_field_instances() {
   // Exported field_instance: 'user-user-field_facebook_url'
   $field_instances['user-user-field_facebook_url'] = array(
     'bundle' => 'user',
-    'default_value' => array(
-      0 => array(
-        'title' => '',
-        'url' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -27,7 +22,7 @@ function cod_profile_social_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 9,
+        'weight' => 10,
       ),
       'full' => array(
         'label' => 'above',
@@ -50,6 +45,7 @@ function cod_profile_social_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => 'facebook-url',
+        'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => 'nofollow',
         'target' => 'default',
@@ -59,12 +55,13 @@ function cod_profile_social_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 0,
+      'rel_remove' => 'default',
       'title' => 'none',
-      'title_label_use_field_label' => FALSE,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
       'validate_url' => 1,
     ),
     'widget' => array(
@@ -79,11 +76,7 @@ function cod_profile_social_field_default_field_instances() {
   // Exported field_instance: 'user-user-field_linkedin_url'
   $field_instances['user-user-field_linkedin_url'] = array(
     'bundle' => 'user',
-    'default_value' => array(
-      0 => array(
-        'url' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -92,7 +85,7 @@ function cod_profile_social_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 10,
+        'weight' => 11,
       ),
       'full' => array(
         'label' => 'above',
@@ -115,6 +108,7 @@ function cod_profile_social_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => 'linkedin-url',
+        'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => 'nofollow',
         'target' => 'default',
@@ -124,12 +118,13 @@ function cod_profile_social_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 0,
+      'rel_remove' => 'default',
       'title' => 'none',
-      'title_label_use_field_label' => FALSE,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
       'validate_url' => 1,
     ),
     'widget' => array(
@@ -144,12 +139,7 @@ function cod_profile_social_field_default_field_instances() {
   // Exported field_instance: 'user-user-field_twitter_url'
   $field_instances['user-user-field_twitter_url'] = array(
     'bundle' => 'user',
-    'default_value' => array(
-      0 => array(
-        'title' => '',
-        'url' => '',
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -158,7 +148,7 @@ function cod_profile_social_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 8,
+        'weight' => 9,
       ),
       'full' => array(
         'label' => 'above',
@@ -181,6 +171,7 @@ function cod_profile_social_field_default_field_instances() {
       'absolute_url' => 1,
       'attributes' => array(
         'class' => 'twitter-url',
+        'configurable_class' => 0,
         'configurable_title' => 0,
         'rel' => 'nofollow',
         'target' => 'default',
@@ -190,12 +181,13 @@ function cod_profile_social_field_default_field_instances() {
         'url_cutoff' => 80,
       ),
       'enable_tokens' => 1,
+      'rel_remove' => 'default',
       'title' => 'none',
-      'title_label_use_field_label' => FALSE,
+      'title_label_use_field_label' => 0,
       'title_maxlength' => 128,
       'title_value' => '',
       'url' => 0,
-      'user_register_form' => 0,
+      'user_register_form' => 1,
       'validate_url' => 1,
     ),
     'widget' => array(

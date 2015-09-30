@@ -22,7 +22,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 1,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'above',
@@ -49,7 +49,7 @@ function drupalcamp_profile_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_buttons',
-      'weight' => 0,
+      'weight' => 3,
     ),
   );
 
@@ -69,7 +69,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'module' => 'list',
         'settings' => array(),
         'type' => 'list_default',
-        'weight' => 12,
+        'weight' => 4,
       ),
       'full' => array(
         'label' => 'above',
@@ -98,7 +98,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 1,
+      'weight' => 4,
     ),
   );
 
@@ -117,7 +117,7 @@ function drupalcamp_profile_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 7,
+        'weight' => 8,
       ),
       'full' => array(
         'label' => 'above',
