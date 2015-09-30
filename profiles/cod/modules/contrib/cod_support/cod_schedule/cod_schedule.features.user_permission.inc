@@ -15,8 +15,6 @@ function cod_schedule_user_default_permissions() {
     'name' => 'create field_session_timeslot',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
@@ -26,8 +24,6 @@ function cod_schedule_user_default_permissions() {
     'name' => 'edit field_session_timeslot',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
@@ -37,8 +33,6 @@ function cod_schedule_user_default_permissions() {
     'name' => 'edit own field_session_timeslot',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );

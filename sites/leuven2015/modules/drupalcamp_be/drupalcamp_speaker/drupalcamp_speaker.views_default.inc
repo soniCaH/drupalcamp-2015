@@ -32,6 +32,13 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<p class="text-center"><?php echo t(\'And lots of other interesting speakers\');?>...</p>
+<p class="text-center"><?php echo l(t(\'see schedule\'), \'schedule\', array(\'attributes\' => array(\'class\' => array(\'button\')))); ?></p>';
+  $handler->display->display_options['footer']['area']['format'] = 'ds_code';
   /* Relationship: Flags: featured_speaker */
   $handler->display->display_options['relationships']['flag_content_rel']['id'] = 'flag_content_rel';
   $handler->display->display_options['relationships']['flag_content_rel']['table'] = 'users';
@@ -49,36 +56,76 @@ function drupalcamp_speaker_views_default_views() {
   $handler->display->display_options['fields']['picture']['field'] = 'picture';
   $handler->display->display_options['fields']['picture']['label'] = '';
   $handler->display->display_options['fields']['picture']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['picture']['element_wrapper_type'] = 'span';
+  $handler->display->display_options['fields']['picture']['element_wrapper_class'] = 'user-profile';
+  $handler->display->display_options['fields']['picture']['empty'] = '<img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/i-speaker.png" alt="No picture" />';
+  $handler->display->display_options['fields']['picture']['link_photo_to_profile'] = FALSE;
+  $handler->display->display_options['fields']['picture']['image_style'] = 'square_large';
   /* Field: User: First name */
   $handler->display->display_options['fields']['field_profile_first']['id'] = 'field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['table'] = 'field_data_field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['field'] = 'field_profile_first';
   $handler->display->display_options['fields']['field_profile_first']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_first']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_profile_first']['element_label_colon'] = FALSE;
   /* Field: User: Last name */
   $handler->display->display_options['fields']['field_profile_last']['id'] = 'field_profile_last';
   $handler->display->display_options['fields']['field_profile_last']['table'] = 'field_data_field_profile_last';
   $handler->display->display_options['fields']['field_profile_last']['field'] = 'field_profile_last';
   $handler->display->display_options['fields']['field_profile_last']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_last']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_profile_last']['element_label_colon'] = FALSE;
   /* Field: User: Job title */
   $handler->display->display_options['fields']['field_profile_job_title']['id'] = 'field_profile_job_title';
   $handler->display->display_options['fields']['field_profile_job_title']['table'] = 'field_data_field_profile_job_title';
   $handler->display->display_options['fields']['field_profile_job_title']['field'] = 'field_profile_job_title';
   $handler->display->display_options['fields']['field_profile_job_title']['label'] = '';
+  $handler->display->display_options['fields']['field_profile_job_title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_profile_job_title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_profile_job_title']['hide_empty'] = TRUE;
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['relationship'] = 'reverse_field_speakers_node';
   $handler->display->display_options['fields']['title']['label'] = '';
+  $handler->display->display_options['fields']['title']['exclude'] = TRUE;
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title']['link_to_node'] = FALSE;
   /* Field: Content: Body */
   $handler->display->display_options['fields']['body']['id'] = 'body';
   $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['relationship'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Field: Content: Session Time Slot(s) */
+  $handler->display->display_options['fields']['field_session_timeslot']['id'] = 'field_session_timeslot';
+  $handler->display->display_options['fields']['field_session_timeslot']['table'] = 'field_data_field_session_timeslot';
+  $handler->display->display_options['fields']['field_session_timeslot']['field'] = 'field_session_timeslot';
+  $handler->display->display_options['fields']['field_session_timeslot']['relationship'] = 'reverse_field_speakers_node';
+  $handler->display->display_options['fields']['field_session_timeslot']['label'] = '';
+  $handler->display->display_options['fields']['field_session_timeslot']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_session_timeslot']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_session_timeslot']['type'] = 'drupalcamp_session_slot_custom_date';
+  $handler->display->display_options['fields']['field_session_timeslot']['settings'] = array(
+    'link' => 0,
+  );
+  $handler->display->display_options['fields']['field_session_timeslot']['delta_offset'] = '0';
+  /* Field: Global: Custom text */
+  $handler->display->display_options['fields']['nothing']['id'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['table'] = 'views';
+  $handler->display->display_options['fields']['nothing']['field'] = 'nothing';
+  $handler->display->display_options['fields']['nothing']['label'] = '';
+  $handler->display->display_options['fields']['nothing']['alter']['text'] = '<div class="featured-body--session-timeslot">[field_session_timeslot]</div>
+<div class="featured-body--session-title">[title]</div>
+<div class="featured-body--name">By [field_profile_first] [field_profile_last]<span class="featured-body--job-description">[field_profile_job_title]</span>.</div>
+<div class="featured-body--session-body">[body]</div>
+';
+  $handler->display->display_options['fields']['nothing']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['nothing']['element_wrapper_type'] = 'div';
+  $handler->display->display_options['fields']['nothing']['element_wrapper_class'] = 'featured-body--wrapper';
   /* Filter criterion: User: Active */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'users';

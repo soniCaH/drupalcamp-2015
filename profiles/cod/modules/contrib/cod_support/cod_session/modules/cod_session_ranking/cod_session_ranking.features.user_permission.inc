@@ -15,8 +15,6 @@ function cod_session_ranking_user_default_permissions() {
     'name' => 'create field_session_ranking',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
@@ -26,8 +24,6 @@ function cod_session_ranking_user_default_permissions() {
     'name' => 'edit field_session_ranking',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
@@ -37,8 +33,6 @@ function cod_session_ranking_user_default_permissions() {
     'name' => 'edit own field_session_ranking',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
@@ -48,8 +42,6 @@ function cod_session_ranking_user_default_permissions() {
     'name' => 'rate content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'fivestar',
   );
@@ -59,8 +51,6 @@ function cod_session_ranking_user_default_permissions() {
     'name' => 'view field_session_ranking',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
@@ -70,8 +60,6 @@ function cod_session_ranking_user_default_permissions() {
     'name' => 'view own field_session_ranking',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'field_permissions',
   );
