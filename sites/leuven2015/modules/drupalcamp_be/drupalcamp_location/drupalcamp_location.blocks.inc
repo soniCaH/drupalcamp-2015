@@ -26,6 +26,9 @@ function _drupalcamp_location_gmaps_view() {
  *   The block array.
  */
 function _drupalcamp_location_location_featured_view() {
+  drupal_add_js('https://maps.googleapis.com/maps/api/js?key=AIzaSyAt_f5KL1ndxUHk2DL1ejSe_r2YB372CkY&sensor=false', 'external');
+  drupal_add_js(drupal_get_path('module', 'drupalcamp_location') . '/js/custom_maps.js');
+
   $block = array(
     'subject' => t('Location'),
     'content' => theme('drupalcamp_location_featured_html',
