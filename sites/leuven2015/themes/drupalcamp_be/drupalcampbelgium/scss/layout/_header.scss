@@ -1,21 +1,38 @@
 // Non-modular or client styles for .l-header region.
-
 .l-header-region {
   color: $white;
   max-width: 100%;
   width: 100%;
 }
 .l-branding {
-  background: url('../images/leuvenmarkt2_edit.png') transparent center top -250px no-repeat;
+  background: url('../images/header_s.jpg') transparent center top -50px no-repeat;
   background-size: cover;
   text-align: center;
   min-height: 450px;
   width: 100%;
 
+  @media #{$medium-up} {
+    background-image: url('../images/header_m.jpg');
+  }
+
+  @media #{$large-up} {
+    background-image: url('../images/header_l.jpg');
+  }
+
+  @media #{$xlarge-up} {
+    background-image: url('../images/header_xl.jpg');
+  }
+
+  @media #{$retina} {
+    background-image: url('../images/header_r.jpg');
+  }
+
+
+//  background: url('../images/leuvenmarkt2_edit.png') transparent center top -250px no-repeat;
+//
   .node-type-event & {
-    background: url('../images/leuvenmarkt2_edit.png') transparent center top no-repeat;
-    background-size: cover;
-    min-height: 800px;
+    min-height: 850px;
+    background-position-y: 0;
   }
 }
 
@@ -27,9 +44,9 @@
 
 .site-branding__logo {
   display: block;
-  padding-top: 2em;
+  padding-top: 2rem;
   .node-type-event & {
-    padding-top: 4em;
+    padding-top: 2rem;
   }
 }
 

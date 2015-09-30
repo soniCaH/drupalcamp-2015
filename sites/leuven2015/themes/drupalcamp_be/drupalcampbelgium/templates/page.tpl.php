@@ -44,7 +44,7 @@
         <?php endif; ?>
 
         <a href="/" title="Home" rel="home" class="site-branding__logo">
-          <img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.svg" alt="Home">
+          <img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.png" alt="Home">
         </a>
         <div class="l-region l-region--branding">
           <div id="block-block-9" class="block block--block block--block-9">
