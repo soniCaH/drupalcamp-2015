@@ -29,6 +29,49 @@ function drupalcamp_profile_ds_field_settings_info() {
 }
 
 /**
+ * Implements hook_ds_layout_settings_info().
+ */
+function drupalcamp_profile_ds_layout_settings_info() {
+  $export = array();
+
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'user|user|user_attendees_overview';
+  $ds_layout->entity_type = 'user';
+  $ds_layout->bundle = 'user';
+  $ds_layout->view_mode = 'user_attendees_overview';
+  $ds_layout->layout = 'ds_1col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'ds_content' => array(
+        0 => 'ds_user_picture',
+        1 => 'field_profile_first',
+        2 => 'field_profile_last',
+        3 => 'field_profile_org',
+      ),
+    ),
+    'fields' => array(
+      'ds_user_picture' => 'ds_content',
+      'field_profile_first' => 'ds_content',
+      'field_profile_last' => 'ds_content',
+      'field_profile_org' => 'ds_content',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'ds_content' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+  );
+  $export['user|user|user_attendees_overview'] = $ds_layout;
+
+  return $export;
+}
+
+/**
  * Implements hook_ds_view_modes_info().
  */
 function drupalcamp_profile_ds_view_modes_info() {
