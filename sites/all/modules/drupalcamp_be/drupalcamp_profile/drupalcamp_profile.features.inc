@@ -11,6 +11,9 @@ function drupalcamp_profile_ctools_plugin_api($module = NULL, $api = NULL) {
   if ($module == "ds" && $api == "ds") {
     return array("version" => "1");
   }
+  if ($module == "strongarm" && $api == "strongarm") {
+    return array("version" => "1");
+  }
 }
 
 /**
@@ -45,11 +48,11 @@ function drupalcamp_profile_flag_default_flags() {
     'show_contextual_link' => 0,
     'show_on_profile' => 1,
     'access_uid' => '',
-    'api_version' => 3,
     'module' => 'drupalcamp_profile',
     'locked' => array(
       0 => 'name',
     ),
+    'api_version' => 3,
   );
   return $flags;
 
