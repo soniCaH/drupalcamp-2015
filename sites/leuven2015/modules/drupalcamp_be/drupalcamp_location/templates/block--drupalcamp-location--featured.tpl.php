@@ -21,14 +21,14 @@
     <h5 class="text-left"><?php echo $title; ?></h5>
     <h6 class="text-left"><?php echo $address; ?></h6>
 
-    <?php foreach($texts as $text): ?>
+    <?php foreach ($texts as $text): ?>
       <p><?php echo $text; ?></p>
     <?php endforeach; ?>
   </div>
 
-  <?php if($button): ?>
-  <div class="small-12 columns clearfix text-center">
-    <?php echo $button; ?>
-  </div>
+  <?php if ($button): ?>
+    <div class="small-12 columns clearfix text-center">
+      <?php echo $button; ?>
+    </div>
   <?php endif; ?>
 </div>

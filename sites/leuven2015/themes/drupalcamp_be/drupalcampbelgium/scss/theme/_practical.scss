@@ -1,0 +1,95 @@
+.practical-information {
+  > div {
+    margin-bottom: 1rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 1rem;
+  }
+}
+
+.b--outer-wrapper {
+  border: 1px solid $darkest;
+  padding: 2px;
+}
+
+.b--inner-wrapper {
+  padding: 0;
+  margin: 0;
+
+  > div {
+    &:not(.b--nopad) {
+      padding: 5px;
+    }
+  }
+}
+
+.b--large {
+  font-size: 6rem;
+}
+
+.b--black {
+  background: $darkest;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+}
+
+.b--center {
+  text-align: center;
+}
+
+.b--nopad {
+  padding: 0;
+}
+
+.b--nomargin {
+  margin: 0;
+}
+
+.b--icon {
+  text-indent: -9999px;
+}
+
+.b--icon--coffee {
+  height: 200px;
+  background: url('../images/i-coffee.png') transparent no-repeat center center;
+  background-size: cover;
+}
+
+.b--icon--globe {
+  height: 100px;
+  min-width: 60px;
+  background: url('../images/i-globe.png') transparent no-repeat center center;
+  background-size: 100px;
+}
+
+.b--icon--wheelchair {
+  height: 175px;
+  background: url('../images/i-wheelchair.png') transparent no-repeat center center;
+  background-size: 175px 175px;
+}
+
+.practical--about {
+  text-align: justify;
+  margin-bottom: 2rem;
+
+  .csscolumns & {
+    -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+    -moz-column-gap: 40px; /* Firefox */
+    column-gap: 40px;
+    @media #{$medium-up} {
+      -webkit-column-count: 2; /* Chrome, Safari, Opera */
+      -moz-column-count: 2; /* Firefox */
+      column-count: 2;
+    }
+    @media #{$large-up} {
+      -webkit-column-count: 3; /* Chrome, Safari, Opera */
+      -moz-column-count: 3; /* Firefox */
+      column-count: 3;
+    }
+  }
+}
