@@ -10,6 +10,49 @@
 function drupalcamp_profile_field_default_field_instances() {
   $field_instances = array();
 
+  // Exported field_instance: 'user-user-field_country'
+  $field_instances['user-user-field_country'] = array(
+    'bundle' => 'user',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'countries',
+        'settings' => array(),
+        'type' => 'country_default',
+        'weight' => 14,
+      ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'user_attendees_overview' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'user',
+    'field_name' => 'field_country',
+    'label' => 'Country',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'countries',
+      'settings' => array(),
+      'type' => 'countries_continent',
+      'weight' => 5,
+    ),
+  );
+
   // Exported field_instance: 'user-user-field_profile_days'
   $field_instances['user-user-field_profile_days'] = array(
     'bundle' => 'user',
@@ -159,7 +202,7 @@ function drupalcamp_profile_field_default_field_instances() {
       'module' => 'og',
       'settings' => array(),
       'type' => 'og_complex',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -232,6 +275,7 @@ function drupalcamp_profile_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Check this field if you would like to volunteer on the event itself (either on Friday or Saturday). We will contact you for more information.');
   t('Conference');
+  t('Country');
   t('Group membership');
   t('I will attend DrupalCamp on');
   t('I would like to volunteer');
