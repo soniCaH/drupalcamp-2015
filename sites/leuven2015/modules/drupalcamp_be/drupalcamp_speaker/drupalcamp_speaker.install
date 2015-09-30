@@ -8,5 +8,5 @@
  * Implements hook_update_N().
  */
 function drupalcamp_speaker_update_7001() {
-  variable_set('user_picture_default', 'sites/leuven2015/files/default-pic.png');
+  variable_set('user_picture_default', 'sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/i-featured.png');
 }
