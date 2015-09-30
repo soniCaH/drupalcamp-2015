@@ -84,7 +84,7 @@
   }
 }
 
-.block-drupalcamp-location {
+.block-drupalcamp-location-location-featured {
   h5, h6 {
     font-weight: bold;
     margin-top: -1em;
@@ -93,5 +93,29 @@
 
   .dcl-venue_map {
     margin-bottom: 2em;
+  }
+
+  .block-title {
+    &:before {
+      background: url('../images/i-globe_s.png') no-repeat center top;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 125px;
+      width: 125px;
+    }
+  }
+}
+
+.block-views-featured-speakers-block {
+  .block-title {
+    &:before {
+      background: url('../images/i-featured_s.png') no-repeat center top;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 125px;
+      width: 125px;
+    }
   }
 }
