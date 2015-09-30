@@ -15,8 +15,6 @@ function cod_session_user_default_permissions() {
     'name' => 'create schedule_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -27,7 +25,6 @@ function cod_session_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
       'authenticated user' => 'authenticated user',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -37,8 +34,6 @@ function cod_session_user_default_permissions() {
     'name' => 'delete any schedule_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -48,8 +43,6 @@ function cod_session_user_default_permissions() {
     'name' => 'delete any session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -59,8 +52,6 @@ function cod_session_user_default_permissions() {
     'name' => 'delete own session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -70,8 +61,6 @@ function cod_session_user_default_permissions() {
     'name' => 'edit any schedule_item content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );
@@ -81,8 +70,6 @@ function cod_session_user_default_permissions() {
     'name' => 'edit any session content',
     'roles' => array(
       'administrator' => 'administrator',
-      'content editor' => 'content editor',
-      'session organizer' => 'session organizer',
     ),
     'module' => 'node',
   );

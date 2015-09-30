@@ -62,7 +62,6 @@ features[og_features_permission][] = node:event:unsubscribe
 features[og_features_permission][] = node:event:update group
 features[page_manager_pages][] = event_dashboard
 features[user_permission][] = view program
-features[user_role][] = attendee manager
 features[variable][] = comment_anonymous_event
 features[variable][] = comment_default_mode_event
 features[variable][] = comment_default_per_page_event

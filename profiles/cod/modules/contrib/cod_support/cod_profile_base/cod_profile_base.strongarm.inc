@@ -32,10 +32,10 @@ function cod_profile_base_strongarm() {
     'extra_fields' => array(
       'form' => array(
         'ckeditor' => array(
-          'weight' => '12',
+          'weight' => '11',
         ),
         'account' => array(
-          'weight' => '1',
+          'weight' => '2',
         ),
         'timezone' => array(
           'weight' => '15',
