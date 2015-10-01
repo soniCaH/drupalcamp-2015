@@ -55,7 +55,7 @@ function drupalcamp_profile_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'ds_2col_stacked';
+  $ds_layout->layout = 'zf_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
@@ -105,7 +105,6 @@ function drupalcamp_profile_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['user|user|full'] = $ds_layout;
 
