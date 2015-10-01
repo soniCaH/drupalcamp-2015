@@ -28,7 +28,7 @@ function cod_profile_optional_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 16,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',

@@ -5,3 +5,53 @@
  */
 
 include_once 'drupalcamp_profile.features.inc';
+
+/**
+ * Implement hook_field_formatter_info().
+ */
+function drupalcamp_profile_field_formatter_info() {
+  return array(
+    'drupalcamp_profile_country_flag' => array(
+      'label'       => t('Output country as a flag'),
+      'field types' => array('country'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function drupalcamp_profile_field_formatter_view($entity_type, $entity, $field,
+  $instance, $langcode, $items, $display
+) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'drupalcamp_profile_country_flag':
+      foreach ($items as $delta => $item) {
+        $country = $item['country'];
+        if (empty($country)) {
+          continue;
+        }
+
+        $img = url(drupal_get_path('module', 'drupalcamp_profile')
+          . DIRECTORY_SEPARATOR . 'flags'
+          . DIRECTORY_SEPARATOR . strtolower($country->iso2) . '.png');
+
+
+        $element[0] = array(
+          '#type'       => 'html_tag',
+          '#tag'        => 'span',
+          '#attributes' => array(
+            'class' => 'user--country user--country--' . strtolower($country->iso2),
+          ),
+          '#value'      => '<img src="' . $img . '" alt="' . $country->name . '" /> ' . $country->name,
+        );
+
+      }
+
+      break;
+  }
+
+  return $element;
+}
