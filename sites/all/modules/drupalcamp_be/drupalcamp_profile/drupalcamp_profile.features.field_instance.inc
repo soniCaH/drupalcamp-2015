@@ -25,7 +25,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'weight' => 14,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'drupalcamp_profile',
         'settings' => array(),
         'type' => 'drupalcamp_profile_country_flag',
@@ -70,10 +70,10 @@ function drupalcamp_profile_field_default_field_instances() {
       ),
       'full' => array(
         'label' => 'above',
-        'module' => 'list',
+        'module' => 'drupalcamp_profile',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 7,
+        'type' => 'drupalcamp_profile_attend_list',
+        'weight' => 6,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -117,11 +117,11 @@ function drupalcamp_profile_field_default_field_instances() {
         'weight' => 4,
       ),
       'full' => array(
-        'label' => 'above',
-        'module' => 'list',
+        'label' => 'hidden',
+        'module' => 'drupalcamp_profile',
         'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 8,
+        'type' => 'drupalcamp_profile_volunteer_badge',
+        'weight' => 7,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -169,7 +169,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -227,7 +227,7 @@ function drupalcamp_profile_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',

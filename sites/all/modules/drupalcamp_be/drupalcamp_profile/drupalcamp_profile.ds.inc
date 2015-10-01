@@ -18,7 +18,7 @@ function drupalcamp_profile_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'full';
   $ds_fieldsetting->settings = array(
     'ds_user_picture' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'ds_picture_square_large',
     ),
@@ -55,65 +55,57 @@ function drupalcamp_profile_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'full';
-  $ds_layout->layout = 'zf_3col_bricks';
+  $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
-      'above_left' => array(
-        0 => 'field_profile_first',
+      'left' => array(
+        0 => 'ds_user_picture',
       ),
-      'above_middle' => array(
-        1 => 'ds_user_picture',
-      ),
-      'above_right' => array(
+      'right' => array(
+        1 => 'field_profile_first',
         2 => 'field_profile_last',
-      ),
-      'middle' => array(
         3 => 'field_country',
-        4 => 'field_profile_job_title',
-        5 => 'field_profile_org',
-        6 => 'field_profile_bio',
-        7 => 'field_profile_days',
-        8 => 'field_volunteer',
-        9 => 'field_facebook_url',
-        10 => 'field_twitter_url',
-        11 => 'field_linkedin_url',
+        4 => 'field_profile_org',
+        5 => 'field_profile_job_title',
+        6 => 'field_profile_days',
+        7 => 'field_volunteer',
       ),
-      'bottom' => array(
-        12 => 'flag_featured_speaker',
+      'footer' => array(
+        8 => 'field_profile_bio',
+        9 => 'group_social_media',
+        10 => 'field_facebook_url',
+        11 => 'field_twitter_url',
+        12 => 'field_linkedin_url',
       ),
     ),
     'fields' => array(
-      'field_profile_first' => 'above_left',
-      'ds_user_picture' => 'above_middle',
-      'field_profile_last' => 'above_right',
-      'field_country' => 'middle',
-      'field_profile_job_title' => 'middle',
-      'field_profile_org' => 'middle',
-      'field_profile_bio' => 'middle',
-      'field_profile_days' => 'middle',
-      'field_volunteer' => 'middle',
-      'field_facebook_url' => 'middle',
-      'field_twitter_url' => 'middle',
-      'field_linkedin_url' => 'middle',
-      'flag_featured_speaker' => 'bottom',
+      'ds_user_picture' => 'left',
+      'field_profile_first' => 'right',
+      'field_profile_last' => 'right',
+      'field_country' => 'right',
+      'field_profile_org' => 'right',
+      'field_profile_job_title' => 'right',
+      'field_profile_days' => 'right',
+      'field_volunteer' => 'right',
+      'field_profile_bio' => 'footer',
+      'group_social_media' => 'footer',
+      'field_facebook_url' => 'footer',
+      'field_twitter_url' => 'footer',
+      'field_linkedin_url' => 'footer',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'top' => 'div',
-      'above_left' => 'div',
-      'above_middle' => 'div',
-      'above_right' => 'div',
-      'middle' => 'div',
-      'below_left' => 'div',
-      'below_middle' => 'div',
-      'below_right' => 'div',
-      'bottom' => 'div',
+      'header' => 'div',
+      'left' => 'div',
+      'right' => 'div',
+      'footer' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['user|user|full'] = $ds_layout;
 
