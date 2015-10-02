@@ -109,8 +109,6 @@
         </div>
       <?php endif; ?>
 
-      <?php if (!$is_front): ?>
-
         <a id="main-content"></a>
 
         <?php if ($title): ?>
@@ -131,7 +129,6 @@
         <?php endif; ?>
 
         <?php print render($page['content']); ?>
-      <?php endif; ?>
     </div>
     <!--/.l-main region -->
 
