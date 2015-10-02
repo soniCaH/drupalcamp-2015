@@ -22,7 +22,7 @@ function cod_news_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => -10,
       ),
       'listing' => array(
         'label' => 'above',
@@ -37,7 +37,7 @@ function cod_news_field_default_field_instances() {
           'trim_length' => 600,
         ),
         'type' => 'text_summary_or_trimmed',
-        'weight' => 0,
+        'weight' => 1,
       ),
     ),
     'entity_type' => 'node',
@@ -70,10 +70,9 @@ function cod_news_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'og_ui',
         'settings' => array(),
-        'type' => 'og_list_default',
-        'weight' => 1,
+        'type' => 'hidden',
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -85,7 +84,7 @@ function cod_news_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 0,
+        'weight' => 10,
       ),
     ),
     'entity_type' => 'node',

@@ -14,7 +14,7 @@ function drupalcamp_general_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'node/1/news';
+  $strongarm->value = 'frontnews';
   $export['site_frontpage'] = $strongarm;
 
   return $export;

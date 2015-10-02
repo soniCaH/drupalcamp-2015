@@ -120,3 +120,15 @@
   }
 }
 
+.page-frontnews {
+  #page-title {
+    &:before {
+      background: url('../images/i-news.png') no-repeat center top;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 138px;
+      width: 150px;
+    }
+  }
+}
