@@ -1,12 +1,47 @@
 @import "../../custom/zurb_foundation/scss/foundation/functions";
 
-$green: rgb(131, 174, 143);
-$green-alpha: rgba(131, 174, 143, 0.75);
-$pink: rgb(148, 119, 184);
-$pink-alpha: rgba(148, 119, 184, 0.75);
+/**
+ * COLOR SCHEMA FROM DESIGN
+ */
+$black: #000000;
+$darkest: #0A0909;
+$darkest-alpha: rgba(9, 9, 9, 0.7);
+$darker: #1D1D1B;
+$dark: #2B2B2B;
+$light: #D8D8D8;
+$white: #FFFFFF;
 
-$primary-color: $green;
-$secondary-color: $pink;
+$primary-color: $darker;
+$secondary-color: $light;
 
-$topbar-bg-color: $green-alpha;
+/**
+ * FONT SCHEMA
+ */
+$body-font-family: "FuturaBT-Book", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$body-font-color: $darker;
+$header-font-color: $darker;
 
+/**
+ * BUTTONS
+ */
+$button-bg-color: $darkest-alpha;
+$button-bg-hover: $darkest;
+$button-border-color: $white;
+$button-border-width: 1px;
+
+/**
+ * TOPBAR
+ */
+$topbar-bg-color: transparent;
+$topbar-link-bg-hover: transparent;
+
+// Media Queries
+$screen: "only screen" !default;
+$retina: (
+        "#{$screen} and (-webkit-min-device-pixel-ratio: 2)",
+        "#{$screen} and (min--moz-device-pixel-ratio: 2)",
+        "#{$screen} and (-o-min-device-pixel-ratio: 2/1)",
+        "#{$screen} and (min-device-pixel-ratio: 2)",
+        "#{$screen} and (min-resolution: 192dpi)",
+        "#{$screen} and (min-resolution: 2dppx)"
+);

@@ -1,0 +1,134 @@
+.featured-body--session-timeslot {
+  clear: both;
+  font-size: 2em;
+  border-bottom: 5px solid $darker;
+  margin-bottom: 0.25em;
+  margin-top: 0.5em;
+
+  @media #{$medium-up} {
+    display: inline-block;
+    margin-top: 0;
+  }
+}
+
+.featured-body--session-title {
+  font-size: 1.75em;
+  margin-bottom: 0.25em;
+}
+
+.featured-body--name {
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.view-featured-speakers {
+  .views-field-picture {
+    text-align: center;
+
+    @media #{$medium-up} {
+      float: left;
+      margin-bottom: 5em;
+      margin-right: 3%;
+      width: 30%;
+    }
+  }
+
+  .featured-body--wrapper {
+    @media #{$medium-up} {
+      float: left;
+      width: 66%;
+    }
+  }
+
+  .featured-body--job-description {
+    font-style: italic;
+
+    &:before {
+      content: ', ';
+    }
+    &:empty {
+      display: none;
+    }
+  }
+
+  .views-row {
+    margin: 15px 0;
+    padding: 15px 0;
+
+    &:after {
+      background: url('../images/featured-after.png') no-repeat center;
+      content: ' ';
+      display: block;
+      height: 15px;
+      margin: 2em;
+    }
+  }
+}
+
+@media #{$medium-up} {
+  .featured--timeslot--day-wrapper {
+    padding: 0 0.1em;
+
+    .featured--timeslot--day {
+
+    }
+    .featured--timeslot--month {
+      display: block;
+      font-size: 65%;
+      margin: -0.75em 0 0 0;
+      padding: 0;
+      clear: both;
+      font-weight: 100;
+      text-align: center;
+    }
+  }
+}
+
+.block-drupalcamp-location-location-featured {
+  h5, h6 {
+    font-weight: bold;
+    text-transform: none;
+  }
+
+  .dcl-venue_map {
+    height: 250px;
+    margin-bottom: 2em;
+  }
+
+  .block-title {
+    &:before {
+      background: url('../images/i-globe_s.png') no-repeat center top;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 125px;
+      width: 125px;
+    }
+  }
+}
+
+.block-views-featured-speakers-block {
+  .block-title {
+    &:before {
+      background: url('../images/i-featured_s.png') no-repeat center top;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 125px;
+      width: 125px;
+    }
+  }
+}
+
+.page-frontnews {
+  #page-title {
+    &:before {
+      background: url('../images/i-news.png') no-repeat center top;
+      content: '';
+      display: block;
+      margin: 0 auto;
+      height: 138px;
+      width: 150px;
+    }
+  }
+}

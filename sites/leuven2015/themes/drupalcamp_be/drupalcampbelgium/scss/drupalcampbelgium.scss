@@ -80,6 +80,8 @@
 // Comment out this import if you don't want to use Bourbon, a replacement for Compass mixins.
 @import "bourbon";
 
+@import "base/fonts";
+
 // Import our mixins early so they can be used by other partials.
 // Optional.
 @import "base/mixins";
@@ -96,7 +98,6 @@
 // Optional.
 @import "base/elements";
 
-
 // Layout
 // Each section of the document has it's own partial seperated out to improve
 // developer experience. Additionally, grids can be declared in layouts as well.
@@ -106,18 +107,23 @@
 @import "layout/footer";
 
 // Modules
-@import "modules/block";
 @import "modules/button";
 @import "modules/container";
 @import "modules/menu_block";
 @import "modules/topbar";
 @import "modules/views";
+@import "modules/news";
 
 // States
 @import "states/collapse";
 
 // Themes
+@import "theme/design";
 @import "theme/sidebar_menu";
+@import "theme/user_profile";
+@import "theme/featured";
+@import "theme/practical";
+@import "theme/flag";
 
 // Older IE support
 //@import "vendor/ie";

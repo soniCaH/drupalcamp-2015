@@ -7,13 +7,25 @@
 
 // Headings
 //------------------------------------------
-// h1, h2, h3,
-// h4, h5, h6 {}
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h1, h2 {
+  &:after {
+    background: url('../images/header-after.png') no-repeat center;
+    content: ' ';
+    display: block;
+    height: 8px;
+  }
+}
 
 // Anchors
 //-----------------------------------------------------------------------------
 a {
-  color: $pink;
+  text-decoration: underline;
 }
 
 //a:focus {}
@@ -21,8 +33,7 @@ a {
 a.active,
 a:active,
 a:hover {
-  color: $pink-alpha;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 // Form Input

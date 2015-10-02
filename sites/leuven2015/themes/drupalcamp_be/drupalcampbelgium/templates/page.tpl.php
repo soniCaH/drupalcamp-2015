@@ -43,7 +43,9 @@
           <!--/.top-bar -->
         <?php endif; ?>
 
-        <a href="/" title="Home" rel="home" class="site-branding__logo"><img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.png" alt="Home"></a>
+        <a href="/" title="Home" rel="home" class="site-branding__logo">
+          <img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.png" alt="Home">
+        </a>
         <div class="l-region l-region--branding">
           <div id="block-block-9" class="block block--block block--block-9">
             <div class="block__content">
@@ -107,26 +109,26 @@
         </div>
       <?php endif; ?>
 
-      <a id="main-content"></a>
+        <a id="main-content"></a>
 
-      <?php if ($title): ?>
-        <?php print render($title_prefix); ?>
-        <h1 id="page-title" class="title"><?php print $title; ?></h1>
-        <?php print render($title_suffix); ?>
-      <?php endif; ?>
+        <?php if ($title): ?>
+          <?php print render($title_prefix); ?>
+          <h1 id="page-title" class="title"><?php print $title; ?></h1>
+          <?php print render($title_suffix); ?>
+        <?php endif; ?>
 
-      <?php if (!empty($tabs)): ?>
-        <?php print render($tabs); ?>
-        <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
-      <?php endif; ?>
+        <?php if (!empty($tabs)): ?>
+          <?php print render($tabs); ?>
+          <?php if (!empty($tabs2)): print render($tabs2); endif; ?>
+        <?php endif; ?>
 
-      <?php if ($action_links): ?>
-        <ul class="action-links">
-          <?php print render($action_links); ?>
-        </ul>
-      <?php endif; ?>
+        <?php if ($action_links): ?>
+          <ul class="action-links">
+            <?php print render($action_links); ?>
+          </ul>
+        <?php endif; ?>
 
-      <?php print render($page['content']); ?>
+        <?php print render($page['content']); ?>
     </div>
     <!--/.l-main region -->
 

@@ -92,6 +92,9 @@ function cod_news_strongarm() {
       'revision' => array(
         'custom_settings' => FALSE,
       ),
+      'taxonomy_page_overview' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

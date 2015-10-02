@@ -29,7 +29,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 5,
+        'weight' => 10,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',
@@ -124,7 +124,7 @@ function cod_profile_base_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 3,
+        'weight' => 5,
       ),
       'user_attendees_overview' => array(
         'label' => 'hidden',

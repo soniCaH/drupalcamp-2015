@@ -25,10 +25,11 @@ function cod_profile_social_field_default_field_instances() {
         'weight' => 10,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 14,
+        'type' => 'link_url',
+        'weight' => 12,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -88,10 +89,11 @@ function cod_profile_social_field_default_field_instances() {
         'weight' => 11,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 13,
+        'type' => 'link_url',
+        'weight' => 14,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',
@@ -151,10 +153,11 @@ function cod_profile_social_field_default_field_instances() {
         'weight' => 9,
       ),
       'full' => array(
-        'label' => 'above',
+        'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 11,
+        'type' => 'link_url',
+        'weight' => 13,
       ),
       'user_attendees_overview' => array(
         'label' => 'above',

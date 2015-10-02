@@ -1,0 +1,15 @@
+@font-face {
+  font-family: 'FuturaBT-Book';
+  src: url('../fonts/FuturaBT-Book.eot') format('embedded-opentype');
+  src: url('../fonts/FuturaBT-Book.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/FuturaBT-Book.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../fonts/FuturaBT-Book.woff') format('woff'), /* Pretty Modern Browsers */
+  url('../fonts/FuturaBT-Book.ttf')  format('truetype'), /* Safari, Android, iOS */
+  url('../fonts/FuturaBT-Book.svg#FuturaBT-Book') format('svg'); /* Legacy iOS */
+  font-weight: normal;
+  font-style: normal;
+}
+
+.text-strong {
+  font-weight: bold;
+}

@@ -21,3 +21,28 @@ function drupalcampbelgium_preprocess_page(&$variables) {
  */
 function drupalcampbelgium_preprocess_node(&$variables) {
 }
+
+/**
+ * Implements theme_links() targeting the main menu topbar.
+ */
+function drupalcampbelgium_links__topbar_main_menu($variables) {
+  // We need to fetch the links ourselves because we need the entire tree.
+  $links = menu_tree_output(menu_tree_all_data(variable_get('menu_main_links_source', 'main-menu')));
+  $output = _zurb_foundation_links($links);
+  $variables['attributes']['class'][] = 'primary';
+  $variables['attributes']['class'][] = 'center-buttons';
+
+  return '<ul' . drupal_attributes($variables['attributes']) . '>' . $output . '</ul>';
+}
+
+/**
+ * Implements theme_links() targeting the secondary menu topbar.
+ */
+function drupalcampbelgium_links__topbar_secondary_menu($variables) {
+  // We need to fetch the links ourselves because we need the entire tree.
+  $links = menu_tree_output(menu_tree_all_data(variable_get('menu_secondary_links_source', 'user-menu')));
+  $output = _zurb_foundation_links($links);
+  $variables['attributes']['class'][] = 'center-buttons';
+
+  return '<ul' . drupal_attributes($variables['attributes']) . '>' . $output . '</ul>';
+}

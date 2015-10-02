@@ -31,6 +31,7 @@ $tcon-menu-arrow360left-transformation: (
   &:hover,
   &:focus {
     outline: none; // see issue #36 https://github.com/grayghostvisuals/transformicons/issues/36
+    background: inherit;
   }
   &::-moz-focus-inner {
     border: 0;
@@ -169,5 +170,43 @@ $spinner_inner_bg: white !default;
 @keyframes tcon-spin360 {
   to {
     transform: rotate(360deg);
+  }
+}
+
+// Larger screen styles.
+@media only screen and (min-width: 40em) {
+  .top-bar {
+    text-align: center;
+  }
+
+  ul.center-buttons {
+    display: inline-block;
+  }
+}
+
+// Some mobile resets.
+.menu-icon {
+  padding-top: 1.2rem;
+}
+
+.top-bar.expanded {
+  background: #333333;
+}
+
+.top-bar-section {
+  // Anchors
+  //-----------------------------------------------------------------------------
+  a {
+    font-weight: 100;
+    text-decoration: none;
+    text-shadow: 1px 1px 4px $darker;
+  }
+
+  //a:focus {}
+
+  a.active,
+  a:active,
+  a:hover {
+    text-decoration: underline;
   }
 }

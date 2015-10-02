@@ -13,6 +13,9 @@ function drupalcamp_location_block_info() {
   $blocks['gmaps'] = array(
     'info' => t('Include the google maps to the venue.'),
   );
+  $blocks['location_featured'] = array(
+    'info' => t('Featured block on the frontpage with venue info.'),
+  );
 
   return $blocks;
 }
@@ -58,9 +61,18 @@ function _drupalcamp_location_block_callback($delta, $type) {
  */
 function drupalcamp_location_theme($existing, $type, $theme, $path) {
   return array(
-    'drupalcamp_location_gmaps_html' => array(
-      'template' => 'templates/block--drupalcamp-location--googlemaps',
+    'drupalcamp_location_gmaps_html'    => array(
+      'template'  => 'templates/block--drupalcamp-location--googlemaps',
       'arguments' => array(),
+    ),
+    'drupalcamp_location_featured_html' => array(
+      'template'  => 'templates/block--drupalcamp-location--featured',
+      'arguments' => array(
+        'title' => '',
+        'address' => '',
+        'texts' => array(),
+        'button' => '',
+      ),
     ),
   );
 }

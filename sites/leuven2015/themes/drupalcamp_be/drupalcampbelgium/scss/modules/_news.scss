@@ -1,0 +1,12 @@
+.node-news {
+  .body {
+    .css-column-wrap {
+      @include css-columns(2, 3);
+    }
+  }
+
+  .field-name-node-link {
+    float: right;
+    margin-top: 0.5rem;
+  }
+}
