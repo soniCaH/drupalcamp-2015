@@ -71,7 +71,7 @@ function drupalcamp_location_theme($existing, $type, $theme, $path) {
         'title' => '',
         'address' => '',
         'texts' => array(),
-        'button' => ''
+        'button' => '',
       ),
     ),
   );

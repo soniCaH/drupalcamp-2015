@@ -7,7 +7,7 @@
 include_once 'drupalcamp_session.features.inc';
 
 /**
- * Implement hook_field_formatter_info().
+ * Implements hook_field_formatter_info().
  */
 function drupalcamp_session_field_formatter_info() {
   return array(
@@ -58,7 +58,7 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
             '#tag'        => 'span',
             '#attributes' => array(
               'title' => format_date($start, 'custom', 'd', $timezone),
-              'class' => 'featured--timeslot--day'
+              'class' => 'featured--timeslot--day',
             ),
             '#value'      => format_date($start, 'custom', 'd', $timezone),
           );
@@ -67,7 +67,7 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
             '#tag'        => 'span',
             '#attributes' => array(
               'title' => format_date($start, 'custom', 'M', $timezone),
-              'class' => 'featured--timeslot--month'
+              'class' => 'featured--timeslot--month',
             ),
             '#value'      => format_date($start, 'custom', 'M', $timezone),
           );
@@ -77,7 +77,7 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
             '#tag'        => 'div',
             '#attributes' => array(
               'title' => format_date($start, 'custom', 'd M', $timezone),
-              'class' => 'featured--timeslot--day-wrapper'
+              'class' => 'featured--timeslot--day-wrapper',
             ),
             '#value'      => drupal_render($day) . drupal_render($month),
           );
