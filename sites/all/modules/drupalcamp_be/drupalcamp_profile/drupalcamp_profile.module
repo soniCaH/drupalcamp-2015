@@ -7,7 +7,7 @@
 include_once 'drupalcamp_profile.features.inc';
 
 /**
- * Implement hook_field_formatter_info().
+ * Implements hook_field_formatter_info().
  */
 function drupalcamp_profile_field_formatter_info() {
   return array(
@@ -47,23 +47,18 @@ function drupalcamp_profile_field_formatter_view($entity_type, $entity, $field,
           . 'flags' . DIRECTORY_SEPARATOR . strtolower($country->iso2) . '.png'
         );
 
-
         $element[$delta] = array(
           '#type'       => 'html_tag',
           '#tag'        => 'span',
           '#attributes' => array(
-            'class' => 'user--country user--country--' . strtolower(
-                $country->iso2
-              ),
+            'class' => 'user--country user--country--' . strtolower($country->iso2),
           ),
-          '#value'      =>
-            '<img src="' . $img . '" alt="' . $country->name . '" /> '
-            . $country->name,
+          '#value'      => '<img src="' . $img . '" alt="' . $country->name . '" /> ' . $country->name,
         );
-
       }
 
       break;
+
     case 'drupalcamp_profile_volunteer_badge':
       foreach ($items as $delta => $item) {
         $value = (bool) $item['value'];
@@ -72,11 +67,6 @@ function drupalcamp_profile_field_formatter_view($entity_type, $entity, $field,
           continue;
         }
 
-//        $img = url(drupal_get_path('module', 'drupalcamp_profile')
-//          . DIRECTORY_SEPARATOR . 'images'
-//          . DIRECTORY_SEPARATOR . 'volunteer-badge.png');
-
-
         $element[$delta] = array(
           '#type'       => 'html_tag',
           '#tag'        => 'span',
@@ -84,10 +74,10 @@ function drupalcamp_profile_field_formatter_view($entity_type, $entity, $field,
             'class' => 'user--volunteer',
           ),
           '#value'      => t('I want to volunteer!'),
-          //          '#value'      => '<img src="' . $img . '" alt="' . t('I want to volunteer') . '" /> ' . t('I want to volunteer!'),
         );
       }
       break;
+
     case 'drupalcamp_profile_attend_list':
       $allowed_values = list_allowed_values($field, $instance, $entity_type, $entity);
       $values = array();
