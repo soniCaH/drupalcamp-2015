@@ -67,7 +67,12 @@ function drupalcamp_location_theme($existing, $type, $theme, $path) {
     ),
     'drupalcamp_location_featured_html' => array(
       'template'  => 'templates/block--drupalcamp-location--featured',
-      'arguments' => array('title' => '', 'address' => '', 'texts' => array(), 'button' => ''),
+      'arguments' => array(
+        'title' => '',
+        'address' => '',
+        'texts' => array(),
+        'button' => ''
+      ),
     ),
   );
 }

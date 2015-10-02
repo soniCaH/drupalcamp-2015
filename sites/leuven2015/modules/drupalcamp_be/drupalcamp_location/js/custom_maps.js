@@ -10,7 +10,8 @@ function init() {
   var mapOptions = {
     zoom: 15,
 
-    center: new google.maps.LatLng(50.880647, 4.674663), // KHLeuven.
+    // KHLeuven Centered.
+    center: new google.maps.LatLng(50.880647, 4.674663),
 
     // How you would like to style the map.
     styles: [
