@@ -46,3 +46,14 @@ function drupalcampbelgium_links__topbar_secondary_menu($variables) {
 
   return '<ul' . drupal_attributes($variables['attributes']) . '>' . $output . '</ul>';
 }
+
+/**
+ * Implements theme_preprocess_views_view().
+ */
+function drupalcampbelgium_preprocess_views_view(&$vars) {
+  $view = &$vars['view'];
+  // Make sure it's the correct view
+  if ($view->name == 'volunteers') {
+    drupal_add_js('http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', 'external');
+  }
+}

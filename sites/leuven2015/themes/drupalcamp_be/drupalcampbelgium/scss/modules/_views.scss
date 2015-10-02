@@ -3,3 +3,19 @@
 
   margin-bottom: 20px;
 }
+
+.view-volunteers {
+  @extend .row;
+
+  .user-profile {
+    text-align: center;
+
+    .field {
+      float: none;
+    }
+    
+    .field-name-field-profile-first, .field-name-field-profile-last {
+      display: inline-block;
+    }
+  }
+}

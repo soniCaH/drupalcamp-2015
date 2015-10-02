@@ -248,4 +248,11 @@
 jQuery(document).ready(function ($) {
   $(document).foundation();
   transformicons.add('.tcon');
+
+  $(".view-volunteers .view-content").isotope({
+    itemSelector: ".views-row",
+    masonry: {
+      columnWidth: ".views-row",
+    }
+  });
 });
