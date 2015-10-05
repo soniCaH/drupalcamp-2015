@@ -26,17 +26,23 @@ function drupalcamp_speaker_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'drupalcamp_speaker-propose' => array(
+          'module' => 'drupalcamp_speaker',
+          'delta' => 'propose',
+          'region' => 'featured',
+          'weight' => '-10',
+        ),
         'views-featured_speakers-block' => array(
           'module' => 'views',
           'delta' => 'featured_speakers-block',
           'region' => 'featured',
-          'weight' => '-10',
+          'weight' => '-9',
         ),
         'drupalcamp_location-location_featured' => array(
           'module' => 'drupalcamp_location',
           'delta' => 'location_featured',
           'region' => 'featured',
-          'weight' => '-9',
+          'weight' => '-8',
         ),
       ),
     ),

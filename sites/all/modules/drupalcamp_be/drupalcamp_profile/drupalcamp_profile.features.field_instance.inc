@@ -47,9 +47,9 @@ function drupalcamp_profile_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'countries',
+      'module' => 'options',
       'settings' => array(),
-      'type' => 'countries_continent',
+      'type' => 'options_select',
       'weight' => 5,
     ),
   );
