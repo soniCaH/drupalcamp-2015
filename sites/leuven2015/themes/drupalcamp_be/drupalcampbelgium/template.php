@@ -54,7 +54,7 @@ function drupalcampbelgium_links__topbar_secondary_menu($variables) {
  */
 function drupalcampbelgium_preprocess_views_view(&$vars) {
   $view = &$vars['view'];
-  // Make sure it's the correct view
+  // Make sure it's the correct view.
   if ($view->name == 'volunteers' || $view->name == 'attendees') {
     drupal_add_js('http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', 'external');
   }

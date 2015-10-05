@@ -251,7 +251,7 @@ jQuery(document).ready(function ($) {
 
   containers = $(".view-volunteers .view-content, .view-attendees .view-content");
 
-  if ($(containers).length ) {
+  if ($(containers).length) {
     containers.isotope({
       itemSelector: ".views-row",
       masonry: {
