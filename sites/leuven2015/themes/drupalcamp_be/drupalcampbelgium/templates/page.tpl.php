@@ -197,18 +197,10 @@
   <?php endif; ?>
 
   <!--.l-footer -->
-  <footer class="l-footer panel row" role="contentinfo">
+  <footer class="l-footer panel" role="contentinfo">
     <?php if (!empty($page['footer'])): ?>
-      <div class="footer columns">
+      <div class="footer row">
         <?php print render($page['footer']); ?>
-      </div>
-    <?php endif; ?>
-
-    <?php if ($site_name) : ?>
-      <div class="copyright columns">
-        &copy; <?php print date('Y') . ' ' . $site_name . ' ' . t(
-            'All rights reserved.'
-          ); ?>
       </div>
     <?php endif; ?>
   </footer>
