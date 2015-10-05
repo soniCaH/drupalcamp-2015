@@ -114,23 +114,19 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
   $ds_layout->entity_type = 'node';
   $ds_layout->bundle = 'sponsor';
   $ds_layout->view_mode = 'sponsor_teaser_diamond';
-  $ds_layout->layout = 'ds_2col';
+  $ds_layout->layout = 'zf_2col';
   $ds_layout->settings = array(
     'regions' => array(
       'left' => array(
         0 => 'field_sponsor_logo',
-        1 => 'field_sponsor_related_attendees',
       ),
       'right' => array(
-        2 => 'title',
-        3 => 'field_sponsor_body',
-        4 => 'field_sponsor_url',
+        1 => 'field_sponsor_body',
+        2 => 'field_sponsor_url',
       ),
     ),
     'fields' => array(
       'field_sponsor_logo' => 'left',
-      'field_sponsor_related_attendees' => 'left',
-      'title' => 'right',
       'field_sponsor_body' => 'right',
       'field_sponsor_url' => 'right',
     ),
@@ -144,7 +140,6 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
-    'layout_disable_css' => 0,
   );
   $export['node|sponsor|sponsor_teaser_diamond'] = $ds_layout;
 
@@ -159,15 +154,11 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_sponsor_logo',
-        1 => 'title',
-        2 => 'field_sponsor_body',
-        3 => 'field_sponsor_url',
+        1 => 'field_sponsor_url',
       ),
     ),
     'fields' => array(
       'field_sponsor_logo' => 'ds_content',
-      'title' => 'ds_content',
-      'field_sponsor_body' => 'ds_content',
       'field_sponsor_url' => 'ds_content',
     ),
     'classes' => array(),
@@ -193,12 +184,10 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_sponsor_logo',
-        1 => 'title',
       ),
     ),
     'fields' => array(
       'field_sponsor_logo' => 'ds_content',
-      'title' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

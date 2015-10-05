@@ -66,10 +66,10 @@ function cod_sponsors_strongarm() {
   $strongarm->value = array(
     'view_modes' => array(
       'teaser' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'listing' => array(
-        'custom_settings' => TRUE,
+        'custom_settings' => FALSE,
       ),
       'full' => array(
         'custom_settings' => FALSE,
@@ -94,6 +94,21 @@ function cod_sponsors_strongarm() {
       ),
       'revision' => array(
         'custom_settings' => FALSE,
+      ),
+      'sponsor_footer_diamond' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sponsor_footer_gold' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sponsor_teaser_diamond' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sponsor_teaser_gold' => array(
+        'custom_settings' => TRUE,
+      ),
+      'sponsor_teaser_silver' => array(
+        'custom_settings' => TRUE,
       ),
     ),
     'extra_fields' => array(

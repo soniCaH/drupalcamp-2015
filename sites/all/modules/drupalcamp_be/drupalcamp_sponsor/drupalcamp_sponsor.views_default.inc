@@ -23,6 +23,7 @@ function drupalcamp_sponsor_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Diamond Sponsors';
+  $handler->display->display_options['css_class'] = 'row';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['cache']['type'] = 'none';
@@ -75,7 +76,7 @@ function drupalcamp_sponsor_views_default_views() {
   $handler->display->display_options['title'] = 'Gold Sponsors';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'small-12 columns';
+  $handler->display->display_options['style_options']['row_class'] = 'small-12 medium-6 columns';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
@@ -115,7 +116,7 @@ function drupalcamp_sponsor_views_default_views() {
   $handler->display->display_options['title'] = 'Silver Sponsors';
   $handler->display->display_options['defaults']['style_plugin'] = FALSE;
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'small-12 columns';
+  $handler->display->display_options['style_options']['row_class'] = 'small-6 medium-4 columns';
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
