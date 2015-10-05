@@ -5,6 +5,12 @@
     @include radius(50%);
   }
 
+  .user--country {
+    img {
+      width: auto;
+    }
+  }
+
   .field-name-ds-user-picture {
     text-align: center;
   }
