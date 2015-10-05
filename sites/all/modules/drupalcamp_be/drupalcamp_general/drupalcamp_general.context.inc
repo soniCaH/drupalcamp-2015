@@ -59,6 +59,18 @@ function drupalcamp_general_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
+        'views-sponsors-block_3' => array(
+          'module' => 'views',
+          'delta' => 'sponsors-block_3',
+          'region' => 'featured',
+          'weight' => '-10',
+        ),
+        'views-sponsors-block_4' => array(
+          'module' => 'views',
+          'delta' => 'sponsors-block_4',
+          'region' => 'content',
+          'weight' => '10',
+        ),
         'drupalcamp_general-footer_text' => array(
           'module' => 'drupalcamp_general',
           'delta' => 'footer_text',
