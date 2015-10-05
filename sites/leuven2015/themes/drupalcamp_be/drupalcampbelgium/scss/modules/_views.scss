@@ -4,10 +4,15 @@
   margin-bottom: 20px;
 }
 
-.view-volunteers {
+.view-volunteers, .view-attendees {
   @extend .row;
 
+  .view-content {
+    @extend .clearfix;
+  }
+
   .user-profile {
+    margin-bottom: 1rem;
 
     .group-left {
       height: 7rem;
@@ -30,6 +35,15 @@
 
     .field-name-field-profile-org {
       line-height: 1rem;
+    }
+  }
+}
+
+.view-attendees {
+  .field-name-field-profile-org {
+    &:before {
+      content: '';
+      display: none;
     }
   }
 }

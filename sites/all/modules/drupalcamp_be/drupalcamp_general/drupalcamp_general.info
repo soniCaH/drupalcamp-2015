@@ -22,4 +22,5 @@ features[field_base][] = field_track_color
 features[field_instance][] = taxonomy_term-session_tracks_1-field_track_color
 features[taxonomy][] = session_tracks_1
 features[variable][] = site_frontpage
+features[views_view][] = attendees
 features[views_view][] = volunteers
