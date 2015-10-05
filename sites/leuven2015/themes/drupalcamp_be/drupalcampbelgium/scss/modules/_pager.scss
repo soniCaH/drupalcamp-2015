@@ -1,0 +1,41 @@
+.pager-wrapper {
+  &:after {
+    background: url('../images/pager-after.png') no-repeat center;
+    content: ' ';
+    display: block !important;
+    height: 10px;
+    margin: 0.5rem 0;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+.pager {
+  margin: 0;
+}
+  .pager-item {
+    margin: 0 1rem;
+  }
+}
+
+.pager-current {
+  font-size: 2em;
+}
+
+.pager-previous, .pager-next {
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.pager-previous {
+  text-align: left;
+}
+
+.pager-next {
+  text-align: right;
+}
