@@ -9,16 +9,14 @@
     text-align: center;
   }
 
-  .field-name-field-profile-first {
-    float: left;
-    font-size: 125%;
+  .field-name-field-profile-first, .field-name-field-profile-last {
+    font-size: 1.25rem;
     font-weight: bold;
-    margin-right: 5px;
   }
 
-  .field-name-field-profile-last {
-    font-size: 125%;
-    font-weight: bold;
+  .field-name-field-profile-first {
+    float: left;
+    margin-right: 5px;
   }
 
   .field-name-field-country {

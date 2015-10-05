@@ -58,7 +58,7 @@ function cod_profile_base_strongarm() {
             'visible' => FALSE,
           ),
           'user_attendees_overview' => array(
-            'weight' => '14',
+            'weight' => '21',
             'visible' => FALSE,
           ),
         ),
@@ -70,6 +70,10 @@ function cod_profile_base_strongarm() {
           'default' => array(
             'weight' => '12',
             'visible' => TRUE,
+          ),
+          'user_attendees_overview' => array(
+            'weight' => '17',
+            'visible' => FALSE,
           ),
         ),
       ),

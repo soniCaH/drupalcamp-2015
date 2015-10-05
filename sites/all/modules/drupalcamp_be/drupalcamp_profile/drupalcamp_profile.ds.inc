@@ -114,31 +114,35 @@ function drupalcamp_profile_ds_layout_settings_info() {
   $ds_layout->entity_type = 'user';
   $ds_layout->bundle = 'user';
   $ds_layout->view_mode = 'user_attendees_overview';
-  $ds_layout->layout = 'ds_1col';
+  $ds_layout->layout = 'ds_2col';
   $ds_layout->settings = array(
     'regions' => array(
-      'ds_content' => array(
+      'left' => array(
         0 => 'ds_user_picture',
+      ),
+      'right' => array(
         1 => 'field_profile_first',
         2 => 'field_profile_last',
         3 => 'field_profile_org',
       ),
     ),
     'fields' => array(
-      'ds_user_picture' => 'ds_content',
-      'field_profile_first' => 'ds_content',
-      'field_profile_last' => 'ds_content',
-      'field_profile_org' => 'ds_content',
+      'ds_user_picture' => 'left',
+      'field_profile_first' => 'right',
+      'field_profile_last' => 'right',
+      'field_profile_org' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
-      'ds_content' => 'div',
+      'left' => 'div',
+      'right' => 'div',
     ),
     'layout_wrapper' => 'div',
     'layout_attributes' => '',
     'layout_attributes_merge' => 1,
     'layout_link_attribute' => '',
     'layout_link_custom' => '',
+    'layout_disable_css' => 0,
   );
   $export['user|user|user_attendees_overview'] = $ds_layout;
 

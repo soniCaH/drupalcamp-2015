@@ -31,7 +31,7 @@ function drupalcamp_general_views_default_views() {
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['pager']['type'] = 'none';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['style_options']['row_class'] = 'medium-6 large-3 columns';
+  $handler->display->display_options['style_options']['row_class'] = 'large-6 columns';
   $handler->display->display_options['row_plugin'] = 'ds';
   $handler->display->display_options['row_options']['view_mode'] = 'user_attendees_overview';
   $handler->display->display_options['row_options']['grouping'] = 0;

@@ -8,7 +8,16 @@
   @extend .row;
 
   .user-profile {
-    text-align: center;
+
+    .group-left {
+      height: 7rem;
+      width: 7rem;
+      max-width: 7rem;
+    }
+
+    .group-right {
+      padding: 2.375rem 0 0 1rem;
+    }
 
     .field {
       float: none;
@@ -16,6 +25,11 @@
     
     .field-name-field-profile-first, .field-name-field-profile-last {
       display: inline-block;
+      line-height: 1.25rem;
+    }
+
+    .field-name-field-profile-org {
+      line-height: 1rem;
     }
   }
 }
