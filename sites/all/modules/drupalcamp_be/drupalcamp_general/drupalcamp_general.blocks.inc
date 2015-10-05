@@ -198,8 +198,8 @@ function _drupalcamp_general_footer_text_view() {
         '#tag'   => 'p',
         '#value' => t(
           'Built on <a href="http://usecod.com/" target="_blank">COD</a>.'
-        ) . (!empty($designer) ? t(
-          ' Designed by @designer.', array('@designer' => $designer)
+        ) . (!empty($designer) ? ' ' . t(
+          'Designed by @designer.', array('@designer' => $designer)
         ) : '') . '<br />' . t(
           '<a href="http://drupal.org/" target="_blank">Drupal</a> is a <a href="http://drupal.com/trademark" target="_blank">registered trademark</a> of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.'
         ),
