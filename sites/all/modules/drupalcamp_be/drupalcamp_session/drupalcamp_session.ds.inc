@@ -128,38 +128,6 @@ function drupalcamp_session_ds_layout_settings_info() {
   $ds_layout->view_mode = 'default';
   $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
-    'regions' => array(
-      'header' => array(
-        0 => 'field_news_image',
-      ),
-      'left' => array(
-        1 => 'field_speakers',
-        2 => 'field_session_timeslot',
-        3 => 'field_accepted',
-      ),
-      'right' => array(
-        4 => 'field_experience',
-        5 => 'og_vocabulary',
-        6 => 'field_session_ranking',
-        7 => 'field_slides',
-      ),
-      'footer' => array(
-        8 => 'body',
-        9 => 'comments',
-      ),
-    ),
-    'fields' => array(
-      'field_news_image' => 'header',
-      'field_speakers' => 'left',
-      'field_session_timeslot' => 'left',
-      'field_accepted' => 'left',
-      'field_experience' => 'right',
-      'og_vocabulary' => 'right',
-      'field_session_ranking' => 'right',
-      'field_slides' => 'right',
-      'body' => 'footer',
-      'comments' => 'footer',
-    ),
     'classes' => array(),
     'wrappers' => array(
       'header' => 'div',

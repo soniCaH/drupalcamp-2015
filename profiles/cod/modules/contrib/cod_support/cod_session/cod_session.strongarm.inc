@@ -247,6 +247,21 @@ function cod_session_strongarm() {
       'taxonomy_page_overview' => array(
         'custom_settings' => TRUE,
       ),
+      'sponsor_footer_diamond' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sponsor_footer_gold' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sponsor_teaser_diamond' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sponsor_teaser_gold' => array(
+        'custom_settings' => FALSE,
+      ),
+      'sponsor_teaser_silver' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(

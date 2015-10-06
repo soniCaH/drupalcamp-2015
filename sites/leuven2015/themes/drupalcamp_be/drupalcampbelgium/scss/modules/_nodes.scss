@@ -1,0 +1,11 @@
+.node-full {
+  .row {
+    margin-bottom: 1em;
+  }
+}
+
+.body {
+  text-align: justify;
+
+  @include css-columns(2,3);
+}
