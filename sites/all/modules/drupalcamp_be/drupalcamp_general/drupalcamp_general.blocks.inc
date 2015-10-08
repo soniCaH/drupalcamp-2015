@@ -198,8 +198,8 @@ function _drupalcamp_general_footer_text_view() {
         '#tag'   => 'p',
         '#value' => t(
           'Built on <a href="http://usecod.com/" target="_blank">COD</a>.'
-        ) . (!empty($designer) ? t(
-          'Designed by @designer', array('@designer' => $designer)
+        ) . (!empty($designer) ? ' ' . t(
+          'Designed by @designer.', array('@designer' => $designer)
         ) : '') . '<br />' . t(
           '<a href="http://drupal.org/" target="_blank">Drupal</a> is a <a href="http://drupal.com/trademark" target="_blank">registered trademark</a> of <a href="http://buytaert.net/" target="_blank">Dries Buytaert</a>.'
         ),
@@ -210,6 +210,24 @@ function _drupalcamp_general_footer_text_view() {
   $block = array(
     'subject' => NULL,
     'content' => $content,
+  );
+
+  return $block;
+}
+
+/**
+ * Block to render the "propose a session" CTA block.
+ *
+ * @return array
+ *   The block array.
+ */
+function _drupalcamp_general_register_cta_view() {
+  $img = drupal_get_path('module', 'drupalcamp_general') . DIRECTORY_SEPARATOR . 'images' . DIRECTORY_SEPARATOR . 'subscribe_LR.png';
+  $url = url('user/register');
+
+  $block = array(
+    'subject' => '',
+    'content' => '<p class="text-center">' . '<a href="' . $url . '"><img src="' . $img . '" alt="Register now and join these beautiful people"/></a>' . '</p>',
   );
 
   return $block;

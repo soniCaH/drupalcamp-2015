@@ -113,6 +113,10 @@
 @import "modules/topbar";
 @import "modules/views";
 @import "modules/news";
+@import "modules/pager";
+@import "modules/panels";
+@import "modules/nodes";
+@import "modules/taxonomy";
 
 // States
 @import "states/collapse";
@@ -124,6 +128,8 @@
 @import "theme/featured";
 @import "theme/practical";
 @import "theme/flag";
+@import "theme/sponsors";
+@import "theme/ckeditor";
 
 // Older IE support
 //@import "vendor/ie";

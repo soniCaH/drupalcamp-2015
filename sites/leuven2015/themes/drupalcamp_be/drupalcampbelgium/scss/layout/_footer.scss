@@ -1,1 +1,31 @@
 // Non-modular or client styles for .l-footer region.
+
+.l-footer {
+  margin-top: 2em;
+  border-top: 1px solid $dark;
+  padding: 2em 0;
+  position: relative;
+
+  &:before {
+    border-top: 1px solid $dark;
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 3px;
+    width: 100%;
+  }
+
+  .block-drupalcamp-general-footer-text {
+    text-align: center;
+
+    p:not(:last-child) {
+      &:after {
+        background: url('../images/footer-p-after.png') no-repeat center;
+        content: ' ';
+        display: block !important;
+        height: 2px;
+        margin: 1.25rem 0;
+      }
+    }
+  }
+}
