@@ -1,16 +1,16 @@
 body:not(.cke_editable) {
-  background: url('../images/paper-old-bg_s.png') repeat-y center;
+  background: url('../images/paper-old-bg_s.jpg') repeat-y center;
   background-size: 100% auto;
 
   @media #{$medium-up} {
-    background-image: url('../images/paper-old-bg_m.png');
+    background-image: url('../images/paper-old-bg_m.jpg');
   }
 
   @media #{$large-up} {
-    background-image: url('../images/paper-old-bg_l.png');
+    background-image: url('../images/paper-old-bg_l.jpg');
   }
 
   @media #{$xlarge-up} {
-    background-image: url('../images/paper-old-bg_xl.png');
+    background-image: url('../images/paper-old-bg_xl.jpg');
   }
 }
