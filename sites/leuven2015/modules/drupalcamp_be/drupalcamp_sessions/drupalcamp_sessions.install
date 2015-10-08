@@ -1,0 +1,209 @@
+<?php
+/**
+ * @file
+ * Installation and update hooks.
+ */
+
+define('CAMP_DAY_ONE', '2015-11-06');
+define('CAMP_DAY_TWO', '2015-11-07');
+define('CAMP_NID', 1);
+
+/**
+ * Implements hook_install().
+ */
+function drupalcamp_sessions_install() {
+  // Install default timeslots for 2015 camp.
+  _drupalcamp_sessions_timeslots_install();
+
+  // Install default rooms for 2015 camp.
+  _drupalcamp_sessions_rooms_install();
+}
+
+/**
+ * Create a set of default timeslots.
+ *
+ * @seealso _drupalcamp_sessions_timeslots_get().
+ */
+function _drupalcamp_sessions_timeslots_install() {
+  $slots = _drupalcamp_sessions_timeslots_get();
+  foreach ($slots as $slot) {
+    $entity = entity_create(
+      'cod_event_time',
+      array(
+        'status' => 1,
+      )
+    );
+
+    $wrapper = entity_metadata_wrapper('cod_event_time', $entity);
+
+    $wrapper->field_evttime_date->set(
+      array(
+        'value'       => $slot['start'],
+        'value2'      => $slot['end'],
+        'timezone'    => 'Europe/Brussels',
+        'offset'      => '7200',
+        'offset2'     => '7200',
+        'timezone_db' => 'Europe/Brussels',
+        'date_type'   => 'datetime',
+      )
+    );
+
+    // Conference node ID.
+    $wrapper->og_group_ref->set(array('target_id' => CAMP_NID));
+
+    $wrapper->save();
+  }
+}
+
+/**
+ * Return a set of default timeslots.
+ *
+ * @return array
+ *   Array with all default timeslots.
+ */
+function _drupalcamp_sessions_timeslots_get() {
+  return array(
+    array(
+      'start' => CAMP_DAY_ONE . ' 06:45:00',
+      'end'   => CAMP_DAY_ONE . ' 07:30:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 06:45:00',
+      'end'   => CAMP_DAY_TWO . ' 07:30:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 07:30:00',
+      'end'   => CAMP_DAY_ONE . ' 08:20:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 07:30:00',
+      'end'   => CAMP_DAY_TWO . ' 08:20:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 08:30:00',
+      'end'   => CAMP_DAY_ONE . ' 09:20:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 08:30:00',
+      'end'   => CAMP_DAY_TWO . ' 09:20:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 09:30:00',
+      'end'   => CAMP_DAY_ONE . ' 10:00:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 09:30:00',
+      'end'   => CAMP_DAY_TWO . ' 10:00:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 10:00:00',
+      'end'   => CAMP_DAY_ONE . ' 10:45:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 10:00:00',
+      'end'   => CAMP_DAY_TWO . ' 10:45:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 10:45:00',
+      'end'   => CAMP_DAY_ONE . ' 11:35:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 10:45:00',
+      'end'   => CAMP_DAY_TWO . ' 11:35:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 11:45:00',
+      'end'   => CAMP_DAY_ONE . ' 12:35:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 11:45:00',
+      'end'   => CAMP_DAY_TWO . ' 12:35:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 12:35:00',
+      'end'   => CAMP_DAY_ONE . ' 13:00:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 12:35:00',
+      'end'   => CAMP_DAY_TWO . ' 13:00:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 13:00:00',
+      'end'   => CAMP_DAY_ONE . ' 13:50:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 13:00:00',
+      'end'   => CAMP_DAY_TWO . ' 13:50:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 14:00:00',
+      'end'   => CAMP_DAY_ONE . ' 14:50:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 14:00:00',
+      'end'   => CAMP_DAY_TWO . ' 14:50:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 15:00:00',
+      'end'   => CAMP_DAY_ONE . ' 15:30:00',
+    ),
+    array(
+      'start' => CAMP_DAY_TWO . ' 15:00:00',
+      'end'   => CAMP_DAY_TWO . ' 15:30:00',
+    ),
+    array(
+      'start' => CAMP_DAY_ONE . ' 16:30:00',
+      'end'   => CAMP_DAY_ONE . ' 21:30:00',
+    ),
+  );
+}
+
+
+/**
+ * Creates some default rooms.
+ *
+ * @seealso _drupalcamp_sessions_rooms_get().
+ */
+function _drupalcamp_sessions_rooms_install() {
+  $rooms = _drupalcamp_sessions_rooms_get();
+  foreach ($rooms as $room) {
+    $entity = entity_create(
+      'cod_event_room',
+      array(
+        'name'     => $room['name'],
+        'capacity' => $room['capacity'],
+        'status'   => 1,
+      )
+    );
+
+    $wrapper = entity_metadata_wrapper('cod_event_room', $entity);
+
+    // Conference node ID.
+    $wrapper->og_group_ref->set(array('target_id' => CAMP_NID));
+
+    $wrapper->save();
+  }
+}
+
+/**
+ * Return a set of default rooms.
+ *
+ * @return array
+ *   Array with all default rooms.
+ */
+function _drupalcamp_sessions_rooms_get() {
+  return array(
+    array(
+      'name'     => t('Foyer'),
+      'capacity' => 0,
+    ),
+    array(
+      'name'     => t('Session aula #1'),
+      'capacity' => 200,
+    ),
+    array(
+      'name'     => t('Session aula #2'),
+      'capacity' => 200,
+    ),
+  );
+}

@@ -1,0 +1,78 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCamp Belgium Location feature.
+ */
+
+include_once 'drupalcamp_location.features.inc';
+
+/**
+ * Implements hook_block_info().
+ */
+function drupalcamp_location_block_info() {
+  $blocks['gmaps'] = array(
+    'info' => t('Include the google maps to the venue.'),
+  );
+  $blocks['location_featured'] = array(
+    'info' => t('Featured block on the frontpage with venue info.'),
+  );
+
+  return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ */
+function drupalcamp_location_block_view($delta = '') {
+  $callback = _drupalcamp_location_block_callback($delta, 'view');
+  if ($callback) {
+    return $callback();
+  }
+}
+
+/**
+ * Helper to include the blocks include and to create the proper callback.
+ *
+ * @param string $delta
+ *   The delta of the block.
+ * @param string $type
+ *   The block hook name (configure, save, view).
+ *
+ * @return FALSE|string
+ *   The callback name will only be returned if it exists.
+ */
+function _drupalcamp_location_block_callback($delta, $type) {
+  module_load_include(
+    'inc',
+    'drupalcamp_location',
+    'drupalcamp_location.blocks'
+  );
+
+  $callback = '_drupalcamp_location_' . $delta . '_' . $type;
+  if (!function_exists($callback)) {
+    return FALSE;
+  }
+
+  return $callback;
+}
+
+/**
+ * Implements hook_theme().
+ */
+function drupalcamp_location_theme($existing, $type, $theme, $path) {
+  return array(
+    'drupalcamp_location_gmaps_html'    => array(
+      'template'  => 'templates/block--drupalcamp-location--googlemaps',
+      'arguments' => array(),
+    ),
+    'drupalcamp_location_featured_html' => array(
+      'template'  => 'templates/block--drupalcamp-location--featured',
+      'arguments' => array(
+        'title' => '',
+        'address' => '',
+        'texts' => array(),
+        'button' => '',
+      ),
+    ),
+  );
+}

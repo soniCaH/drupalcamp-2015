@@ -1,0 +1,86 @@
+.user-profile {
+  img {
+    @include radius(50%);
+  }
+
+  .field-name-ds-user-picture {
+    text-align: center;
+  }
+
+  .field-name-field-profile-first {
+    float: left;
+    font-size: 125%;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .field-name-field-profile-last {
+    font-size: 125%;
+    font-weight: bold;
+  }
+
+  .field-name-field-country {
+    &:before {
+      content: 'Lives in';
+      margin-right: 5px;
+    }
+  }
+
+  .field-name-field-profile-org {
+    float: left;
+
+    &:before {
+      content: 'Works for';
+      margin-right: 5px;
+    }
+
+    & + .field-name-field-profile-job-title {
+
+      &:before {
+        content: 'as';
+        margin-left: 5px;
+        margin-right: 5px;
+      }
+    }
+
+    & + :not(.field-name-field-profile-job-title) {
+      clear: both;
+    }
+
+  }
+
+  .field-name-field-profile-job-title {
+    &:before {
+      content: 'Works as';
+      margin-right: 5px;
+    }
+  }
+
+  .field-name-field-profile-days {
+    margin-top: 15px;
+  }
+
+  .group-footer {
+    padding-top: 2rem;
+  }
+}
+
+.field-name-field-twitter-url {
+  background: url('../images/icon/twitter.png') no-repeat left center;
+  line-height: 35px;
+  padding: 0 0 0 35px;
+}
+
+.field-name-field-facebook-url {
+  background: url('../images/icon/facebook.png') no-repeat left center;
+  line-height: 35px;
+  padding: 0 0 0 35px;
+
+}
+
+.field-name-field-linkedin-url {
+  background: url('../images/icon/linkedin.png') no-repeat left center;
+  line-height: 35px;
+  padding: 0 0 0 35px;
+
+}

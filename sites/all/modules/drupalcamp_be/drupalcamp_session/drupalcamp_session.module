@@ -1,0 +1,90 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCamp Belgium Sessions feature.
+ */
+
+include_once 'drupalcamp_session.features.inc';
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function drupalcamp_session_field_formatter_info() {
+  return array(
+    'drupalcamp_session_slot_custom_date' => array(
+      'label'       => t('Session slot - custom date formatter'),
+      'field types' => array('entityreference'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
+  $instance, $langcode, $items, $display
+) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'drupalcamp_session_slot_custom_date':
+      $ts_id = $entity->field_session_timeslot['und'][0]['target_id'];
+
+      if (!empty($ts_id)) {
+        $query = db_select('cod_event_time', 'cet');
+        $query->addField('evt_date', 'field_evttime_date_value', 'date');
+        $query->addField('evt_date', 'field_evttime_date_offset', 'offset');
+        $query->addField('evt_date', 'field_evttime_date_timezone', 'timezone');
+
+        $query->innerJoin(
+          'field_data_field_timeslot_time', 'ftt',
+          'ftt.field_timeslot_time_target_id = cet.evttid'
+        );
+        $query->innerJoin(
+          'field_data_field_evttime_date', 'evt_date',
+          'evt_date.revision_id = cet.evttid'
+        );
+
+        $query->condition('ftt.entity_id', $ts_id);
+
+        $result = $query->execute()->fetchAssoc();
+
+        if (!empty($result)) {
+          $timezone = $result['timezone'];
+          $start = strtotime($result['date']) + $result['offset'];
+
+          $day = array(
+            '#type'       => 'html_tag',
+            '#tag'        => 'span',
+            '#attributes' => array(
+              'title' => format_date($start, 'custom', 'd', $timezone),
+              'class' => 'featured--timeslot--day',
+            ),
+            '#value'      => format_date($start, 'custom', 'd', $timezone),
+          );
+          $month = array(
+            '#type'       => 'html_tag',
+            '#tag'        => 'span',
+            '#attributes' => array(
+              'title' => format_date($start, 'custom', 'M', $timezone),
+              'class' => 'featured--timeslot--month',
+            ),
+            '#value'      => format_date($start, 'custom', 'M', $timezone),
+          );
+
+          $element[0] = array(
+            '#type'       => 'html_tag',
+            '#tag'        => 'div',
+            '#attributes' => array(
+              'title' => format_date($start, 'custom', 'd M', $timezone),
+              'class' => 'featured--timeslot--day-wrapper',
+            ),
+            '#value'      => drupal_render($day) . drupal_render($month),
+          );
+
+          return $element;
+        }
+      }
+      break;
+  }
+}

@@ -1,0 +1,105 @@
+<?php
+/**
+ * @file
+ * Code for the DrupalCamp Belgium Profile feature.
+ */
+
+include_once 'drupalcamp_profile.features.inc';
+
+/**
+ * Implements hook_field_formatter_info().
+ */
+function drupalcamp_profile_field_formatter_info() {
+  return array(
+    'drupalcamp_profile_country_flag'    => array(
+      'label'       => t('Output country as a flag'),
+      'field types' => array('country'),
+    ),
+    'drupalcamp_profile_volunteer_badge' => array(
+      'label'       => t('(Volunteer) Output a badge instead of label'),
+      'field types' => array('list_boolean'),
+    ),
+    'drupalcamp_profile_attend_list' => array(
+      'label'       => t('(Attend days) Output days user attend as list'),
+      'field types' => array('list_text'),
+    ),
+  );
+}
+
+/**
+ * Implements hook_field_formatter_view().
+ */
+function drupalcamp_profile_field_formatter_view($entity_type, $entity, $field,
+  $instance, $langcode, $items, $display
+) {
+  $element = array();
+
+  switch ($display['type']) {
+    case 'drupalcamp_profile_country_flag':
+      foreach ($items as $delta => $item) {
+        $country = $item['country'];
+        if (empty($country)) {
+          continue;
+        }
+
+        $img = url(
+          drupal_get_path('module', 'drupalcamp_profile') . DIRECTORY_SEPARATOR
+          . 'flags' . DIRECTORY_SEPARATOR . strtolower($country->iso2) . '.png'
+        );
+
+        $element[$delta] = array(
+          '#type'       => 'html_tag',
+          '#tag'        => 'span',
+          '#attributes' => array(
+            'class' => 'user--country user--country--' . strtolower($country->iso2),
+          ),
+          '#value'      => '<img src="' . $img . '" alt="' . $country->name . '" /> ' . $country->name,
+        );
+      }
+
+      break;
+
+    case 'drupalcamp_profile_volunteer_badge':
+      foreach ($items as $delta => $item) {
+        $value = (bool) $item['value'];
+
+        if (!$value) {
+          continue;
+        }
+
+        $element[$delta] = array(
+          '#type'       => 'html_tag',
+          '#tag'        => 'span',
+          '#attributes' => array(
+            'class' => 'user--volunteer',
+          ),
+          '#value'      => t('I want to volunteer!'),
+        );
+      }
+      break;
+
+    case 'drupalcamp_profile_attend_list':
+      $allowed_values = list_allowed_values($field, $instance, $entity_type, $entity);
+      $values = array();
+      foreach ($items as $delta => $item) {
+        if (isset($allowed_values[$item['value']])) {
+          $output = field_filter_xss($allowed_values[$item['value']]);
+        }
+        else {
+          // If no match was found in allowed values, fall back to the key.
+          $output = field_filter_xss($item['value']);
+        }
+        $values[] = $output;
+      }
+
+      $element[0] = array(
+        '#items' => $values,
+        '#theme' => 'item_list',
+        '#type' => 'ul',
+      );
+
+      break;
+  }
+
+  return $element;
+}
