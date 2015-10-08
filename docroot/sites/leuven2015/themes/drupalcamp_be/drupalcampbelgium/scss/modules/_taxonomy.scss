@@ -1,0 +1,39 @@
+.page-taxonomy .node-session.view-mode-taxonomy_page_overview {
+  border: 0;
+  .field-name-session-room {
+    float: right;
+
+  }
+}
+
+.experience-level {
+  float: right;
+  padding: 5px;
+  height: 25px;
+  text-align: center;
+  text-indent: -9999px;
+  width: 45px;
+  margin-right: 5px;
+
+  &.experience-level-beginner {
+    background: url('../images/exp-beginner.png') no-repeat center right;
+  }
+  &.experience-level-intermediate {
+    background: url('../images/exp-intermediate.png') no-repeat center right;
+  }
+  &.experience-level-advanced {
+    background: url('../images/exp-advanced.png') no-repeat center right;
+  }
+}
+
+.view-mode-taxonomy_page_overview {
+  .experience-level-beginner {
+    background: url('../images/exp-beginner-blue.png') no-repeat center right;
+  }
+  .experience-level-intermediate {
+    background: url('../images/exp-intermediate-blue.png') no-repeat center right;
+  }
+  .experience-level-advanced {
+    background: url('../images/exp-advanced-blue.png') no-repeat center right;
+  }
+}

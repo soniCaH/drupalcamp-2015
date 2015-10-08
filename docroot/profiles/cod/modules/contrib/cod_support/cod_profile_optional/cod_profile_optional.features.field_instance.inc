@@ -34,7 +34,7 @@ function cod_profile_optional_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 18,
       ),
     ),
     'entity_type' => 'user',

@@ -19,16 +19,8 @@ function cod_session_ranking_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'above',
-        'module' => 'fivestar',
-        'settings' => array(
-          'expose' => TRUE,
-          'style' => 'average',
-          'text' => 'average',
-          'widget' => array(
-            'fivestar_widget' => NULL,
-          ),
-        ),
-        'type' => 'fivestar_formatter_default',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 6,
       ),
       'listing' => array(

@@ -36,7 +36,7 @@ function cod_sponsors_image_default_styles() {
       2 => array(
         'name' => 'image_scale',
         'data' => array(
-          'width' => 220,
+          'width' => 500,
           'height' => '',
           'upscale' => 1,
         ),

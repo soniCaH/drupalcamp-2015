@@ -72,3 +72,23 @@ a:hover {
 // }
 
 // select {}
+
+input[type="file"], input[type="checkbox"], input[type="radio"], select {
+  margin: 0;
+}
+
+select[multiple="multiple"] {
+  height: 10em;
+}
+
+fieldset {
+  border: 1px solid $dark;
+
+  legend {
+    background: none;
+  }
+}
+
+table {
+  width: 100%;
+}

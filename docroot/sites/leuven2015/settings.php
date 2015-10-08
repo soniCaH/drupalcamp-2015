@@ -212,21 +212,18 @@
  *   );
  * @endcode
  */
-$databases = array (
-  'default' => 
-  array (
-    'default' => 
-    array (
-      'database' => 'dc_leuven2015',
-      'username' => 'drupalcamp',
-      'password' => 'drupalcamp',
-      'host' => 'localhost',
-      'port' => '',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ),
-  ),
-);
+
+if (file_exists('/var/www/site-php')) {
+  require '/var/www/site-php/drupalcampbelgium/drupalcampbelgium-settings.inc';
+}
+else {
+  $settings_path = dirname(__FILE__);
+  $filename = $settings_path . '/local.settings.php';
+
+  if (file_exists($filename)) {
+    require $filename;
+  }
+}
 
 /**
  * Access control for update.php script.
