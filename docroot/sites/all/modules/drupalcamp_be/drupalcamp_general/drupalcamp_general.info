@@ -12,7 +12,6 @@ dependencies[] = features
 dependencies[] = strongarm
 dependencies[] = taxonomy
 dependencies[] = views
-features[context][] = drupalcamp_attendees_cta
 features[context][] = drupalcamp_volunteers
 features[context][] = drupalcampbe_context_sitewide
 features[ctools][] = context:context:3

@@ -57,6 +57,12 @@ function drupalcamp_general_views_default_views() {
   $handler->display->display_options['row_options']['alternating_fieldset']['item_7'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_8'] = 'full';
   $handler->display->display_options['row_options']['alternating_fieldset']['item_9'] = 'full';
+  /* Footer: Global: Text area */
+  $handler->display->display_options['footer']['area']['id'] = 'area';
+  $handler->display->display_options['footer']['area']['table'] = 'views';
+  $handler->display->display_options['footer']['area']['field'] = 'area';
+  $handler->display->display_options['footer']['area']['content'] = '<p class="text-center"><a href="/user/register" class="button">JOIN THESE WONDERFUL PEOPLE</a></p>';
+  $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
   $handler->display->display_options['fields']['name']['table'] = 'users';
