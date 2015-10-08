@@ -85,7 +85,9 @@ function drupalcampbelgium_preprocess_field(&$variables, $hook) {
     $node = $variables['element']['#object'];
     $type = field_get_items('node', $node, 'field_schedule_item_type');
 
-    if (empty($type) || empty($type[0]['value'])) { return; }
+    if (empty($type) || empty($type[0]['value'])) {
+      return;
+    }
 
     $variables['classes_array'][] = 'schedule_item';
     $variables['classes_array'][] = 'schedule_' . check_plain($type[0]['value']);
