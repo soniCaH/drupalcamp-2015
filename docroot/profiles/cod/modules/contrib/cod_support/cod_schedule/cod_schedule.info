@@ -6,6 +6,7 @@ version = 7.x-1.0-beta10
 project = cod_support
 dependencies[] = cod_base
 dependencies[] = cod_events
+dependencies[] = cod_schedule
 dependencies[] = cod_session
 dependencies[] = ctools
 dependencies[] = date
