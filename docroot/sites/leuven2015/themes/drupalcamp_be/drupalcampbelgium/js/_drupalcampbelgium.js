@@ -19,9 +19,6 @@
     }
   }(this || window, function () {
 
-    // ####################
-    // MODULE TRANSFORMICON
-    // ####################
     'use strict';
 
     var
@@ -33,9 +30,6 @@
         revert: ['click']
       };
 
-    // ##############
-    // private methods
-    // ##############
     /**
      * Normalize a selector into an array of DOM elements.
      *
@@ -136,9 +130,6 @@
       tcon.toggle(event.currentTarget);
     };
 
-    // ##############
-    // public methods
-    // ##############
     /**
      * Add transformicon behavior to one or more elements.
      *

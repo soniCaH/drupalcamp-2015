@@ -4,9 +4,9 @@
  * Installation and update hooks.
  */
 
-define('CAMP_DAY_ONE', '2015-11-06');
-define('CAMP_DAY_TWO', '2015-11-07');
-define('CAMP_NID', 1);
+define('DRUPALCAMP_SESSIONS_CAMP_DAY_ONE', '2015-11-06');
+define('DRUPALCAMP_SESSIONS_CAMP_DAY_TWO', '2015-11-07');
+define('DRUPALCAMP_SESSIONS_CAMP_NID', 1);
 
 /**
  * Implements hook_install().
@@ -49,7 +49,7 @@ function _drupalcamp_sessions_timeslots_install() {
     );
 
     // Conference node ID.
-    $wrapper->og_group_ref->set(array('target_id' => CAMP_NID));
+    $wrapper->og_group_ref->set(array('target_id' => DRUPALCAMP_SESSIONS_CAMP_NID));
 
     $wrapper->save();
   }
@@ -64,96 +64,96 @@ function _drupalcamp_sessions_timeslots_install() {
 function _drupalcamp_sessions_timeslots_get() {
   return array(
     array(
-      'start' => CAMP_DAY_ONE . ' 06:45:00',
-      'end'   => CAMP_DAY_ONE . ' 07:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 06:45:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 07:30:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 06:45:00',
-      'end'   => CAMP_DAY_TWO . ' 07:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 06:45:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 07:30:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 07:30:00',
-      'end'   => CAMP_DAY_ONE . ' 08:20:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 07:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 08:20:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 07:30:00',
-      'end'   => CAMP_DAY_TWO . ' 08:20:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 07:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 08:20:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 08:30:00',
-      'end'   => CAMP_DAY_ONE . ' 09:20:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 08:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 09:20:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 08:30:00',
-      'end'   => CAMP_DAY_TWO . ' 09:20:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 08:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 09:20:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 09:30:00',
-      'end'   => CAMP_DAY_ONE . ' 10:00:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 09:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 10:00:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 09:30:00',
-      'end'   => CAMP_DAY_TWO . ' 10:00:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 09:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 10:00:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 10:00:00',
-      'end'   => CAMP_DAY_ONE . ' 10:45:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 10:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 10:45:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 10:00:00',
-      'end'   => CAMP_DAY_TWO . ' 10:45:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 10:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 10:45:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 10:45:00',
-      'end'   => CAMP_DAY_ONE . ' 11:35:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 10:45:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 11:35:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 10:45:00',
-      'end'   => CAMP_DAY_TWO . ' 11:35:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 10:45:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 11:35:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 11:45:00',
-      'end'   => CAMP_DAY_ONE . ' 12:35:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 11:45:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 12:35:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 11:45:00',
-      'end'   => CAMP_DAY_TWO . ' 12:35:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 11:45:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 12:35:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 12:35:00',
-      'end'   => CAMP_DAY_ONE . ' 13:00:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 12:35:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 13:00:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 12:35:00',
-      'end'   => CAMP_DAY_TWO . ' 13:00:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 12:35:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 13:00:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 13:00:00',
-      'end'   => CAMP_DAY_ONE . ' 13:50:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 13:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 13:50:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 13:00:00',
-      'end'   => CAMP_DAY_TWO . ' 13:50:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 13:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 13:50:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 14:00:00',
-      'end'   => CAMP_DAY_ONE . ' 14:50:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 14:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 14:50:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 14:00:00',
-      'end'   => CAMP_DAY_TWO . ' 14:50:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 14:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 14:50:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 15:00:00',
-      'end'   => CAMP_DAY_ONE . ' 15:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 15:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 15:30:00',
     ),
     array(
-      'start' => CAMP_DAY_TWO . ' 15:00:00',
-      'end'   => CAMP_DAY_TWO . ' 15:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 15:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 15:30:00',
     ),
     array(
-      'start' => CAMP_DAY_ONE . ' 16:30:00',
-      'end'   => CAMP_DAY_ONE . ' 21:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 16:30:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 21:30:00',
     ),
   );
 }
@@ -179,7 +179,7 @@ function _drupalcamp_sessions_rooms_install() {
     $wrapper = entity_metadata_wrapper('cod_event_room', $entity);
 
     // Conference node ID.
-    $wrapper->og_group_ref->set(array('target_id' => CAMP_NID));
+    $wrapper->og_group_ref->set(array('target_id' => DRUPALCAMP_SESSIONS_CAMP_NID));
 
     $wrapper->save();
   }
