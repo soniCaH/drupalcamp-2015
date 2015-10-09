@@ -57,5 +57,6 @@
 $sites['leuven2015.dev'] = 'leuven2015';
 $sites['leuven2015.drupalcamp.be'] = 'leuven2015';
 $sites['drupalcamp.be'] = 'leuven2015';
-$sites['drupalcampbelgiumymkxdrthml.devcloud.acquia-sites.com'] = 'leuven2015';
-$sites['drupalcampbelgiumgt7nqz2f34.devcloud.acquia-sites.com'] = 'leuven2015';
+$sites['drupalcampdugbedev.prod.acquia-sites.com'] = 'leuven2015';
+$sites['drupalcampdugbestg.prod.acquia-sites.com'] = 'leuven2015';
+$sites['drupalcampdugbe.prod.acquia-sites.com'] = 'leuven2015';

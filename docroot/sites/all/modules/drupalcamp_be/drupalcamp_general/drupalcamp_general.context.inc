@@ -13,39 +13,6 @@ function drupalcamp_general_context_default_contexts() {
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'drupalcamp_attendees_cta';
-  $context->description = 'Place CTA on attendees page';
-  $context->tag = 'DrupalCamp Belgium';
-  $context->conditions = array(
-    'path' => array(
-      'values' => array(
-        'attendees' => 'attendees',
-      ),
-    ),
-  );
-  $context->reactions = array(
-    'block' => array(
-      'blocks' => array(
-        'drupalcamp_general-register_cta' => array(
-          'module' => 'drupalcamp_general',
-          'delta' => 'register_cta',
-          'region' => 'content',
-          'weight' => '5',
-        ),
-      ),
-    ),
-  );
-  $context->condition_mode = 0;
-
-  // Translatables
-  // Included for use with string extractors like potx.
-  t('DrupalCamp Belgium');
-  t('Place CTA on attendees page');
-  $export['drupalcamp_attendees_cta'] = $context;
-
-  $context = new stdClass();
-  $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
-  $context->api_version = 3;
   $context->name = 'drupalcamp_volunteers';
   $context->description = 'Place blocks on the volunteers page';
   $context->tag = 'DrupalCamp Belgium';
@@ -83,6 +50,11 @@ function drupalcamp_general_context_default_contexts() {
   $context->description = 'DCL - Sitewide context (always active)';
   $context->tag = 'DrupalCamp Belgium';
   $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '~admin/*' => '~admin/*',
+      ),
+    ),
     'sitewide' => array(
       'values' => array(
         1 => 1,
@@ -113,7 +85,7 @@ function drupalcamp_general_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.
