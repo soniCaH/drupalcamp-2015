@@ -240,7 +240,7 @@ jQuery(document).ready(function ($) {
   $(document).foundation();
   transformicons.add('.tcon');
 
-  containers = $(".view-volunteers .view-content, .view-attendees .view-content, .view-sponsors .view-content");
+  containers = $(".view-volunteers .view-content, .view-attendees .view-content");
 
   if ($(containers).length) {
     containers.isotope({
