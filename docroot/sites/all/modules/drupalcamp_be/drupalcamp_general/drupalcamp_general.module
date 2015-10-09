@@ -24,6 +24,7 @@ include_once 'drupalcamp_general.features.inc';
  */
 function drupalcamp_general_menu_alter(&$items) {
   $items['node']['access callback'] = FALSE;
+  $items['filter/tips']['access callback'] = FALSE;
   $items['user/register']['title'] = 'Register';
   $items['user/%user/tickets']['access callback'] = FALSE;
   $items['user/%user/edit']['title'] = t('Edit Your Details');

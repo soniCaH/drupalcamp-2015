@@ -95,7 +95,7 @@ function drupalcamp_session_field_formatter_view($entity_type, $entity, $field,
 function drupalcamp_session_menu() {
   // Default menu callback (change to Saturday after day 1).
   $items['schedule'] = array(
-    'title'            => t('Schedule'),
+    'title'            => 'Schedule',
     'type'             => MENU_NORMAL_ITEM,
     'page callback'    => 'drupalcamp_session_schedule_default_page',
     // Switch to Saturday once Friday is over.
@@ -106,7 +106,7 @@ function drupalcamp_session_menu() {
   );
 
   $items['schedule/friday'] = array(
-    'title'            => t('Schedule - Friday'),
+    'title'            => 'Schedule - Friday',
     'page callback'    => 'drupalcamp_session_schedule_default_page',
     'page arguments'   => array("friday"),
     'type'             => MENU_DEFAULT_LOCAL_TASK,
@@ -116,7 +116,7 @@ function drupalcamp_session_menu() {
   );
 
   $items['schedule/saturday'] = array(
-    'title'            => t('Schedule - Saturday'),
+    'title'            => 'Schedule - Saturday',
     'type'             => MENU_LOCAL_TASK,
     'page callback'    => 'drupalcamp_session_schedule_default_page',
     'page arguments'   => array("saturday"),

@@ -1,12 +1,16 @@
 <?php
+/**
+ * @file
+ * Display a schedule for DrupalCamp.
+ */
 
 /**
  * Default Program page (without flags).
  *
- * @param String $day
- *   String indication of which event-day (friday or saturday).
+ * @param string $day
+ *   string indication of which event-day (friday or saturday).
  *
- * @return String
+ * @return string
  */
 function drupalcamp_session_schedule_default_page($day) {
   drupal_set_title('Schedule');
@@ -15,7 +19,7 @@ function drupalcamp_session_schedule_default_page($day) {
   if (!$output) {
     $text = t('At the moment, there are no sessions accepted for this day.');
 
-    // Create message
+    // Create message.
     $output = theme('html_tag', array(
       'element' => array(
         '#tag'        => 'div',
@@ -31,8 +35,8 @@ function drupalcamp_session_schedule_default_page($day) {
 /**
  * Create program/schedule page.
  *
- * @param String $day
- *   String indication of which event-day (friday or saturday).
+ * @param string $day
+ *   string indication of which event-day (friday or saturday).
  *
  * @return bool|string
  */
@@ -40,20 +44,6 @@ function _drupalcamp_session_schedule_create_page($day) {
   // @TODO: Create a DrupalCamp dashboard or something.
 
   // Timeslots. Hardcoded. Punch me if you see me.
-  /**
-   * __________                  __,___/  ",",
-   * ___.--"          "\'.         ____/  l   \    ",'-,
-   * ------f"               // \\\        \  (l\ \    \     \ \",
-   * |                    |||       /   u       |      \ \ \
-   * |                    |||     _ )          /       | |  \
-   * ----L_-XXX-.             .|'    / U          <        | |  |
-   * "\   -<_____///     \           6 )       | |  |
-   * \___)     -"       '.       -.<"       / /   |
-   * |'.___  |       _._."   /
-   * |     ./     _."."   _."
-   * /      |"----"     _."
-   * jjs       \
-   */
   $available_days = array(
     'friday'   => '2015-11-06',
     'saturday' => '2015-11-07'
@@ -132,9 +122,11 @@ function _drupalcamp_session_schedule_create_page($day) {
 /**
  * Helper function to retrieve the name of the room a session is scheduled in.
  *
- * @param  int $nid
+ * @param int $nid
+ *   Node ID from a session or schedule item.
  *
  * @return string
+ *   Name of the room.
  */
 function _drupalcamp_session_get_room_name($nid) {
   $sql = db_select('cod_event_room', 'room');
@@ -152,9 +144,11 @@ function _drupalcamp_session_get_room_name($nid) {
 /**
  * Helper function to retrieve timeslots on a day.
  *
- * @param  string $date
+ * @param string $date
+ *   Date as a string.
  *
  * @return QueryResult
+ *   Database Query result.
  */
 function _drupalcamp_session_page_get_timeslots($date) {
   $date  = $date . '%';
@@ -176,10 +170,11 @@ function _drupalcamp_session_page_get_timeslots($date) {
 /**
  * Get all sessions for a specific day.
  *
- * @param string $timeslot
+ * @param object $timeslot
+ *   Full timeslot entity.
  */
 function _drupalcamp_session_page_get_nodes($timeslot) {
-  // Get all session of the given day
+  // Get all session of the given day.
   $query = db_select('node', 'node')->distinct();
 
   $query->addField('node', 'nid', 'nid');
