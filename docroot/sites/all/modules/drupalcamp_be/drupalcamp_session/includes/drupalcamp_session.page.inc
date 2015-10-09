@@ -8,9 +8,10 @@
  * Default Program page (without flags).
  *
  * @param string $day
- *   string indication of which event-day (friday or saturday).
+ *   String indication of which event-day (friday or saturday).
  *
  * @return string
+ *   Create rendered output of the schedule.
  */
 function drupalcamp_session_schedule_default_page($day) {
   drupal_set_title('Schedule');
@@ -25,7 +26,7 @@ function drupalcamp_session_schedule_default_page($day) {
         '#tag'        => 'div',
         '#value'      => '<p>' . $text . '</p>',
         '#attributes' => array('class' => drupal_html_class('conf-message')),
-      )
+      ),
     ));
   }
 
@@ -36,21 +37,23 @@ function drupalcamp_session_schedule_default_page($day) {
  * Create program/schedule page.
  *
  * @param string $day
- *   string indication of which event-day (friday or saturday).
+ *   String indication of which event-day (friday or saturday).
  *
  * @return bool|string
+ *   Boolean if no schedule found. String (output) of the schedule otherwise.
  */
 function _drupalcamp_session_schedule_create_page($day) {
   // @TODO: Create a DrupalCamp dashboard or something.
-
   // Timeslots. Hardcoded. Punch me if you see me.
   $available_days = array(
     'friday'   => '2015-11-06',
-    'saturday' => '2015-11-07'
+    'saturday' => '2015-11-07',
   );
 
-  // Even worse. Rooms by their human-readable name. Used to display the schedule.
-  // Set to FALSE = display on the left side of the timeline, TRUE = on the right side.
+  // Even worse. Rooms by their human-readable name.
+  // Used to display the schedule.
+  // Set to FALSE = display on the left side of the timeline,
+  // TRUE = on the right side.
   $room_mapping = array(
     'Session aula #1'  => TRUE,
     'Session aula #2' => FALSE,

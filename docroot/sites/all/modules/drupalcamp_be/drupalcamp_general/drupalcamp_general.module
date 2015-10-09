@@ -101,6 +101,8 @@ function drupalcamp_general_block_configure($delta = '') {
   if ($callback) {
     return $callback();
   }
+
+  return;
 }
 
 /**
@@ -111,6 +113,8 @@ function drupalcamp_general_block_save($delta = '', $edit = array()) {
   if ($callback) {
     return $callback($edit);
   }
+
+  return;
 }
 
 /**
@@ -121,6 +125,8 @@ function drupalcamp_general_block_view($delta = '') {
   if ($callback) {
     return $callback();
   }
+
+  return;
 }
 
 /**
