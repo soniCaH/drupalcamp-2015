@@ -214,7 +214,7 @@
  */
 
 if (file_exists('/var/www/site-php')) {
-  require '/var/www/site-php/drupalcampbelgium/drupalcampbelgium-settings.inc';
+  require '/var/www/site-php/drupalcampdugbe/drupalcampdugbe-settings.inc';
 }
 else {
   $settings_path = dirname(__FILE__);
