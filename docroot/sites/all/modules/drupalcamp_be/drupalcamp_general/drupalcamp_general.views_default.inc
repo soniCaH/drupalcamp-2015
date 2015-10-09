@@ -23,6 +23,7 @@ function drupalcamp_general_views_default_views() {
   /* Display: Master */
   $handler = $view->new_display('default', 'Master', 'default');
   $handler->display->display_options['title'] = 'Attendees';
+  $handler->display->display_options['css_class'] = 'row';
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['access']['type'] = 'perm';
   $handler->display->display_options['access']['perm'] = 'access user profiles';
@@ -61,7 +62,7 @@ function drupalcamp_general_views_default_views() {
   $handler->display->display_options['footer']['area']['id'] = 'area';
   $handler->display->display_options['footer']['area']['table'] = 'views';
   $handler->display->display_options['footer']['area']['field'] = 'area';
-  $handler->display->display_options['footer']['area']['content'] = '<p class="text-center"><a href="/user/register" class="button">JOIN THESE WONDERFUL PEOPLE</a></p>';
+  $handler->display->display_options['footer']['area']['content'] = '<div class="small-12 columns"><p class="text-center"><a href="/user/register" class="button">JOIN THESE WONDERFUL PEOPLE</a></p></div>';
   $handler->display->display_options['footer']['area']['format'] = 'full_html';
   /* Field: User: Name */
   $handler->display->display_options['fields']['name']['id'] = 'name';
