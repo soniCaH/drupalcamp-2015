@@ -31,6 +31,21 @@ function drupalcamp_general_menu_alter(&$items) {
 }
 
 /**
+ * Implements hook_menu().
+ */
+function drupalcamp_general_menu() {
+  $items['user/%user/logout'] = array(
+    'title' => 'Logout',
+    'access callback' => 'user_is_logged_in',
+    'page callback' => 'drupalcamp_general_exec_logout',
+    'type' => MENU_LOCAL_TASK,
+    'weight' => 10,
+  );
+
+  return $items;
+}
+
+/**
  * Implements hook_module_implements_alter().
  */
 function drupalcamp_general_module_implements_alter(&$implementations, $hook) {
@@ -72,9 +87,6 @@ function drupalcamp_general_form_alter(&$form, &$form_state, $form_id) {
 function drupalcamp_general_block_info() {
   $blocks['footer_text'] = array(
     'info' => t('Footer text with social links and credits.'),
-  );
-  $blocks['register_cta'] = array(
-    'info' => t('Add "They look beautiful" block.'),
   );
 
   return $blocks;
@@ -175,4 +187,13 @@ function _drupalcamp_general_user_sessions_access() {
   }
 
   return FALSE;
+}
+
+
+/**
+ * Execute user logout.
+ */
+function drupalcamp_general_exec_logout() {
+  module_load_include('inc', 'user', 'user.pages');
+  user_logout();
 }

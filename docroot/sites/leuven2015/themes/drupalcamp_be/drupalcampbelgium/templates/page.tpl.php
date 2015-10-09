@@ -47,11 +47,13 @@
           <img src="/sites/leuven2015/themes/drupalcamp_be/drupalcampbelgium/images/event-logo.png" alt="Home">
         </a>
         <div class="l-region l-region--branding">
+          <?php if (!$logged_in): ?>
           <div id="block-block-9" class="block block--block block--block-9">
             <div class="block__content">
-              <p><a href="/user/register" class="button">Register Now</a></p>
+              <p><a href="/user/register" class="button margin--right">Register Now</a><a href="/user/login" class="button">Log in</a></p>
             </div>
           </div>
+          <?php endif; ?>
         </div>
       </div>
     </div>
