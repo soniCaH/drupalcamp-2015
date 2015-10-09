@@ -94,7 +94,7 @@ function _drupalcamp_session_schedule_create_page($day) {
     $items = array();
     foreach ($output as $row) {
       $items[] = array(
-        'data'  => '<div class="tldate">' . strtoupper(format_date(strtotime($row['starttime']) + 3600, 'custom', 'D  d/m/Y - H:i')) . ' - ' . strtoupper(format_date(strtotime($row['endtime']) + 3600, 'custom', 'H:i')) . '</div>',
+        'data'  => '<div class="tldate">' . strtoupper(format_date(strtotime($row['starttime']) + 7200, 'custom', 'D  d/m/Y - H:i')) . ' - ' . strtoupper(format_date(strtotime($row['endtime']) + 7200, 'custom', 'H:i')) . '</div>',
         'class' => array('tldate'),
       );
 
