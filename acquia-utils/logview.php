@@ -17,15 +17,9 @@
 #     cat: all of it
 #     range: just send lines N to M (must pass a lines N,M arg)
 #     menu: show HTML formatted list of local log files
-<<<<<<< HEAD
 # lines: How many lines to send. Can be an integer or a range 
 #     of two integers in the form of N,M (start_line,stop_line)
 # 
-=======
-# lines: How many lines to send. Can be an integer or a range
-#     of two integers in the form of N,M (start_line,stop_line)
-#
->>>>>>> develop
 # No op argument: shows a plain text list of local log files.
 #
 # EXAMPLES
@@ -37,22 +31,14 @@
 #   curl -H "Host: example.com" 'http://web-1.example.acquia-sites.com/utils/logview.php?op=tail&lines=50&file=error.log'
 #
 # Download and save compressed log file
-<<<<<<< HEAD
 #   curl -H "Host: example.com" -o access.log-20091214.gz 'http://web-1.example.acquia-sites.com/utils/logview.php?op=cat&file=access.log-20091214.gz' 
-=======
-#   curl -H "Host: example.com" -o access.log-20091214.gz 'http://web-1.example.acquia-sites.com/utils/logview.php?op=cat&file=access.log-20091214.gz'
->>>>>>> develop
 #
 # Download and decompress a compressed log file
 #   curl -H "Host: example.com" 'http://web-1.example.acquia-sites.com/utils/logview.php?op=cat&file=access.log-20091214.gz' | gunzip -dc
 #
 # COPYRIGHT
 #
-<<<<<<< HEAD
 # Copyright (c) 2009 Acquia. Permission granted to modify and redistribute 
-=======
-# Copyright (c) 2009 Acquia. Permission granted to modify and redistribute
->>>>>>> develop
 # this file without restrictions.
 #
 
@@ -60,11 +46,7 @@
 /**
  * Read and verify inputs
  */
-<<<<<<< HEAD
 global $args; 
-=======
-global $args;
->>>>>>> develop
 aq_read_input_args();
 aq_set_default_args();
 aq_verify_args();
@@ -116,11 +98,7 @@ function aq_read_input_args() {
   // file: the log file name
   if (isset($_GET['file'])) {
     preg_match('@([\w\.\-]{3,40})@', $_GET['file'], $matches);
-<<<<<<< HEAD
     $args['file'] = isset($matches[1]) ? $matches[1] : '';  
-=======
-    $args['file'] = isset($matches[1]) ? $matches[1] : '';
->>>>>>> develop
   }
   // lines: numbers of lines or a range of lines (start_at,stop_at)
   if (isset($_GET['lines'])) {
@@ -221,11 +199,7 @@ function aq_check_file_access() {
     header('HTTP/1.1 404 Not Found');
     aq_error("<h1>Not Found</h1>The file {$site['logdir']}/{$args['file']} was not found on this server.");
     return FALSE;
-<<<<<<< HEAD
   }  
-=======
-  }
->>>>>>> develop
   // check file read access
   if ($fh = @fopen("{$site['logdir']}/{$args['file']}", 'r')) {
     fclose($fh);
@@ -256,11 +230,7 @@ function aq_passthru($op) {
   else {
     header("Content-Type: text/plain");
   }
-<<<<<<< HEAD
   passthru("$op {$site['logdir']}/{$args['file']}"); 
-=======
-  passthru("$op {$site['logdir']}/{$args['file']}");
->>>>>>> develop
 }
 
 /**
@@ -271,11 +241,7 @@ function aq_show_main_menu() {
   print "<html>
 <head>
 <style>
-<<<<<<< HEAD
 * { 
-=======
-* {
->>>>>>> develop
   font-family: sans-serif;
   font-size: 10pt;
   line-height: 1.3;
@@ -355,11 +321,7 @@ function aq_get_log_files_list() {
     }
     $site['log_files'][$file] = array();
     $site['log_files'][$file]['ext'] = array_pop(explode(".", $file));
-<<<<<<< HEAD
     $site['log_files'][$file]['size'] = number_format(filesize("{$site['logdir']}/$file"));    
-=======
-    $site['log_files'][$file]['size'] = number_format(filesize("{$site['logdir']}/$file"));
->>>>>>> develop
   }
   closedir($dh);
   if (empty($site['log_files'])) {
@@ -367,9 +329,4 @@ function aq_get_log_files_list() {
   }
 }
 
-<<<<<<< HEAD
 ?>
-=======
-?>
-No newline at end of file
->>>>>>> develop

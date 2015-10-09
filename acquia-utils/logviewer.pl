@@ -7,7 +7,6 @@
   Usage:  ./logviewer.pl -f php-errors.log -c tail -n example.com -s web-1 web-2 web-3
 
 =head2 DESCRIPTION
-<<<<<<< HEAD
   
   This shell script assists with gathering server logs for a partilcar site
   on Acquia Hosting.
@@ -25,25 +24,6 @@
   4. Run this script from your local desktop to reach out to each web server
   and pull your logs from each server.
   
-=======
-
-  This shell script assists with gathering server logs for a partilcar site
-  on Acquia Hosting.
-
-=head2 SETUP
-
-  1. Check out your Acquia Hosting site repository using SVN
-
-  2. Install the acquia-utils/logview.php script on your Acquia Hosting site
-  per its instructions
-
-  3. Visit the Hosting tab of your Acquia Network subscription, and note the
-  list of web servers currenly serving your Acquia Hosting site.
-
-  4. Run this script from your local desktop to reach out to each web server
-  and pull your logs from each server.
-
->>>>>>> develop
 =head2 OPTIONS
 
   See the usage message (run this script with -h option for help.)
@@ -89,43 +69,26 @@ sub processArg {
   my ($arg) = @_;
 
   print "DEBUG: arg: $arg\n" if $debug;
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # agent
   if ($arg eq '-a') {
     $agent = shift @ARGV;
     return;
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # command
   if ($arg eq '-c') {
     $command = shift @ARGV;
     return;
   }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> develop
   # debug
   if ($arg eq '-d') {
     $debug = 1;
     return;
   }
-<<<<<<< HEAD
   
   # file  
-=======
-
-  # file
->>>>>>> develop
   if ($arg eq '-f') {
     $file = shift @ARGV;
     return;
@@ -135,31 +98,19 @@ sub processArg {
   if ($arg eq '-h') {
     usage();
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # lines
   if ($arg eq '-l') {
     $lines = shift @ARGV;
     return;
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # logview_uri
   if ($arg eq '-u') {
     $logview_uri = shift @ARGV;
     return;
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # site name
   if ($arg eq '-n') {
     $sitename = shift @ARGV;
@@ -177,11 +128,7 @@ sub processArg {
     }
     return;
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # unknown arg
   print "ERROR: Unknown argument: $arg";
   &brief_usage();
@@ -208,31 +155,19 @@ sub setDefaultArgs {
 
 =cut
 sub verfifyArgs {
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # file
   unless ($file =~ /^[\w\-\.]{3,40}$/) {
     print "ERROR: Invalid file argument: $file\n";
     exit(1);
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # command
   unless ($command =~ /^\w{2,10}$/) {
     print "ERROR: Invalid command argument: $command\n";
     exit(1);
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # siet name
   unless ($sitename =~ /^[\w\-\.]{1,60}$/) {
     &brief_usage();
@@ -245,21 +180,13 @@ sub verfifyArgs {
     print "ERROR: Invalid range argument: $lines\n";
     exit(1);
   }
-<<<<<<< HEAD
     
-=======
-
->>>>>>> develop
   # logview.php uri path
   if ($logview_uri && $logview_uri !~ /^[\w\-\.\/]{2,60}$/) {
     print "ERROR: Invalid logview uri path argument: $logview_uri\n";
     exit(1);
   }
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
   # servers
   unless (@servers) {
     print "ERROR: No servers specified.\n";
@@ -274,11 +201,7 @@ sub verfifyArgs {
 }
 
 
-<<<<<<< HEAD
 =head2 verifyUserAgent() 
-=======
-=head2 verifyUserAgent()
->>>>>>> develop
 
   Test ability to run curl or wget
 
@@ -288,11 +211,7 @@ sub verifyUserAgent {
   if ($agent) {
     if (testAgent($agent)) {
       return;
-<<<<<<< HEAD
     } 
-=======
-    }
->>>>>>> develop
     else {
       print "ERROR: web user agent $agent could not be verified.\n";
       exit(1);
@@ -312,11 +231,7 @@ sub verifyUserAgent {
 =head2 testAgent()
 
   Simple test to see if the user agent command can be run at all.
-<<<<<<< HEAD
   
-=======
-
->>>>>>> develop
 =cut
 sub testAgent {
   my ($agent) = @_;
@@ -385,7 +300,6 @@ Use "./logviewer.pl -h" for full documentation.
 sub usage {
   print qq|
   logviewer.pl - Aggregate Acquia Hosting server logs.
-<<<<<<< HEAD
   
   Example: 
   
@@ -417,39 +331,6 @@ sub usage {
           error.log, or php-errors.log (Optional: Defaults to access.log if 
           not specified)
   
-=======
-
-  Example:
-
-  ./logviewer.pl -n example.com -u /utils/lv.php -f php-errors.log -c cat -s web-2 web-8 web-11
-
-  For the actual command arguments that work with your site refer to the
-  Hosting section of your Acquia Network subscription on acquia.com.
-
-  Setup:
-
-  This script communicates with the logview.php script on your Acquia Hosting
-  site. If you have not setup the logview.php script on your Acquia Hosting site
-  yet, then you can do so by copying the logview.php script from your svn repo
-  from /trunk/acquia-utils/ into your site docroot then deploying it using svn.
-  After deploying logview.php you can then use this script locally to easily
-  download log data from logview.php across many servers.
-
-  Options:
-
-  -n domain_name:   (Required) The domain name of your web site.
-
-  -s server1 server2, ...   (Required) A space-separated list of
-          Acquia Hosting web servers serving your site.
-
-  -u uri_path: The relative uri path of the logview.php script installed
-          on your Acquia Hosting site. (Default: /ahutils/logview.php)
-
-  -f file:  (Optional) Which server log file to read. Can be one of access.log,
-          error.log, or php-errors.log (Optional: Defaults to access.log if
-          not specified)
-
->>>>>>> develop
   -c command: (Optional) Which part of the log file to download. Can be one
           of these:
 
@@ -457,7 +338,6 @@ sub usage {
           tail: (Default) the bottom 30 lines of the file
           cat: the entire file
           range: lines start,stop (requires the lines argument be specified)
-<<<<<<< HEAD
           
   -l lines: (Optional) How many lines (a number), or a range of lines when 
           using the range command in the form of number,number 
@@ -468,18 +348,6 @@ sub usage {
   -d:     (Optional) Show debug messages.
   
   -h:     Help. Shows this message.  
-=======
-
-  -l lines: (Optional) How many lines (a number), or a range of lines when
-          using the range command in the form of number,number
-
-  -a agent: (Optional) Which shell-based web agent to use (curl or wget. Default
-          is curl)
-
-  -d:     (Optional) Show debug messages.
-
-  -h:     Help. Shows this message.
->>>>>>> develop
 
 |;
   exit(0);
