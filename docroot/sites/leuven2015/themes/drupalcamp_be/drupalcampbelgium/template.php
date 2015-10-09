@@ -50,17 +50,6 @@ function drupalcampbelgium_links__topbar_secondary_menu($variables) {
 }
 
 /**
- * Implements theme_preprocess_views_view().
- */
-function drupalcampbelgium_preprocess_views_view(&$vars) {
-  $view = &$vars['view'];
-  // Make sure it's the correct view.
-  if ($view->name == 'volunteers' || $view->name == 'attendees' || $view->name == 'sponsors') {
-    drupal_add_js('http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js', 'external');
-  }
-}
-
-/**
  * Implements template_preprocess_field().
  */
 function drupalcampbelgium_preprocess_field(&$variables, $hook) {

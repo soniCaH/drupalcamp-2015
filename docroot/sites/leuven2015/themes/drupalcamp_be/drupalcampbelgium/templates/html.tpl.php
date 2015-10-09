@@ -63,6 +63,9 @@
 <?php print $page; ?>
 <?php print $page_bottom; ?>
 <?php print _zurb_foundation_add_reveals(); ?>
+
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/2.2.2/isotope.pkgd.min.js" />
+
 <script>
   (function ($, Drupal, window, document, undefined) {
     $(document).foundation();
