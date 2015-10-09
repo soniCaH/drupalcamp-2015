@@ -3,3 +3,21 @@
 
   margin-bottom: 20px;
 }
+
+
+@media #{$medium-up} {
+  .view-mode-user_attendees_overview {
+    .views-row {
+      margin-bottom: 3em;
+    }
+
+    .field-name-ds-user-picture {
+      max-width: 12em;
+      height: auto;
+    }
+
+    .group-right {
+      padding-top: 4em;
+    }
+  }
+}
