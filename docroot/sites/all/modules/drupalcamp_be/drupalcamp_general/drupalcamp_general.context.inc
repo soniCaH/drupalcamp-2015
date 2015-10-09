@@ -50,6 +50,11 @@ function drupalcamp_general_context_default_contexts() {
   $context->description = 'DCL - Sitewide context (always active)';
   $context->tag = 'DrupalCamp Belgium';
   $context->conditions = array(
+    'path' => array(
+      'values' => array(
+        '~admin/*' => '~admin/*',
+      ),
+    ),
     'sitewide' => array(
       'values' => array(
         1 => 1,
@@ -80,7 +85,7 @@ function drupalcamp_general_context_default_contexts() {
       ),
     ),
   );
-  $context->condition_mode = 0;
+  $context->condition_mode = 1;
 
   // Translatables
   // Included for use with string extractors like potx.

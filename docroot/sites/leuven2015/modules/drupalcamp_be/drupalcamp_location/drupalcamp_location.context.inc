@@ -36,7 +36,7 @@ function drupalcamp_location_context_default_contexts() {
           'module' => 'drupalcamp_routeplanner',
           'delta' => 'delijn',
           'region' => 'content',
-          'weight' => '-9',
+          'weight' => '3',
         ),
       ),
     ),
