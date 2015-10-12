@@ -2683,8 +2683,14 @@ function cod_session_views_default_views() {
   $handler->display->display_options['pager']['type'] = 'full';
   $handler->display->display_options['pager']['options']['items_per_page'] = '10';
   $handler->display->display_options['style_plugin'] = 'default';
-  $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['links'] = FALSE;
+  $handler->display->display_options['style_options']['grouping'] = array(
+    0 => array(
+      'field' => 'field_accepted',
+      'rendered' => 1,
+      'rendered_strip' => 0,
+    ),
+  );
+  $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -2692,6 +2698,13 @@ function cod_session_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Field: Content: Status */
+  $handler->display->display_options['fields']['field_accepted']['id'] = 'field_accepted';
+  $handler->display->display_options['fields']['field_accepted']['table'] = 'field_data_field_accepted';
+  $handler->display->display_options['fields']['field_accepted']['field'] = 'field_accepted';
+  $handler->display->display_options['fields']['field_accepted']['label'] = '';
+  $handler->display->display_options['fields']['field_accepted']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_accepted']['element_label_colon'] = FALSE;
   /* Sort criterion: Content: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -2723,7 +2736,18 @@ function cod_session_views_default_views() {
   $handler->display->display_options['filters']['field_accepted_value']['table'] = 'field_data_field_accepted';
   $handler->display->display_options['filters']['field_accepted_value']['field'] = 'field_accepted_value';
   $handler->display->display_options['filters']['field_accepted_value']['value'] = array(
+    'unprocessed' => 'unprocessed',
     'accepted' => 'accepted',
+  );
+  $handler->display->display_options['filters']['field_accepted_value']['expose']['operator_id'] = 'field_accepted_value_op';
+  $handler->display->display_options['filters']['field_accepted_value']['expose']['label'] = 'Status';
+  $handler->display->display_options['filters']['field_accepted_value']['expose']['operator'] = 'field_accepted_value_op';
+  $handler->display->display_options['filters']['field_accepted_value']['expose']['identifier'] = 'field_accepted_value';
+  $handler->display->display_options['filters']['field_accepted_value']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    5 => 0,
+    8 => 0,
   );
 
   /* Display: Page */
