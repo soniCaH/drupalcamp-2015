@@ -135,7 +135,7 @@ function drupalcampbelgium_pager(array $variables) {
     $li_next = !empty($li_next) ? $li_next : '<span class="invisible">' . $tags[1] . '</span>';
 
     $output = array(
-      '<div class="row pager-wrapper">',
+      '<div class="pager-wrapper">',
       '  <h2 class="element-invisible">' . t('Pages') . '</h2>',
       '  <div class="medium-3 columns pager-previous">' . $li_previous . '</div>',
       '  <div class="medium-6 columns pager-content">' . $list . '</div>',

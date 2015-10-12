@@ -1,5 +1,9 @@
 .pager-wrapper {
-  &:after {
+  clear: both;
+  overflow: hidden;
+  margin: 2rem 0;
+
+  &:before {
     background: url('../images/pager-after.png') no-repeat center;
     content: ' ';
     display: block !important;

@@ -1,3 +1,9 @@
+.view {
+  .view-content {
+    @extend .clearfix;
+  }
+}
+
 .views-row {
   @extend .clearfix;
 
