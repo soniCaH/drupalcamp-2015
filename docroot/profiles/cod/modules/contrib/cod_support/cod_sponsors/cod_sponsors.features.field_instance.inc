@@ -22,7 +22,7 @@ function cod_sponsors_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 4,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -193,6 +193,88 @@ function cod_sponsors_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-sponsor-field_sponsor_logo_color'
+  $field_instances['node-sponsor-field_sponsor_logo_color'] = array(
+    'bundle' => 'sponsor',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 14,
+      ),
+      'listing' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'sponsor_footer_diamond' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'sponsor_footer_gold' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 7,
+      ),
+      'sponsor_teaser_diamond' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'sponsor_teaser_gold' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'sponsor_teaser_silver' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_sponsor_logo_color',
+    'label' => 'Logo Color',
+    'required' => 0,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 0,
+      'file_directory' => 'sponsor-logo-color',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'image',
+      'settings' => array(
+        'preview_image_style' => 'thumbnail',
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'image_image',
+      'weight' => 12,
+    ),
+  );
+
   // Exported field_instance: 'node-sponsor-field_sponsor_related_attendees'
   $field_instances['node-sponsor-field_sponsor_related_attendees'] = array(
     'bundle' => 'sponsor',
@@ -202,11 +284,8 @@ function cod_sponsors_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 3,
       ),
       'listing' => array(
@@ -283,7 +362,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'above',
@@ -356,7 +435,7 @@ function cod_sponsors_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 2,
+        'weight' => 1,
       ),
       'listing' => array(
         'label' => 'above',
@@ -450,7 +529,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 16,
       ),
       'listing' => array(
         'label' => 'above',
@@ -535,6 +614,7 @@ function cod_sponsors_field_default_field_instances() {
   t('Conference');
   t('Description');
   t('Logo');
+  t('Logo Color');
   t('Related Attendees');
   t('Sponsor URL');
   t('Sponsorship Level');

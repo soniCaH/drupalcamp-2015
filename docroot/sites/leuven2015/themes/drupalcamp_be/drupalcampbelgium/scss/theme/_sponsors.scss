@@ -4,7 +4,13 @@
   }
 }
 
-.view-display-id-block_4 {
+.node-sponsor {
+  .field-name-field-sponsor-logo {
+    text-align: center;
+  }
+}
+
+.view-display-id-block_4, .node-type-sponsor .footer {
   &:before {
     background: url('../images/pager-after.png') no-repeat center;
     content: ' ';

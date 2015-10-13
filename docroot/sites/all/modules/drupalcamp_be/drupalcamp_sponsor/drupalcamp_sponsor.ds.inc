@@ -93,23 +93,17 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
   $ds_layout->layout = 'ds_2col_stacked';
   $ds_layout->settings = array(
     'regions' => array(
-      'left' => array(
+      'header' => array(
         0 => 'field_sponsor_logo',
       ),
-      'right' => array(
-        1 => 'title',
-        2 => 'field_sponsor_url',
-        3 => 'field_sponsor_related_attendees',
-      ),
       'footer' => array(
-        4 => 'field_sponsor_body',
+        1 => 'field_sponsor_url',
+        2 => 'field_sponsor_body',
       ),
     ),
     'fields' => array(
-      'field_sponsor_logo' => 'left',
-      'title' => 'right',
-      'field_sponsor_url' => 'right',
-      'field_sponsor_related_attendees' => 'right',
+      'field_sponsor_logo' => 'header',
+      'field_sponsor_url' => 'footer',
       'field_sponsor_body' => 'footer',
     ),
     'classes' => array(),
