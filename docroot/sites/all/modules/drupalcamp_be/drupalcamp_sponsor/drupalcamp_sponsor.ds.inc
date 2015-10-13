@@ -192,13 +192,11 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
       ),
       'right' => array(
         1 => 'field_sponsor_body',
-        2 => 'field_sponsor_url',
       ),
     ),
     'fields' => array(
       'field_sponsor_logo' => 'left',
       'field_sponsor_body' => 'right',
-      'field_sponsor_url' => 'right',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -224,12 +222,10 @@ function drupalcamp_sponsor_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'field_sponsor_logo',
-        1 => 'field_sponsor_url',
       ),
     ),
     'fields' => array(
       'field_sponsor_logo' => 'ds_content',
-      'field_sponsor_url' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

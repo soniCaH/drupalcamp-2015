@@ -74,6 +74,12 @@ function drupalcamp_general_context_default_contexts() {
           'module' => 'views',
           'delta' => 'sponsors-block_4',
           'region' => 'content',
+          'weight' => '9',
+        ),
+        'views-sponsors-block_5' => array(
+          'module' => 'views',
+          'delta' => 'sponsors-block_5',
+          'region' => 'content',
           'weight' => '10',
         ),
         'drupalcamp_general-footer_text' => array(
