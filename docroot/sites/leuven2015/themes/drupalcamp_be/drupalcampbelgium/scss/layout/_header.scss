@@ -22,25 +22,13 @@
   @media #{$xlarge-up} {
     background-image: url('../images/header_xl.jpg');
   }
-
-//  background: url('../images/leuvenmarkt2_edit.png') transparent center top -250px no-repeat;
-//
-  .node-type-event & {
-    min-height: 850px;
-    background-position-y: 0;
-  }
 }
 
 .l-region--branding {
-  .node-type-event & {
-    margin-top: 5em;
-  }
+  margin-top: 2em;
 }
 
 .site-branding__logo {
   display: block;
   padding-top: 2rem;
-  .node-type-event & {
-    padding-top: 2rem;
-  }
 }
