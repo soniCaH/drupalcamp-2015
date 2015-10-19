@@ -5,7 +5,5 @@
 
   .body {
     text-align: justify;
-
-    @include css-columns(2,3);
   }
 }
