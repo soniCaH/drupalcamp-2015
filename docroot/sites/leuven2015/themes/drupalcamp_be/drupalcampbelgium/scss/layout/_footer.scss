@@ -1,1 +1,17 @@
 // Non-modular or client styles for .l-footer region.
+
+.footer {
+  text-align: center;
+
+  p {
+    &:not(:last-child) {
+      &:after{
+        background: url('../images/footer-p-after.png') no-repeat top center;
+        content: ' ';
+        display: block !important;
+        height: 10px;
+        margin: 1.25rem 0 0 0;
+      }
+    }
+  }
+}
