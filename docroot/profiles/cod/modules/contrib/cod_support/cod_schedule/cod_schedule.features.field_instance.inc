@@ -424,7 +424,7 @@ function cod_schedule_field_default_field_instances() {
           'view_mode' => 'timeslot_time_only',
         ),
         'type' => 'entityreference_entity_view',
-        'weight' => 3,
+        'weight' => 2,
       ),
       'teaser' => array(
         'label' => 'above',

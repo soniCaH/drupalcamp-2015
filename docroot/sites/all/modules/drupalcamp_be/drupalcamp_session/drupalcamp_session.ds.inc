@@ -57,11 +57,6 @@ function drupalcamp_session_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'session';
   $ds_fieldsetting->view_mode = 'taxonomy_page_overview';
   $ds_fieldsetting->settings = array(
-    'session_room' => array(
-      'weight' => '1',
-      'label' => 'hidden',
-      'format' => 'default',
-    ),
     'title' => array(
       'weight' => '0',
       'label' => 'hidden',
@@ -210,16 +205,14 @@ function drupalcamp_session_ds_layout_settings_info() {
     'regions' => array(
       'ds_content' => array(
         0 => 'title',
-        1 => 'session_room',
-        2 => 'field_experience',
-        3 => 'field_session_timeslot',
-        4 => 'field_speakers',
-        5 => 'body',
+        1 => 'field_experience',
+        2 => 'field_session_timeslot',
+        3 => 'field_speakers',
+        4 => 'body',
       ),
     ),
     'fields' => array(
       'title' => 'ds_content',
-      'session_room' => 'ds_content',
       'field_experience' => 'ds_content',
       'field_session_timeslot' => 'ds_content',
       'field_speakers' => 'ds_content',

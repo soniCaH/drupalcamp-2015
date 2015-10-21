@@ -33,7 +33,7 @@ function cod_session_ranking_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 9,
+        'weight' => 16,
       ),
       'teaser' => array(
         'label' => 'above',
