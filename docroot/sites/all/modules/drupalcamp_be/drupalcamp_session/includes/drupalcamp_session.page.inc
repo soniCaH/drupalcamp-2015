@@ -114,14 +114,28 @@ function _drupalcamp_session_schedule_create_page($day) {
           $schedule_type = check_plain($type[0]['value']);
         }
 
+        $classes = array();
+
+        if ($class) {
+          $classes[] = $class;
+        }
+
+        if ($entity->type == 'schedule_item') {
+          $classes[] = 'schedule-item';
+        }
+        else {
+          $classes[] = 'session';
+        }
+
+        if ($schedule_type) {
+          $classes[] = 'schedule_' . $schedule_type;
+        }
+
+        $classes[] = 'parallel-' . count($row['nids']);
+
         $items[] = array(
           'data'  => '<div class="timeline-panel">' . render($node_teaser) . '</div>',
-          'class' => array(
-            $class ? $class : '',
-            ($entity->type == 'schedule_item') ? 'schedule-item' : 'session',
-            $schedule_type ? 'schedule_' . $schedule_type : '',
-            'parallel-' . count($row['nids'])
-          ),
+          'class' => $classes,
         );
       }
     }
