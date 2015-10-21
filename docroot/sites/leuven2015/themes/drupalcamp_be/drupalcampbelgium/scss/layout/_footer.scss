@@ -1,5 +1,15 @@
 // Non-modular or client styles for .l-footer region.
 
+.l-footer {
+  &:before {
+    background: url('../images/header-after.png') repeat-x center;
+    content: ' ';
+    display: block;
+    height: 8px;
+    margin: 1.25rem 0;
+  }
+}
+
 .footer {
   text-align: center;
 
@@ -14,4 +24,6 @@
       }
     }
   }
+
+
 }

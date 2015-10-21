@@ -154,3 +154,15 @@
     width: auto;
   }
 }
+
+.sponsors--featured {
+  .views-row {
+    padding: 1rem;
+
+    .node-sponsor {
+      border: 1px solid lighten($dark, 50%);
+      border-radius: 1rem;
+      padding: 1rem;
+    }
+  }
+}
