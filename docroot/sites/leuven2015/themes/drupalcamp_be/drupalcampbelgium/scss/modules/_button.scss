@@ -9,3 +9,7 @@ button, .button {
 .button-group {
   text-align: center;
 }
+
+.button.secondary.active {
+  @include button-style($bg:$secondary-button-bg-hover, $bg-hover:$secondary-button-bg-hover, $border-color:$secondary-button-border-color);
+}
