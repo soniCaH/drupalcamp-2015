@@ -53,6 +53,7 @@ function drupalcamp_general_context_default_contexts() {
     'path' => array(
       'values' => array(
         '~admin/*' => '~admin/*',
+        '~user/*/*' => '~user/*/*',
       ),
     ),
     'sitewide' => array(

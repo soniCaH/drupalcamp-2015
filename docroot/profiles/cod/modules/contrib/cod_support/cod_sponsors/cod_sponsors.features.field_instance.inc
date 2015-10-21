@@ -22,7 +22,7 @@ function cod_sponsors_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 2,
+        'weight' => 4,
       ),
       'listing' => array(
         'label' => 'above',
@@ -55,7 +55,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 11,
+        'weight' => 2,
       ),
       'sponsor_teaser_silver' => array(
         'label' => 'hidden',
@@ -203,7 +203,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 14,
+        'weight' => 7,
       ),
       'listing' => array(
         'label' => 'above',
@@ -284,8 +284,11 @@ function cod_sponsors_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'settings' => array(),
-        'type' => 'hidden',
+        'module' => 'entityreference',
+        'settings' => array(
+          'link' => 1,
+        ),
+        'type' => 'entityreference_label',
         'weight' => 3,
       ),
       'listing' => array(
@@ -316,7 +319,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 12,
+        'weight' => 4,
       ),
       'sponsor_teaser_silver' => array(
         'label' => 'hidden',
@@ -362,7 +365,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 15,
+        'weight' => 14,
       ),
       'listing' => array(
         'label' => 'above',
@@ -392,7 +395,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 13,
+        'weight' => 5,
       ),
       'sponsor_teaser_silver' => array(
         'label' => 'hidden',
@@ -435,7 +438,7 @@ function cod_sponsors_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(),
         'type' => 'link_default',
-        'weight' => 1,
+        'weight' => 2,
       ),
       'listing' => array(
         'label' => 'above',
@@ -457,15 +460,17 @@ function cod_sponsors_field_default_field_instances() {
       ),
       'sponsor_teaser_diamond' => array(
         'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
+        'type' => 'link_default',
         'weight' => 2,
       ),
       'sponsor_teaser_gold' => array(
         'label' => 'hidden',
+        'module' => 'link',
         'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 1,
+        'type' => 'link_default',
+        'weight' => 3,
       ),
       'sponsor_teaser_silver' => array(
         'label' => 'hidden',
@@ -527,7 +532,7 @@ function cod_sponsors_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 16,
+        'weight' => 15,
       ),
       'listing' => array(
         'label' => 'above',
