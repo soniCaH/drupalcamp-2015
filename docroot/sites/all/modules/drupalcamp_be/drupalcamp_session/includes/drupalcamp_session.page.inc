@@ -55,8 +55,8 @@ function _drupalcamp_session_schedule_create_page($day) {
   // Set to FALSE = display on the left side of the timeline,
   // TRUE = on the right side.
   $room_mapping = array(
-    'Session aula #1'  => TRUE,
-    'Session aula #2' => FALSE,
+    '2DotsTwice Room'  => TRUE,
+    'AMPLEXOR Room' => FALSE,
   );
 
   if (empty($available_days[$day])) {
