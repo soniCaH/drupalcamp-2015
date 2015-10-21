@@ -18,12 +18,12 @@ function drupalcamp_session_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'session_room' => array(
-      'weight' => '0',
+      'weight' => '1',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'title' => array(
-      'weight' => '1',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
@@ -83,17 +83,17 @@ function drupalcamp_session_ds_field_settings_info() {
   $ds_fieldsetting->view_mode = 'teaser';
   $ds_fieldsetting->settings = array(
     'session_room' => array(
-      'weight' => '0',
+      'weight' => '3',
       'label' => 'hidden',
       'format' => 'default',
     ),
     'title' => array(
-      'weight' => '3',
+      'weight' => '0',
       'label' => 'hidden',
       'format' => 'default',
       'formatter_settings' => array(
         'link' => '1',
-        'wrapper' => 'h3',
+        'wrapper' => 'h4',
         'class' => '',
       ),
     ),
@@ -155,13 +155,13 @@ function drupalcamp_session_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'session_room',
-        1 => 'title',
+        0 => 'title',
+        1 => 'session_room',
       ),
     ),
     'fields' => array(
-      'session_room' => 'ds_content',
       'title' => 'ds_content',
+      'session_room' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(
@@ -247,21 +247,23 @@ function drupalcamp_session_ds_layout_settings_info() {
   $ds_layout->settings = array(
     'regions' => array(
       'ds_content' => array(
-        0 => 'session_room',
-        1 => 'field_experience',
-        2 => 'og_vocabulary',
-        3 => 'title',
-        4 => 'field_speakers',
-        5 => 'body',
+        0 => 'title',
+        1 => 'group_speaker_track',
+        2 => 'field_speakers',
+        3 => 'session_room',
+        4 => 'group_room_experience',
+        5 => 'field_experience',
+        6 => 'og_vocabulary',
       ),
     ),
     'fields' => array(
+      'title' => 'ds_content',
+      'group_speaker_track' => 'ds_content',
+      'field_speakers' => 'ds_content',
       'session_room' => 'ds_content',
+      'group_room_experience' => 'ds_content',
       'field_experience' => 'ds_content',
       'og_vocabulary' => 'ds_content',
-      'title' => 'ds_content',
-      'field_speakers' => 'ds_content',
-      'body' => 'ds_content',
     ),
     'classes' => array(),
     'wrappers' => array(

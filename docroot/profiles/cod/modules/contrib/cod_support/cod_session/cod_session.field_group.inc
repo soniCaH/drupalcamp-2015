@@ -98,6 +98,40 @@ function cod_session_field_group_info() {
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
   $field_group->api_version = 1;
+  $field_group->identifier = 'group_room_experience|node|session|teaser';
+  $field_group->group_name = 'group_room_experience';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'session';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Room + Experience',
+    'weight' => '4',
+    'children' => array(
+      0 => 'og_vocabulary',
+      1 => 'field_experience',
+      2 => 'session_room',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Room + Experience',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-room-experience field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_room_experience|node|session|teaser'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
   $field_group->identifier = 'group_schedule_info|node|schedule_item|default';
   $field_group->group_name = 'group_schedule_info';
   $field_group->entity_type = 'node';
@@ -210,6 +244,38 @@ function cod_session_field_group_info() {
     ),
   );
   $export['group_schedule|node|session|form'] = $field_group;
+
+  $field_group = new stdClass();
+  $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
+  $field_group->api_version = 1;
+  $field_group->identifier = 'group_speaker_track|node|session|teaser';
+  $field_group->group_name = 'group_speaker_track';
+  $field_group->entity_type = 'node';
+  $field_group->bundle = 'session';
+  $field_group->mode = 'teaser';
+  $field_group->parent_name = '';
+  $field_group->data = array(
+    'label' => 'Speaker + Track',
+    'weight' => '1',
+    'children' => array(
+      0 => 'field_speakers',
+    ),
+    'format_type' => 'div',
+    'format_settings' => array(
+      'label' => 'Speaker + Track',
+      'instance_settings' => array(
+        'id' => '',
+        'classes' => 'group-speaker-track field-group-div',
+        'description' => '',
+        'show_label' => '0',
+        'label_element' => 'h3',
+        'effect' => 'none',
+        'speed' => 'none',
+      ),
+      'formatter' => 'open',
+    ),
+  );
+  $export['group_speaker_track|node|session|teaser'] = $field_group;
 
   return $export;
 }

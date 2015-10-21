@@ -105,10 +105,18 @@ function _drupalcamp_session_schedule_create_page($day) {
         }
 
         // Get teaser view of entities.
-        $node    = entity_view('node', array($entity), 'teaser');
+        $node_teaser    = entity_view('node', array($entity), 'teaser');
+        $schedule_type  = NULL;
+        $type           = NULL;
+
+        if ($entity->type == 'schedule_item') {
+          $type = field_get_items('node', $entity, 'field_schedule_item_type');
+          $schedule_type = check_plain($type[0]['value']);
+        }
+
         $items[] = array(
-          'data'  => '<div class="timeline-panel">' . render($node) . '</div>',
-          'class' => array($class ? $class : '', ($entity->type == 'schedule_item') ? 'schedule-item' : ''),
+          'data'  => '<div class="timeline-panel">' . render($node_teaser) . '</div>',
+          'class' => array($class ? $class : '', ($entity->type == 'schedule_item') ? 'schedule-item' : 'session', $schedule_type ? 'schedule_' . $schedule_type : '', 'parallel-' . count($row['nids'])),
         );
       }
     }

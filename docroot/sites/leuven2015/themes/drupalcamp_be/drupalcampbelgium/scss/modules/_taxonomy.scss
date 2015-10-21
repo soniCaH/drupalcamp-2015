@@ -7,33 +7,33 @@
 }
 
 .experience-level {
+  background: url('../images/pepper-white.png') no-repeat;
   float: right;
-  padding: 5px;
-  height: 25px;
+  height: 20px;
   text-align: center;
   text-indent: -9999px;
   width: 45px;
   margin-right: 5px;
 
   &.experience-level-beginner {
-    background: url('../images/exp-beginner.png') no-repeat center right;
+    background-position: 0px 1px;
+    width: 10px;
   }
+
   &.experience-level-intermediate {
-    background: url('../images/exp-intermediate.png') no-repeat center right;
+    background-position: -20px -19px;
+    width: 20px;
   }
+
   &.experience-level-advanced {
-    background: url('../images/exp-advanced.png') no-repeat center right;
+    background-position: -49px -39px;
+    width: 30px;
   }
+
 }
 
 .view-mode-taxonomy_page_overview {
-  .experience-level-beginner {
-    background: url('../images/exp-beginner-blue.png') no-repeat center right;
-  }
-  .experience-level-intermediate {
-    background: url('../images/exp-intermediate-blue.png') no-repeat center right;
-  }
-  .experience-level-advanced {
-    background: url('../images/exp-advanced-blue.png') no-repeat center right;
+  .experience-level {
+    background-image: url('../images/pepper-black.png');
   }
 }

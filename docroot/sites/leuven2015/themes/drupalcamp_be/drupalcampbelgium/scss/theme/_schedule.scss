@@ -3,212 +3,126 @@
   overflow: hidden;
   padding: 20px 0 20px;
   position: relative;
-}
 
-.timeline * {
-  box-sizing: border-box;
-}
-
-.timeline:before {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  content: " ";
-  width: 3px;
-  background-color: #AAA;
-  left: 50%;
-  margin-left: -1.5px;
-}
-
-.tldate {
-  display: block;
-  width: 100%;
-  background: #000;
-  // border: 1px solid darken(@basecolor, 4%);
-  color: #FFF;
-  margin: 0 auto;
-  padding: 3px 0;
-  // font-weight: bold;
-  text-align: center;
-}
-
-.item-list ul.timeline li {
-  padding: 0;
-  margin: 0 0 25px 0;
-  position: relative;
-  width: 46%;
-  float: left;
-
-  ul.contextual-links li {
-    float: none;
-    margin: 0;
+  .tldate {
+    clear: both;
+    display: block;
+    color: $darker;
+    font-size: 1.5rem;
+    padding: 3px 0;
+    text-align: center;
     width: 100%;
   }
-}
 
-.timeline h2 {
-  border: none;
-}
+  .schedule-item, .session {
+    a {
+      text-decoration: none;
 
-
-.timeline li .timeline-panel {
-  background: #fff;
-  border: 1px solid #AAA;
-  padding: 0;
-  width: 100%;
-  > .node > div {
-    padding: 5px;
-    &.field-name-session-room, &.field-name-og-vocabulary, &.contextual-links-wrapper {
-      padding: 0;
+      &:hover {
+        text-decoration: underline;
+      }
     }
-  }
-  .field-name-field-speakers {
-    float: right;
-    font-size: 85%;
-    font-style: italic;
-    margin: -30px 5px 0 0;
-  }
-}
 
-.item-list ul.timeline li.schedule-item,
-.timeline li .timeline-panel .node-schedule-item {
-  width: 100%;
-  .field-name-title {
-    h2 {
-      font-size: 22px;
+    h4 {
+      text-transform: none;
       margin: 0;
-      padding: 0;
-      width: 70%;
-      a {
-        color: #404040;
+    }
+  }
+
+  .session {
+    margin: 0 0 25px 0;
+    padding: 0;
+
+    @media #{$medium-up} {
+      &.parallel-2 {
+        float: left;
+        width: 46%;
       }
     }
+
+    h4 {
+      text-align: left;
+    }
+
+    .timeline-panel {
+      border: 1px solid $dark;
+      padding: 0.5rem;
+      width: 100%;
+    }
+  }
+
+  .schedule-item {
+    h3 {
+      width: 100%;
+      margin-top: 1rem;
+    }
+
     &.schedule_breakfast, &.schedule_welcome, &.schedule_coffee {
-      h2 {
+      h3 {
         width: 100%;
-        background: url(../images/icon-coffee.png) no-repeat center top;
-        padding-top: 65px;
+        background: url(../images/coffee.png) center top / 75px 129px no-repeat;
+        padding-top: 129px;
       }
     }
-    &.schedule_lunch {
-      h2 {
-        width: 100%;
-        background: url(../images/icon-eat.png) no-repeat center top;
-        padding-top: 65px;
+
+    //    &.schedule_lunch {
+    //      h3 {
+    //        width: 100%;
+    //        background: url(../images/coffee.png) center top / 75px 129px no-repeat;
+    //        padding-top: 129px;
+    //      }
+    //    }
+    //
+    //    &.schedule_drinks {
+    //      h3 {
+    //        width: 100%;
+    //        background: url(../images/coffee.png) center top / 75px 129px no-repeat;
+    //        padding-top: 129px;
+    //      }
+    //    }
+    //
+    //    &.schedule_tapas {
+    //      h3 {
+    //        width: 100%;
+    //        background: url(../images/coffee.png) center top / 75px 129px no-repeat;
+    //        padding-top: 129px;
+    //      }
+    //    }
+  }
+
+  .field-name-field-speakers {
+    margin: 0.25em 0;
+  }
+
+  .group-room-experience {
+    @extend .clearfix;
+
+    background: $darker;
+    bottom: 0;
+    color: $white;
+    clear: both;
+    font-size: 0.75rem;
+    line-height: 20px;
+    margin: 3em 0 0 0;
+    padding: 2px 5px;
+    width: 100%;
+
+    .field-name-session-room {
+      float: left;
+    }
+
+    .field-name-og-vocabulary {
+      float: right;
+      margin: 0 1em 0 0;
+
+      a {
+        color: $white;
       }
     }
-    &.schedule_drinks {
-      h2 {
-        width: 100%;
-        background: url(../images/icon-drink.png) no-repeat center top;
-        padding-top: 65px;
-      }
-    }
-    &.schedule_bbq {
-      h2 {
-        width: 100%;
-        background: url(../images/icon-bbq.png) no-repeat center top;
-        padding-top: 65px;
-      }
-    }
-    &.schedule_closing {
-      h2 {
-        width: 100%;
-        background: url(../images/icon-closing.png) no-repeat center top;
-        padding-top: 65px;
-      }
+
+    .field-name-field-experience {
+      float: right;
+      margin: 0;
     }
   }
-}
-
-.timeline li .timeline-panel .field-name-session-room {
-  background: #e5e5e5;
-  padding: 5px;
-  text-align: center;
-}
-
-.timeline li .timeline-panel h2 {
-  text-align: center;
-}
-
-.item-list ul.timeline li.tldate {
-  clear: both;
-  width: 100%;
-}
-
-/** panel arrows **/
-.timeline-panel:before {
-  position: absolute;
-  top: 59px;
-  right: -14px;
-  display: inline-block;
-  border-top: 15px solid transparent;
-  border-left: 15px solid #AAA;
-  border-right: 0 solid #AAA;
-  border-bottom: 15px solid transparent;
-  content: " ";
-}
-
-.timeline-panel:after {
-  position: absolute;
-  top: 60px;
-  right: -13px;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 14px solid transparent;
-  content: " ";
-}
-
-.schedule-item .timeline-panel:before, .schedule-item .timeline-panel:after {
-  display: none;
-}
-
-.item-list ul.timeline li.timeline-inverted {
-  float: right;
-}
-
-li.timeline-inverted .timeline-panel:before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -14px;
-  right: auto;
-}
-
-li.timeline-inverted .timeline-panel:after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -13px;
-  right: auto;
-}
-
-.experience-level {
-  float: right;
-  padding: 5px;
-  height: 25px;
-  text-align: center;
-  text-indent: -9999px;
-  width: 45px;
-  margin-right: 5px;
-
-  &.experience-level-beginner {
-    background: url('../images/exp-beginner-blue.png') no-repeat center right;
-  }
-  &.experience-level-intermediate {
-    background: url('../images/exp-intermediate-blue.png') no-repeat center right;
-  }
-  &.experience-level-advanced {
-    background: url('../images/exp-advanced-blue.png') no-repeat center right;
-  }
-}
-
-@media #{$small-only} {
-.item-list ul.timeline li {
-  width: 100%;
-  float: none;
-}
-.timeline-panel:before, .timeline-panel:after, li.timeline-inverted .timeline-panel:before, li.timeline-inverted .timeline-panel:after {
-  display: none;
-}
 }
