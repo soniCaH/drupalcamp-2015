@@ -30,16 +30,6 @@
 
 .field-type-entityreference {
   a {
-    &+a {
-      &:before {
-        content: ', ';
-      }
-
-      &:last-child {
-        &:before {
-          content: ' & ';
-        }
-      }
-    }
+    display: block;
   }
 }
