@@ -20,6 +20,16 @@ function drupalcamp_sessions_install() {
 }
 
 /**
+ * Implements hook_update_N().
+ *
+ * New timeslots defined.
+ */
+function drupalcamp_sessions_update_7001() {
+  // Install default timeslots for 2015 camp.
+  _drupalcamp_sessions_timeslots_install();
+}
+
+/**
  * Create a set of default timeslots.
  *
  * @seealso _drupalcamp_sessions_timeslots_get().
