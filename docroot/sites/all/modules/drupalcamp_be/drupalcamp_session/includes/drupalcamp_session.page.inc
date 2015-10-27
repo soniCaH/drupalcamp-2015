@@ -55,8 +55,8 @@ function _drupalcamp_session_schedule_create_page($day) {
   // Set to FALSE = display on the left side of the timeline,
   // TRUE = on the right side.
   $room_mapping = array(
-    '2DotsTwice Room'  => TRUE,
-    'AMPLEXOR Room' => FALSE,
+    '2DotsTwice Room'  => FALSE,
+    'AMPLEXOR Room' => TRUE,
   );
 
   if (empty($available_days[$day])) {
@@ -216,6 +216,7 @@ function _drupalcamp_session_page_get_nodes($timeslot) {
 
   $query->condition('timeslot_time.field_timeslot_time_target_id', $timeslot->entity_id);
   $query->condition('node.status', 1);
+  $query->orderBy('room.field_timeslot_room_target_id');
   $query->where('((accepted.field_accepted_value = \'accepted\' AND node.type = \'session\') OR (node.type = \'schedule_item\'))');
 
   return $query->execute()->fetchAllAssoc('nid');

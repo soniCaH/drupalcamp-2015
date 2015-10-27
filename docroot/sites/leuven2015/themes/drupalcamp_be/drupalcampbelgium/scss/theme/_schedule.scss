@@ -16,6 +16,11 @@
     padding: 3px 0;
     text-align: center;
     width: 100%;
+
+
+    @media #{$small-only} {
+      font-size: 1rem;
+    }
   }
 
   .schedule-item, .session {
@@ -39,7 +44,10 @@
     @media #{$medium-up} {
       &.parallel-2 {
         float: left;
-        width: 46%;
+        width: 48%;
+      }
+      &.timeline-inverted {
+        margin-left: 4%;
       }
     }
 
