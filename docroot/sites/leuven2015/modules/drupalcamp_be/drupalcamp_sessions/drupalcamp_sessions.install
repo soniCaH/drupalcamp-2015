@@ -80,19 +80,19 @@ function _drupalcamp_sessions_timeslots_get() {
       'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 08:20:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 08:30:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 09:20:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 08:20:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 09:10:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 08:30:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 09:20:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 08:20:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 09:10:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 09:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 09:10:00',
       'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 10:00:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 09:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 09:10:00',
       'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 10:00:00',
     ),
     array(
@@ -105,11 +105,11 @@ function _drupalcamp_sessions_timeslots_get() {
     ),
     array(
       'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 10:45:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 11:35:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 11:45:00',
     ),
     array(
       'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 10:45:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 11:35:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 11:45:00',
     ),
     array(
       'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 11:45:00',
@@ -136,24 +136,24 @@ function _drupalcamp_sessions_timeslots_get() {
       'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 13:50:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 14:00:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 14:50:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 13:50:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 14:40:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 14:00:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 14:50:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 13:50:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 14:40:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 15:00:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 14:40:00',
       'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 15:30:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 15:00:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 14:40:00',
       'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_TWO . ' 15:30:00',
     ),
     array(
-      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 16:30:00',
-      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 21:30:00',
+      'start' => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 16:00:00',
+      'end'   => DRUPALCAMP_SESSIONS_CAMP_DAY_ONE . ' 19:30:00',
     ),
   );
 }
