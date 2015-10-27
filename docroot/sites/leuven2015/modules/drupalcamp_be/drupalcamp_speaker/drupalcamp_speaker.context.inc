@@ -26,12 +26,6 @@ function drupalcamp_speaker_context_default_contexts() {
   $context->reactions = array(
     'block' => array(
       'blocks' => array(
-        'drupalcamp_speaker-propose' => array(
-          'module' => 'drupalcamp_speaker',
-          'delta' => 'propose',
-          'region' => 'featured',
-          'weight' => '-10',
-        ),
         'views-featured_speakers-block' => array(
           'module' => 'views',
           'delta' => 'featured_speakers-block',
